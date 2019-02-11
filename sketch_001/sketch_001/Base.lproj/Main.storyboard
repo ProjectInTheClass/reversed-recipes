@@ -236,7 +236,7 @@
                     <navigationItem key="navigationItem" title="나의 냉장고" id="MKs-pw-AtX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="a0n-ki-AGf">
                             <connections>
-                                <segue destination="6ar-x8-WH9" kind="presentation" id="uuK-l4-u0z"/>
+                                <segue destination="6ar-x8-WH9" kind="presentation" id="AeW-Eh-kGr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1442,6 +1442,7 @@
                             <constraint firstItem="nUE-lN-NX0" firstAttribute="top" secondItem="M9J-62-gDx" secondAttribute="topMargin" constant="40" id="VJ1-iG-2iv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nUE-lN-NX0" secondAttribute="trailing" id="xdc-D1-TZJ"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="9MI-bl-1TY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2BR-Un-6bz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1822,6 +1823,7 @@
                             <constraint firstItem="of1-OM-i9f" firstAttribute="top" secondItem="2CG-Xt-0rE" secondAttribute="topMargin" constant="40" id="uGz-i2-ts8"/>
                             <constraint firstItem="l9s-Mw-m4Y" firstAttribute="top" secondItem="of1-OM-i9f" secondAttribute="bottom" constant="20" id="zIi-dY-c23"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="MDG-UR-nUh"/>
                     </view>
                     <connections>
                         <outlet property="maltSugarButton" destination="DKn-54-aK9" id="usH-bg-bDB"/>
