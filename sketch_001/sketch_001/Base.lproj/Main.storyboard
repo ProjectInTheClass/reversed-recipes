@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HbR-Pf-URO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k3M-zx-WAo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc7-AI-q2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="1753"/>
+            <point key="canvasLocation" x="-148" y="2083"/>
         </scene>
         <!--Ingredient Table View Controller-->
         <scene sceneID="uvk-br-47U">
@@ -328,22 +328,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkZ-3c-DYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="887" y="1701"/>
-        </scene>
-        <!--요리 보기-->
-        <scene sceneID="ykQ-Vp-8Bd">
-            <objects>
-                <viewController id="Lyq-u0-Z8E" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CVo-aA-nCB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="cKA-Zk-rAF"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="요리 보기" id="hRu-Uw-7Ky"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Tq-iJ-cji" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1724" y="2437"/>
         </scene>
         <!--레시피-->
         <scene sceneID="nNC-DY-f07">
@@ -1145,7 +1129,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjE-eX-gyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="2473"/>
+            <point key="canvasLocation" x="-988" y="3116"/>
         </scene>
         <!--장 보기-->
         <scene sceneID="Uc9-md-afM">
@@ -1162,42 +1146,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcb-yr-F9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="3160"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fpM-g8-qrj">
-            <objects>
-                <viewController id="Brs-dF-RWU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7bC-8b-rh4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="7H1-vH-Wbd"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5wX-cK-Ufh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1724" y="3160"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="pH9-eD-HNb">
-            <objects>
-                <viewController id="IdW-0Y-MEd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i0C-1r-sGu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="VFO-RC-20J"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1ya-7U-icD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1087" y="4023"/>
+            <point key="canvasLocation" x="-988" y="4190"/>
         </scene>
         <!--장보기 메모-->
         <scene sceneID="GZS-7c-jLs">
             <objects>
-                <viewController id="fWB-xj-cpO" sceneMemberID="viewController">
+                <viewController id="fWB-xj-cpO" customClass="MemoViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WvQ-TU-yZE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1206,22 +1160,30 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="이마트가서 살 것  식빵, 우유, 달걀, 포도쨈" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C6G-aj-tjA">
-                                <rect key="frame" x="16" y="126" width="343" height="146"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C6G-aj-tjA">
+                                <rect key="frame" x="8" y="72" width="359" height="538"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C6G-aj-tjA" firstAttribute="top" secondItem="bu4-id-mDX" secondAttribute="top" constant="8" id="SC5-8R-3Fq"/>
+                            <constraint firstItem="bu4-id-mDX" firstAttribute="trailing" secondItem="C6G-aj-tjA" secondAttribute="trailing" constant="8" id="Xqg-7E-Cpm"/>
+                            <constraint firstItem="bu4-id-mDX" firstAttribute="bottom" secondItem="C6G-aj-tjA" secondAttribute="bottom" constant="8" id="f6n-oz-NSO"/>
+                            <constraint firstItem="C6G-aj-tjA" firstAttribute="leading" secondItem="bu4-id-mDX" secondAttribute="leading" constant="8" id="mgK-Dn-svb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bu4-id-mDX"/>
                     </view>
                     <navigationItem key="navigationItem" title="장보기 메모" id="QLv-KI-M5s"/>
+                    <connections>
+                        <outlet property="memoTextView" destination="C6G-aj-tjA" id="Did-z2-7u9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXh-ZO-V1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="3160"/>
+            <point key="canvasLocation" x="-148" y="4190"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gYO-hr-pBt">
@@ -1443,7 +1405,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7W-np-Tgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="2474"/>
+            <point key="canvasLocation" x="-148" y="3116"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */; };
 		BB0459392202DD45003F75F4 /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0459382202DD45003F75F4 /* TotalData.swift */; };
 		BB045976220888A2003F75F4 /* csvjson.json in Resources */ = {isa = PBXBuildFile; fileRef = BB045975220888A2003F75F4 /* csvjson.json */; };
 		BB04BFE221EC632A00A09975 /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFD521EC632A00A09975 /* DrawingCanvasView.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		BB0459382202DD45003F75F4 /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
 		BB045975220888A2003F75F4 /* csvjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = csvjson.json; sourceTree = "<group>"; };
 		BB04BFD521EC632A00A09975 /* DrawingCanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				BBB80A8C21FF382900D13866 /* Models.swift */,
 				BB045975220888A2003F75F4 /* csvjson.json */,
 				BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */,
+				52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */,
 			);
 			path = sketch_001;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				BB04BFEA21EC632A00A09975 /* FIlters.swift in Sources */,
 				BB04BFE821EC632A00A09975 /* CHPickerViewController.swift in Sources */,
 				BB04BFE921EC632A00A09975 /* SwipeActionTableViewCell.swift in Sources */,
+				52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */,
 				BB04BFEC21EC632A00A09975 /* CHModalViewController.swift in Sources */,
 				BB04BFED21EC632A00A09975 /* CHControls.swift in Sources */,
 				BBB80A8D21FF382900D13866 /* Models.swift in Sources */,
