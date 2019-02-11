@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		528F3909221180A8003A7AD3 /* RefregeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */; };
+		528F390C221197CA003A7AD3 /* MeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F390B221197CA003A7AD3 /* MeatViewController.swift */; };
+		528F390E221197D9003A7AD3 /* VegitableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F390D221197D9003A7AD3 /* VegitableViewController.swift */; };
+		528F3910221197E3003A7AD3 /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F390F221197E3003A7AD3 /* FruitViewController.swift */; };
+		528F3912221197F5003A7AD3 /* FishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F3911221197F5003A7AD3 /* FishViewController.swift */; };
+		528F3914221198E0003A7AD3 /* DairyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F3913221198E0003A7AD3 /* DairyViewController.swift */; };
+		528F39182211991D003A7AD3 /* SeasoningSegmentedContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F39172211991D003A7AD3 /* SeasoningSegmentedContainerViewController.swift */; };
+		528F391A221199B0003A7AD3 /* IngredientSegmentedContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F3919221199B0003A7AD3 /* IngredientSegmentedContainerViewController.swift */; };
 		52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */; };
 		BB0459392202DD45003F75F4 /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0459382202DD45003F75F4 /* TotalData.swift */; };
 		BB045976220888A2003F75F4 /* csvjson.json in Resources */ = {isa = PBXBuildFile; fileRef = BB045975220888A2003F75F4 /* csvjson.json */; };
@@ -42,6 +49,13 @@
 
 /* Begin PBXFileReference section */
 		528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefregeratorViewController.swift; sourceTree = "<group>"; };
+		528F390B221197CA003A7AD3 /* MeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatViewController.swift; sourceTree = "<group>"; };
+		528F390D221197D9003A7AD3 /* VegitableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegitableViewController.swift; sourceTree = "<group>"; };
+		528F390F221197E3003A7AD3 /* FruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewController.swift; sourceTree = "<group>"; };
+		528F3911221197F5003A7AD3 /* FishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishViewController.swift; sourceTree = "<group>"; };
+		528F3913221198E0003A7AD3 /* DairyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DairyViewController.swift; sourceTree = "<group>"; };
+		528F39172211991D003A7AD3 /* SeasoningSegmentedContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasoningSegmentedContainerViewController.swift; sourceTree = "<group>"; };
+		528F3919221199B0003A7AD3 /* IngredientSegmentedContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSegmentedContainerViewController.swift; sourceTree = "<group>"; };
 		52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		BB0459382202DD45003F75F4 /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
 		BB045975220888A2003F75F4 /* csvjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = csvjson.json; sourceTree = "<group>"; };
@@ -87,6 +101,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		528F390A22119765003A7AD3 /* RefregeratorController */ = {
+			isa = PBXGroup;
+			children = (
+				528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */,
+				528F3919221199B0003A7AD3 /* IngredientSegmentedContainerViewController.swift */,
+				528F39172211991D003A7AD3 /* SeasoningSegmentedContainerViewController.swift */,
+				528F390B221197CA003A7AD3 /* MeatViewController.swift */,
+				528F390D221197D9003A7AD3 /* VegitableViewController.swift */,
+				528F390F221197E3003A7AD3 /* FruitViewController.swift */,
+				528F3911221197F5003A7AD3 /* FishViewController.swift */,
+				528F3913221198E0003A7AD3 /* DairyViewController.swift */,
+			);
+			path = RefregeratorController;
+			sourceTree = "<group>";
+		};
 		BB04BFD421EC632A00A09975 /* PilotPlant */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +155,7 @@
 		BB7F238021E77D230056BB42 /* sketch_001 */ = {
 			isa = PBXGroup;
 			children = (
+				528F390A22119765003A7AD3 /* RefregeratorController */,
 				BB04BFD421EC632A00A09975 /* PilotPlant */,
 				BB7F238121E77D230056BB42 /* AppDelegate.swift */,
 				BB7F238521E77D230056BB42 /* Main.storyboard */,
@@ -144,8 +174,6 @@
 				BBB80A8C21FF382900D13866 /* Models.swift */,
 				BB045975220888A2003F75F4 /* csvjson.json */,
 				BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */,
-				528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */,
-
 				52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */,
 			);
 			path = sketch_001;
@@ -223,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528F391A221199B0003A7AD3 /* IngredientSegmentedContainerViewController.swift in Sources */,
 				BBB80AFF2201E93000D13866 /* IngredientTableViewCell.swift in Sources */,
+				528F39182211991D003A7AD3 /* SeasoningSegmentedContainerViewController.swift in Sources */,
 				BB04BFEB21EC632A00A09975 /* CHTableViewControllers.swift in Sources */,
 				BB04BFE621EC632A00A09975 /* CHPagingScrollViewController.swift in Sources */,
 				BB41278122101B6700CA5709 /* BookmarkTableViewController.swift in Sources */,
@@ -231,8 +261,11 @@
 				BB04BFE721EC632A00A09975 /* CHViews.swift in Sources */,
 				BBB80AFD2201E6A900D13866 /* IngredientTableViewController.swift in Sources */,
 				BB04BFEA21EC632A00A09975 /* FIlters.swift in Sources */,
+				528F390E221197D9003A7AD3 /* VegitableViewController.swift in Sources */,
 				BB04BFE821EC632A00A09975 /* CHPickerViewController.swift in Sources */,
 				BB04BFE921EC632A00A09975 /* SwipeActionTableViewCell.swift in Sources */,
+				528F3910221197E3003A7AD3 /* FruitViewController.swift in Sources */,
+				528F3914221198E0003A7AD3 /* DairyViewController.swift in Sources */,
 				52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */,
 				BB04BFEC21EC632A00A09975 /* CHModalViewController.swift in Sources */,
 				BB04BFED21EC632A00A09975 /* CHControls.swift in Sources */,
@@ -244,12 +277,14 @@
 				BB04BFE321EC632A00A09975 /* CHContentViewController.swift in Sources */,
 				528F3909221180A8003A7AD3 /* RefregeratorViewController.swift in Sources */,
 				BB4127AF22108FED00CA5709 /* FoodListViewController.swift in Sources */,
+				528F390C221197CA003A7AD3 /* MeatViewController.swift in Sources */,
 				BB7F238221E77D230056BB42 /* AppDelegate.swift in Sources */,
 				BBB80A8921FF30DC00D13866 /* TableViewCell.swift in Sources */,
 				BB04BFE221EC632A00A09975 /* DrawingCanvasView.swift in Sources */,
 				BB4127EF2211289D00CA5709 /* FoodRecipesTableViewController.swift in Sources */,
 				BB04BFEE21EC632A00A09975 /* RecordButton.swift in Sources */,
 				BB4127852210608900CA5709 /* RecipesTableViewCell.swift in Sources */,
+				528F3912221197F5003A7AD3 /* FishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4QW852N6BA;
+				DEVELOPMENT_TEAM = KR257UWNPD;
 				INFOPLIST_FILE = sketch_001/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,7 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4QW852N6BA;
+				DEVELOPMENT_TEAM = KR257UWNPD;
 				INFOPLIST_FILE = sketch_001/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
