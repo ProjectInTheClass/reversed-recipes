@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522DEE01221197EB00EB8ADA /* DetailIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */; };
 		528F3909221180A8003A7AD3 /* RefregeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */; };
 		528F390C221197CA003A7AD3 /* MeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F390B221197CA003A7AD3 /* MeatViewController.swift */; };
 		528F390E221197D9003A7AD3 /* VegitableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F390D221197D9003A7AD3 /* VegitableViewController.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIngredientViewController.swift; sourceTree = "<group>"; };
 		528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefregeratorViewController.swift; sourceTree = "<group>"; };
 		528F390B221197CA003A7AD3 /* MeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatViewController.swift; sourceTree = "<group>"; };
 		528F390D221197D9003A7AD3 /* VegitableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegitableViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +176,12 @@
 				BBB80A8C21FF382900D13866 /* Models.swift */,
 				BB045975220888A2003F75F4 /* csvjson.json */,
 				BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */,
+<<<<<<< HEAD
+=======
+				528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */,
+>>>>>>> e5efd954d6ae8c07dd235786ea715a23f3020eff
 				52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */,
+				522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */,
 			);
 			path = sketch_001;
 			sourceTree = "<group>";
@@ -259,6 +266,7 @@
 				BB41278122101B6700CA5709 /* BookmarkTableViewController.swift in Sources */,
 				BB4127892210612900CA5709 /* RecipesViewController.swift in Sources */,
 				BB04BFE721EC632A00A09975 /* CHViews.swift in Sources */,
+				522DEE01221197EB00EB8ADA /* DetailIngredientViewController.swift in Sources */,
 				BBB80AFD2201E6A900D13866 /* IngredientTableViewController.swift in Sources */,
 				BB04BFEA21EC632A00A09975 /* FIlters.swift in Sources */,
 				528F390E221197D9003A7AD3 /* VegitableViewController.swift in Sources */,
