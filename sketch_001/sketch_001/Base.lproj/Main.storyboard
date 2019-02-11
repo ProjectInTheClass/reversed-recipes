@@ -24,7 +24,6 @@
                         <segue destination="O74-6A-dpR" kind="relationship" relationship="viewControllers" id="aXw-ud-3EY"/>
                         <segue destination="rm1-Rc-lI8" kind="relationship" relationship="viewControllers" id="JeF-ET-MaL"/>
                         <segue destination="cNr-nn-YWk" kind="relationship" relationship="viewControllers" id="m2s-CQ-vuO"/>
-                        <segue destination="0SM-Fi-Cav" kind="relationship" relationship="viewControllers" id="LC9-CS-WO7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSl-Ll-BKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1151,56 +1150,6 @@
             </objects>
             <point key="canvasLocation" x="102" y="2473"/>
         </scene>
-        <!--설정-->
-        <scene sceneID="eYL-Ip-DXA">
-            <objects>
-                <navigationController id="0SM-Fi-Cav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="설정" image="settings" id="2Z8-X9-wFe"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PSy-xw-6Iy">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ZTo-D3-Qfs" kind="relationship" relationship="rootViewController" id="Ymx-Tg-npB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="utS-zf-RuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="140" y="3953"/>
-        </scene>
-        <!--설정-->
-        <scene sceneID="5Af-Jy-t98">
-            <objects>
-                <viewController id="ZTo-D3-Qfs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ICD-vN-9kx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi 연결 시에만 동영상 재생" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qs1-9I-rRe">
-                                <rect key="frame" x="16" y="83" width="195" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOy-9M-3vy">
-                                <rect key="frame" x="307" y="78" width="51" height="31"/>
-                            </switch>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="gOy-9M-3vy" firstAttribute="leading" secondItem="Qs1-9I-rRe" secondAttribute="trailing" constant="96" id="0me-3i-Hmo"/>
-                            <constraint firstItem="Qs1-9I-rRe" firstAttribute="centerY" secondItem="gOy-9M-3vy" secondAttribute="centerY" id="Eir-k4-QTz"/>
-                            <constraint firstItem="Qs1-9I-rRe" firstAttribute="top" secondItem="x3w-w7-PIx" secondAttribute="top" constant="19" id="o7B-S8-Phq"/>
-                            <constraint firstItem="Qs1-9I-rRe" firstAttribute="leading" secondItem="ICD-vN-9kx" secondAttribute="leadingMargin" id="pKv-XC-Orc"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="x3w-w7-PIx"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="설정" id="C7j-Kb-icx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MsJ-pG-4h3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="942" y="3952"/>
-        </scene>
         <!--장 보기-->
         <scene sceneID="Uc9-md-afM">
             <objects>
@@ -1487,7 +1436,6 @@
         <image name="pork" width="528" height="528"/>
         <image name="refrigerator-1" width="51" height="51"/>
         <image name="salt" width="500" height="500"/>
-        <image name="settings" width="51" height="51"/>
         <image name="soy" width="500" height="500"/>
         <image name="계란볶음밥" width="1080" height="600"/>
         <image name="김치볶음밥" width="1080" height="600"/>
