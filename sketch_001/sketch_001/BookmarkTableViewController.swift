@@ -19,21 +19,6 @@ class BookmarkTableViewController: UITableViewController {
         //indexedPlist안에 bool 값이 true 인것들의 ID값을 모아놓는다.
         //그 ID값을 갖고있는 레시피들을 표출한다.
         //ID 값과 totalrecipes안에 있는 id값을 대조해서 같은 항목들을 표출한다.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        bookmarkedFoodArr.remove(at: indexPath.row)
-//        tableView.deleteRows(at: [indexPath], with: .automatic)
-//    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.tableView.reloadData()
-
         if let data = NSData(contentsOfFile: plistCoding.destPath) as Data?{
             plistCoding.indexedPlist = try!  plistCoding.decoder.decode([CheckPlist].self, from: data)
         }
@@ -48,6 +33,19 @@ class BookmarkTableViewController: UITableViewController {
             }
         }
         print("view will appear", bookmarkedFoodArr)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        bookmarkedFoodArr.remove(at: indexPath.row)
+//        tableView.deleteRows(at: [indexPath], with: .automatic)
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
