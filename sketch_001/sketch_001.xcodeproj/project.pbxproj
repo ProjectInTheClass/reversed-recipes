@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+		528F3909221180A8003A7AD3 /* RefregeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */; };
+=======
 		52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */; };
+>>>>>>> ef406c12703adcc3242fddd306b99f1ce4c49d04
 		BB0459392202DD45003F75F4 /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0459382202DD45003F75F4 /* TotalData.swift */; };
 		BB045976220888A2003F75F4 /* csvjson.json in Resources */ = {isa = PBXBuildFile; fileRef = BB045975220888A2003F75F4 /* csvjson.json */; };
 		BB04BFE221EC632A00A09975 /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFD521EC632A00A09975 /* DrawingCanvasView.swift */; };
@@ -40,7 +44,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+		528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefregeratorViewController.swift; sourceTree = "<group>"; };
+=======
 		52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+>>>>>>> ef406c12703adcc3242fddd306b99f1ce4c49d04
 		BB0459382202DD45003F75F4 /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
 		BB045975220888A2003F75F4 /* csvjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = csvjson.json; sourceTree = "<group>"; };
 		BB04BFD521EC632A00A09975 /* DrawingCanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
@@ -142,7 +150,11 @@
 				BBB80A8C21FF382900D13866 /* Models.swift */,
 				BB045975220888A2003F75F4 /* csvjson.json */,
 				BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */,
+<<<<<<< HEAD
+				528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */,
+=======
 				52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */,
+>>>>>>> ef406c12703adcc3242fddd306b99f1ce4c49d04
 			);
 			path = sketch_001;
 			sourceTree = "<group>";
@@ -238,6 +250,7 @@
 				BB04BFE421EC632A00A09975 /* UIViewController+Navigation.swift in Sources */,
 				BBB80A8721FF30C700D13866 /* TableViewController.swift in Sources */,
 				BB04BFE321EC632A00A09975 /* CHContentViewController.swift in Sources */,
+				528F3909221180A8003A7AD3 /* RefregeratorViewController.swift in Sources */,
 				BB4127AF22108FED00CA5709 /* FoodListViewController.swift in Sources */,
 				BB7F238221E77D230056BB42 /* AppDelegate.swift in Sources */,
 				BBB80A8921FF30DC00D13866 /* TableViewCell.swift in Sources */,
