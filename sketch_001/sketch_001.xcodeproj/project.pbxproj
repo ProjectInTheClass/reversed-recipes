@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522DEE01221197EB00EB8ADA /* DetailIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */; };
 		528F3909221180A8003A7AD3 /* RefregeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */; };
 		52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */; };
 		BB0459392202DD45003F75F4 /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0459382202DD45003F75F4 /* TotalData.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIngredientViewController.swift; sourceTree = "<group>"; };
 		528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefregeratorViewController.swift; sourceTree = "<group>"; };
 		52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		BB0459382202DD45003F75F4 /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
@@ -145,8 +147,8 @@
 				BB045975220888A2003F75F4 /* csvjson.json */,
 				BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */,
 				528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */,
-
 				52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */,
+				522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */,
 			);
 			path = sketch_001;
 			sourceTree = "<group>";
@@ -229,6 +231,7 @@
 				BB41278122101B6700CA5709 /* BookmarkTableViewController.swift in Sources */,
 				BB4127892210612900CA5709 /* RecipesViewController.swift in Sources */,
 				BB04BFE721EC632A00A09975 /* CHViews.swift in Sources */,
+				522DEE01221197EB00EB8ADA /* DetailIngredientViewController.swift in Sources */,
 				BBB80AFD2201E6A900D13866 /* IngredientTableViewController.swift in Sources */,
 				BB04BFEA21EC632A00A09975 /* FIlters.swift in Sources */,
 				BB04BFE821EC632A00A09975 /* CHPickerViewController.swift in Sources */,
