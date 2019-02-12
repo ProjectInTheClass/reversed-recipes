@@ -345,7 +345,7 @@
                                 <state key="normal" title="요리 보기"/>
                                 <connections>
                                     <action selector="showRecipes:" destination="bp0-wR-E1L" eventType="touchUpInside" id="3ov-pS-QbT"/>
-                                    <segue destination="cml-vC-HhH" kind="presentation" identifier="foodListSegue" id="f8i-MI-ytb"/>
+                                    <segue destination="cml-vC-HhH" kind="show" identifier="foodListSegue" id="f8i-MI-ytb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1690,7 +1690,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodListCell" rowHeight="246" id="lWh-PR-oQw" customClass="TableViewCell" customModule="sketch_001" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodListCell" rowHeight="246" id="lWh-PR-oQw" customClass="FoodListCell" customModule="sketch_001" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="246"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lWh-PR-oQw" id="BzE-0l-Rft">
