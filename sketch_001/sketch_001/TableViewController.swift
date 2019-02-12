@@ -10,6 +10,9 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    var plistCoding = PlistCoding()
+    var possibleFoodList: [Food]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,19 +30,34 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return possibleFoodList.count
+        return possibleFoodList!.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodListCell", for: indexPath) as! TableViewCell
-        let food = possibleFoodList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodListCell", for: indexPath) as! FoodListCell
+        let food = possibleFoodList![indexPath.row]
         
         cell.foodName.text = food.name
         cell.foodTime.text = food.time
         cell.foodDescript.text = food.descript
         cell.foodImage.image = UIImage(named: food.thumbnail)
         cell.food = food
+        
+        // 버튼을 누르면 도큐먼트 폴더의 plist를 읽어서 디코딩
+        if let data = NSData(contentsOfFile: plistCoding.destPath) as Data?{
+            plistCoding.indexedPlist = try!  plistCoding.decoder.decode([CheckPlist].self, from: data)
+        }
+        
+        //이미 셀이 있으면 그것을 수정하고 없으면 생성
+        let tmpCheckPlist = plistCoding.indexedPlist?.first(where: {$0.id == food.id})
+        //현재 셀의 ID값과 도큐먼트에 있는 plist의 ID값이 같은 항목
+        
+        if tmpCheckPlist == nil{
+            cell.bookmarkButton.isSelected = false
+        }else {
+            cell.bookmarkButton.isSelected = true
+        }
         
 //        if let foodInCell = cell.food {
 //            if bookMark.isBookmarked(foodInCell) {

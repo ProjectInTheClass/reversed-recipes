@@ -2,12 +2,19 @@
   "images" : [
     {
       "idiom" : "universal",
+<<<<<<< HEAD
       "filename" : "계란볶음밥-2.jpg",
+=======
+>>>>>>> 82528258a5489d07c6062e25478f616ca84039ac
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
       "filename" : "계란볶음밥-1.jpg",
+=======
+      "filename" : "계란볶음밥-1.jpg",
+>>>>>>> 82528258a5489d07c6062e25478f616ca84039ac
       "scale" : "2x"
     },
     {

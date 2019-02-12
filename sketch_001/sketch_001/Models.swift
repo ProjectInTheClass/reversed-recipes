@@ -8,33 +8,16 @@
 
 import Foundation
 
-var totalData = TotalData()
-let ingredients = [
-    Ingredient(name: "양파", icon: "onions", ´class´: .vegetable, expirationDate: 5),
-    Ingredient(name: "계란", icon: "eggs", ´class´: .eggs, expirationDate: 5),
-    Ingredient(name: "돼지고기", icon: "pork", ´class´: .meat, expirationDate: 5),
-    Ingredient(name: "우유", icon: "milk", ´class´: .dairyGoods, expirationDate: 3),
-    Ingredient(name: "대파", icon: "leek", ´class´: .vegetable, expirationDate: 3),
-    Ingredient(name: "밥", icon: "rice", ´class´: .rice, expirationDate: 3)
-]
-var ingredientsList = [String]()
-var possibleFoodList = [Food]()
+//var foods = [
+//    Food(name: "감바스", thumbnail: "감바스", time: "5분", descript: "간편하게 만들어 먹는 안주"),
+//    Food(name: "계란볶음밥", thumbnail: "계란볶음밥", time: "5분", descript: "영양만점 손쉬운 볶음밥"),
+//    Food(name: "김치볶음밥", thumbnail: "김치볶음밥", time: "5분", descript: "김치와 밥만 있으면 된다!"),
+//    Food(name: "돼지고기 김치찌개", thumbnail: "돼지고기-김치찌개", time: "5분", descript: "김치찌개에서 돼지고기 골라먹는 재미"),
+//    Food(name: "쇠고기무국", thumbnail: "쇠고기무국", time: "5분", descript: "집에서 먹던 그 맛, 뜨끈한 쇠고기 무국"),
+//    Food(name: "참치마요", thumbnail: "참치마요", time: "5분", descript: "모두가 좋아하는 참치마요덮밥")
+//]
 
-let seasonings = [
-    Seasoning(name: "소금", icon: "salt"),
-    Seasoning(name: "설탕", icon: "salt"),
-    Seasoning(name: "간장", icon: "soy")
-]
-var foods = [
-    Food(name: "감바스", thumbnail: "감바스", time: "5분", descript: "간편하게 만들어 먹는 안주"),
-    Food(name: "계란볶음밥", thumbnail: "계란볶음밥", time: "5분", descript: "영양만점 손쉬운 볶음밥"),
-    Food(name: "김치볶음밥", thumbnail: "김치볶음밥", time: "5분", descript: "김치와 밥만 있으면 된다!"),
-    Food(name: "돼지고기 김치찌개", thumbnail: "돼지고기 김치찌개", time: "5분", descript: "김치찌개에서 돼지고기 골라먹는 재미"),
-    Food(name: "쇠고기무국", thumbnail: "쇠고기무국", time: "5분", descript: "집에서 먹던 그 맛, 뜨끈한 쇠고기 무국"),
-    Food(name: "참치마요", thumbnail: "참치마요", time: "5분", descript: "모두가 좋아하는 참치마요덮밥")
-]
-
-struct Ingredient {
+class Ingredient {
     var name: String
     var icon: String
     var ´class´: Class
