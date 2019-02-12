@@ -10,6 +10,9 @@ import UIKit
 
 class FoodListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var ingredients: [Ingredient]?
+    var possibleFoodList: [Food]?
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -17,13 +20,13 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ingredients.count
+        return ingredients!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! IngredientsListCollectionViewCell
         
-        let ingredient = ingredients[indexPath.row]
+        let ingredient = ingredients![indexPath.row]
         cell.ingredientImage.image = UIImage(named: ingredient.icon)
         cell.ingredientName.text = ingredient.name
         cell.contentView.layer.cornerRadius = 6.0
@@ -52,6 +55,14 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
         // Do any additional setup after loading the view.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "foodListEmbeddedSegue") {
+            let childViewController = segue.destination as! TableViewController
+            
+            childViewController.possibleFoodList = possibleFoodList
+        }
+    }
+    
 }
 
 class IngredientsListCollectionViewCell: UICollectionViewCell {

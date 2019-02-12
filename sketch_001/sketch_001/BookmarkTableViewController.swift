@@ -10,29 +10,13 @@ import UIKit
 
 class BookmarkTableViewController: UITableViewController {
     
+    var totalData: TotalData?
     var plistCoding = PlistCoding()
     var tmpIdArr = [Int]()
     var bookmarkedFoodArr = [Food]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //indexedPlist안에 bool 값이 true 인것들의 ID값을 모아놓는다.
-        //그 ID값을 갖고있는 레시피들을 표출한다.
-        //ID 값과 totalrecipes안에 있는 id값을 대조해서 같은 항목들을 표출한다.
-        if let data = NSData(contentsOfFile: plistCoding.destPath) as Data?{
-            plistCoding.indexedPlist = try!  plistCoding.decoder.decode([CheckPlist].self, from: data)
-        }
-        
-        if let indexedPlist = plistCoding.indexedPlist{
-            tmpIdArr = indexedPlist.filter({$0.bookmarked == true}).map({$0.id})
-        }
-        
-        for id in tmpIdArr {
-            if let totalRecipes = totalData.totalRecipes{
-                bookmarkedFoodArr = totalRecipes.filter({$0.id == id})
-            }
-        }
-        print("view will appear", bookmarkedFoodArr)
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,7 +29,30 @@ class BookmarkTableViewController: UITableViewController {
 //    }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.tableView.reloadData()
+//        super.tableView.reloadData()
+        //indexedPlist안에 bool 값이 true 인것들의 ID값을 모아놓는다.
+        //그 ID값을 갖고있는 레시피들을 표출한다.
+        //ID 값과 totalrecipes안에 있는 id값을 대조해서 같은 항목들을 표출한다.
+        if let data = NSData(contentsOfFile: plistCoding.destPath) as Data?{
+            plistCoding.indexedPlist = try!  plistCoding.decoder.decode([CheckPlist].self, from: data)
+        }
+        
+        if let indexedPlist = plistCoding.indexedPlist{
+            tmpIdArr = indexedPlist.filter({$0.bookmarked == true}).map({$0.id})
+        }
+        
+        for id in tmpIdArr {
+            if let totalRecipes = totalData?.totalRecipes{
+                //                bookmarkedFoodArr = totalRecipes.filter({$0.id == id})
+                for food in totalRecipes.filter({$0.id == id}) {
+                    bookmarkedFoodArr.append(food)
+                }
+            }
+        }
+        print("view will appear", bookmarkedFoodArr)
+        
+        let tabBarController = self.tabBarController as! TabBarController
+        totalData = tabBarController.totalData
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,8 +70,8 @@ class BookmarkTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SavedCell", for: indexPath)
-        as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodListCell", for: indexPath)
+        as! FoodListCell
         let food = bookmarkedFoodArr[indexPath.row]
         
         cell.foodName.text = food.name

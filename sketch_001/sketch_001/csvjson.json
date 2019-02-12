@@ -12,7 +12,7 @@
     "ingreAmount": "1공기, 1/3개, 1/2컵, 1/4개",
     "seasoning": "설탕, 고추장, 소금, 참기름",
     "descript": "",
-    "thumbnail": "",
+    "thumbnail": "김치볶음밥",
     "id": 0
   },
   {
@@ -28,7 +28,7 @@
     "ingreAmount": "1공기, 1개, 1개",
     "seasoning": "마요네즈, 간장, 설탕",
     "descript": "",
-    "thumbnail": "",
+    "thumbnail": "참치마요",
     "id": 1
   },
   {
@@ -44,7 +44,7 @@
     "ingreAmount": "1공기, 1개, 1/3개",
     "seasoning": "소금, 후추",
     "descript": "",
-    "thumbnail": "",
+    "thumbnail": "계란볶음밥",
     "id": 2
   },
   {
@@ -60,7 +60,7 @@
     "ingreAmount": "150g, 50g, 1/2개, 1개, 1.5컵, 2개",
     "seasoning": "국간장, 고춧가루, 된장",
     "descript": "",
-    "thumbnail": "",
+    "thumbnail": "돼지고기-김치찌개",
     "id": 3
   },
   {
@@ -76,7 +76,7 @@
     "ingreAmount": "1개, 1/2개, 1/2개, 1/2개, 2개, 1/2개",
     "seasoning": "된장",
     "descript": "",
-    "thumbnail": "",
+    "thumbnail": "된장찌개",
     "id": 4
   },
   {
@@ -92,7 +92,7 @@
     "ingreAmount": "2개, 1/2개, 1/2개, 1개, 1/2개",
     "seasoning": "",
     "descript": "",
-    "thumbnail": "",
+    "thumbnail": "해물-새우-라면",
     "id": 5
   },
   {

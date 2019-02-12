@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class FoodListCell: UITableViewCell {
 
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var foodName: UILabel!
@@ -29,7 +29,7 @@ class TableViewCell: UITableViewCell {
     
     @IBAction func bookmarkButtonTapped(_ sender: Any) {
         
-        print("현재 셀의 ID는: ", self.food?.id)
+        print("현재 셀의 ID는: \(self.food!.id!)")
         
         // 버튼을 누르면 도큐먼트 폴더의 plist를 읽어서 디코딩
         if let data = NSData(contentsOfFile: plistCoding.destPath) as Data?{
@@ -47,21 +47,21 @@ class TableViewCell: UITableViewCell {
                 plistCoding.indexedPlist?.append(tmpCheckPlist)
                 print("없어서 새로 만들고 true로 바꿨다")//없다면 생성하고 bool 값을 true로
             }
-        }else{
-            if let tmpCheckPlist = tmpCheckPlist//있다면
-            {
-                plistCoding.indexedPlist?.removeAll(where: {$0.id == self.food?.id})
-                bookmarkButton.isSelected = false
+        }else {
+            plistCoding.indexedPlist?.removeAll(where: {$0.id == self.food?.id})
+            bookmarkButton.isSelected = false
+//            if let tmpCheckPlist = tmpCheckPlist//있다면
+//            {
 //                tmpCheckPlist.bookmarked = !tmpCheckPlist.bookmarked
 //                print("북마크의 bool값을 반대로 바꿨다")
 //                print(tmpCheckPlist)
                 //북마크의 bool 값을 변경
-            }
+//            }
         }// 다시 인코딩하여 저장
     
-    if let data = try? plistCoding.encoder.encode(plistCoding.indexedPlist){
-        try?data.write(to: URL(fileURLWithPath: plistCoding.destPath))
-    }
+        if let data = try? plistCoding.encoder.encode(plistCoding.indexedPlist){
+            try?data.write(to: URL(fileURLWithPath: plistCoding.destPath))
+        }
         
         //이미 있는 데이터에다가 버튼이 눌린 데이터를 추가
         

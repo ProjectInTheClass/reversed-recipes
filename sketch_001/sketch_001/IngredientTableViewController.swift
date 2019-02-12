@@ -10,24 +10,11 @@ import UIKit
 
 class IngredientTableViewController: UITableViewController {
 
+    var ingredients: [Ingredient]?
+    var seasonings: [Seasoning]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        for ingredient in ingredients {
-            ingredientsList.append(ingredient.name)
-        }
-        guard let totalRecipes = totalData.totalRecipes else {
-            return
-        }
-        for food in totalRecipes {
-            if let ingredients = food.ingredients{
-                let eachIngre = Set(ingredients.components(separatedBy: ", "))
-                if eachIngre.isSubset(of: ingredientsList){
-                    possibleFoodList.append(food)
-                    print(possibleFoodList)
-                }
-            }
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,9 +37,9 @@ class IngredientTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0{
-            return ingredients.count
+            return ingredients!.count
         }else if section == 1{
-            return seasonings.count
+            return seasonings!.count
         }else{
             return 0
         }
@@ -62,14 +49,14 @@ class IngredientTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
         
         if indexPath.section == 0 {
-            let ingredient = ingredients[indexPath.row]
+            let ingredient = ingredients![indexPath.row]
             cell.ingredientIcon.image = UIImage(named: ingredient.icon)
             cell.ingredientName.text = ingredient.name
             cell.ingredientTerm.text = "\(ingredient.expirationDate)일"
             cell.ingredientAmount.text = ""
             
         }else{
-            let seasoning = seasonings[indexPath.row]
+            let seasoning = seasonings![indexPath.row]
             cell.ingredientIcon.image = UIImage(named: seasoning.icon)
             cell.ingredientName.text = seasoning.name
             cell.ingredientAmount.text = ""
