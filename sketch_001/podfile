@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'sketch_001' do
+  pod 'AlignedCollectionViewFlowLayout'
+end

@@ -1,0 +1,6 @@
+framework module Pods_sketch_001 {
+  umbrella header "Pods-sketch_001-umbrella.h"
+
+  export *
+  module * { export * }
+}
