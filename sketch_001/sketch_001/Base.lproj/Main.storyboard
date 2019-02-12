@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k3M-zx-WAo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -924,6 +924,8 @@
             <point key="canvasLocation" x="865" y="360"/>
         </scene>
         <!--View Controller-->
+<<<<<<< HEAD
+=======
         <scene sceneID="R3j-3j-91b">
             <objects>
                 <viewController id="7jb-l1-Olc" sceneMemberID="viewController">
@@ -1002,6 +1004,7 @@
             <point key="canvasLocation" x="5262" y="824"/>
         </scene>
         <!--View Controller-->
+>>>>>>> e5efd954d6ae8c07dd235786ea715a23f3020eff
         <scene sceneID="tHc-RZ-x5T">
             <objects>
                 <viewController id="60r-tk-byr" sceneMemberID="viewController">
@@ -1482,10 +1485,10 @@
             </objects>
             <point key="canvasLocation" x="-148" y="3837"/>
         </scene>
-        <!--Refregerator View Controller-->
+        <!--Ingredient Segmented Container View Controller-->
         <scene sceneID="Mr7-gY-C14">
             <objects>
-                <viewController id="SAv-DO-8fQ" customClass="RefregeratorViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SAv-DO-8fQ" customClass="IngredientSegmentedContainerViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M9J-62-gDx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1498,7 +1501,7 @@
                                         <color key="backgroundColor" red="0.9994729161" green="0.86872255799999998" blue="0.70004218819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button" image="Steak"/>
                                         <connections>
-                                            <segue destination="1mW-gY-Hqc" kind="show" id="UTg-pf-2gb"/>
+                                            <segue destination="1mW-gY-Hqc" kind="show" identifier="meat" id="UTg-pf-2gb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-PK-X5f">
@@ -1506,7 +1509,7 @@
                                         <color key="backgroundColor" red="0.9994729161" green="0.86872255799999998" blue="0.70004218819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button" image="Broccoli"/>
                                         <connections>
-                                            <segue destination="LT8-b5-z9v" kind="show" id="Cmb-Db-HFw"/>
+                                            <segue destination="LT8-b5-z9v" kind="show" identifier="vegitable" id="Cmb-Db-HFw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPJ-KI-DGf">
@@ -1514,7 +1517,7 @@
                                         <color key="backgroundColor" red="0.9994729161" green="0.86872255799999998" blue="0.70004218819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button" image="Apple"/>
                                         <connections>
-                                            <segue destination="PBN-NZ-k88" kind="show" id="Cd5-BL-Xv2"/>
+                                            <segue destination="PBN-NZ-k88" kind="show" identifier="fruit" id="Cd5-BL-Xv2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1530,7 +1533,7 @@
                                         <color key="backgroundColor" red="0.9994729161" green="0.86872255799999998" blue="0.70004218819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button" image="Fish Food"/>
                                         <connections>
-                                            <segue destination="qGl-Yu-fRY" kind="show" id="t0a-6B-X50"/>
+                                            <segue destination="qGl-Yu-fRY" kind="show" identifier="fish" id="t0a-6B-X50"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0O-6l-dEj">
@@ -1538,7 +1541,7 @@
                                         <color key="backgroundColor" red="0.9994729161" green="0.86872255799999998" blue="0.70004218819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button" image="milk"/>
                                         <connections>
-                                            <segue destination="bav-je-W4I" kind="show" id="PGT-AD-MeI"/>
+                                            <segue destination="bav-je-W4I" kind="show" identifier="dairy" id="PGT-AD-MeI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvV-Qa-URp">
@@ -1563,21 +1566,45 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9MI-bl-1TY"/>
                     </view>
+                    <connections>
+                        <outlet property="dairyButton" destination="w0O-6l-dEj" id="Ue0-EX-XhM"/>
+                        <outlet property="fishButton" destination="Lie-mH-U7g" id="gV4-Nf-iKZ"/>
+                        <outlet property="fruitButton" destination="JPJ-KI-DGf" id="iyO-fb-Yb3"/>
+                        <outlet property="meatButton" destination="BAp-wP-xCk" id="uD8-Ck-tn6"/>
+                        <outlet property="vegitableButton" destination="9pT-PK-X5f" id="rg4-ba-08q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2BR-Un-6bz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="2481" y="-1404"/>
+=======
             <point key="canvasLocation" x="865" y="954"/>
+>>>>>>> e5efd954d6ae8c07dd235786ea715a23f3020eff
         </scene>
-        <!--Refregerator View Controller-->
+        <!--Meat View Controller-->
         <scene sceneID="e7n-4Y-jNf">
             <objects>
-                <viewController id="1mW-gY-Hqc" customClass="RefregeratorViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1mW-gY-Hqc" customClass="MeatViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HyL-0E-vS0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vC-Bx-E6r">
+                                <rect key="frame" x="0.0" y="-4" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="Mtn-qG-etY">
+                                        <barButtonItem key="leftBarButtonItem" title="취소" id="FM0-SJ-LB6">
+                                            <connections>
+                                                <action selector="dismissButton:" destination="1mW-gY-Hqc" id="Bmd-4H-s3u"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Td6-RF-JrC">
-                                <rect key="frame" x="20" y="40" width="335" height="100"/>
+                                <rect key="frame" x="20" y="60" width="335" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm0-dt-JFM">
                                         <rect key="frame" x="0.0" y="0.0" width="98.5" height="100"/>
@@ -1598,7 +1625,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt5-Dq-BGe">
                                         <rect key="frame" x="236.5" y="0.0" width="98.5" height="100"/>
                                         <color key="backgroundColor" red="0.9994729161" green="0.86872255799999998" blue="0.70004218819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button" image="chicken"/>
+                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="chickenButtonSelected:" destination="1mW-gY-Hqc" eventType="touchUpInside" id="8CP-TQ-TVU"/>
                                         </connections>
@@ -1611,32 +1638,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Td6-RF-JrC" firstAttribute="leading" secondItem="PdR-MK-tTW" secondAttribute="leading" constant="20" id="CVJ-yW-bul"/>
-                            <constraint firstItem="Td6-RF-JrC" firstAttribute="top" secondItem="PdR-MK-tTW" secondAttribute="top" constant="40" id="HzL-ig-hZ1"/>
-                            <constraint firstItem="PdR-MK-tTW" firstAttribute="trailing" secondItem="Td6-RF-JrC" secondAttribute="trailing" constant="20" id="RqS-AD-dUn"/>
+                            <constraint firstItem="Td6-RF-JrC" firstAttribute="top" secondItem="HyL-0E-vS0" secondAttribute="top" constant="60" id="mrg-yE-ASJ"/>
+                            <constraint firstItem="PdR-MK-tTW" firstAttribute="trailing" secondItem="Td6-RF-JrC" secondAttribute="trailing" constant="20" id="uFO-Rm-j2f"/>
+                            <constraint firstItem="Td6-RF-JrC" firstAttribute="leading" secondItem="PdR-MK-tTW" secondAttribute="leading" constant="20" id="x8x-vS-Q0B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PdR-MK-tTW"/>
                     </view>
                     <connections>
-                        <outlet property="chickenButton" destination="Pt5-Dq-BGe" id="WZf-UW-g9A"/>
-                        <outlet property="porkButton" destination="lve-ap-Gw5" id="MiP-FG-etV"/>
-                        <outlet property="steakButton" destination="Zm0-dt-JFM" id="8MR-tL-2PW"/>
+                        <outlet property="chickenButton" destination="Pt5-Dq-BGe" id="8Rj-7M-ryZ"/>
+                        <outlet property="porkButton" destination="lve-ap-Gw5" id="pCb-QB-qjQ"/>
+                        <outlet property="steakButton" destination="Zm0-dt-JFM" id="0S4-tH-wyg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvk-nM-NWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2140" y="1534"/>
         </scene>
-        <!--Refregerator View Controller-->
+        <!--Vegitable View Controller-->
         <scene sceneID="XHL-oJ-Wh9">
             <objects>
-                <viewController id="LT8-b5-z9v" customClass="RefregeratorViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LT8-b5-z9v" customClass="VegitableViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZUa-ED-uTf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="55D-YQ-Kiw">
-                                <rect key="frame" x="20" y="40" width="335" height="100"/>
+                                <rect key="frame" x="20" y="60" width="335" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UI0-Mx-afd">
                                         <rect key="frame" x="0.0" y="0.0" width="98.5" height="100"/>
@@ -1667,18 +1694,32 @@
                                     <constraint firstAttribute="height" constant="100" id="fg4-a0-ZAb"/>
                                 </constraints>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5N-7u-02j">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="C8u-Dl-ffP">
+                                        <barButtonItem key="leftBarButtonItem" title="취소" id="OLq-10-DBl">
+                                            <connections>
+                                                <action selector="dismissButton:" destination="LT8-b5-z9v" id="NdA-dN-AI3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yxO-qB-9UV" firstAttribute="trailing" secondItem="55D-YQ-Kiw" secondAttribute="trailing" constant="20" id="48J-Ah-god"/>
                             <constraint firstItem="55D-YQ-Kiw" firstAttribute="leading" secondItem="yxO-qB-9UV" secondAttribute="leading" constant="20" id="s7U-Gz-rZL"/>
-                            <constraint firstItem="55D-YQ-Kiw" firstAttribute="top" secondItem="yxO-qB-9UV" secondAttribute="top" constant="40" id="wqJ-bn-izC"/>
+                            <constraint firstItem="55D-YQ-Kiw" firstAttribute="top" secondItem="yxO-qB-9UV" secondAttribute="top" constant="60" id="wqJ-bn-izC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yxO-qB-9UV"/>
                     </view>
                     <connections>
-                        <outlet property="carrotButton" destination="UI0-Mx-afd" id="k7I-Eo-QnP"/>
-                        <outlet property="cucumberButton" destination="bTB-IB-s1N" id="Qbu-Be-xlM"/>
+                        <outlet property="carrotButton" destination="UI0-Mx-afd" id="ngK-jf-hht"/>
+                        <outlet property="cucumberButton" destination="bTB-IB-s1N" id="22g-ng-ic7"/>
+                        <outlet property="whiteRaddishButton" destination="PDb-Mo-rbn" id="R6L-bc-xQ9"/>
                         <outlet property="whiteRadishButton" destination="PDb-Mo-rbn" id="zxX-09-DHu"/>
                     </connections>
                 </viewController>
@@ -1686,16 +1727,16 @@
             </objects>
             <point key="canvasLocation" x="2758" y="1533"/>
         </scene>
-        <!--Refregerator View Controller-->
+        <!--Fruit View Controller-->
         <scene sceneID="iJF-b2-T2E">
             <objects>
-                <viewController id="PBN-NZ-k88" customClass="RefregeratorViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PBN-NZ-k88" customClass="FruitViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5e3-G2-Six">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-l4-uyn">
-                                <rect key="frame" x="20" y="40" width="335" height="100"/>
+                                <rect key="frame" x="20" y="60" width="335" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQI-uV-nSt">
                                         <rect key="frame" x="0.0" y="0.0" width="98.5" height="100"/>
@@ -1703,6 +1744,7 @@
                                         <state key="normal" title="사과"/>
                                         <connections>
                                             <action selector="appleButtonSelected:" destination="PBN-NZ-k88" eventType="touchUpInside" id="Bgh-IY-1yd"/>
+                                            <action selector="dismissButton:" destination="PBN-NZ-k88" eventType="touchUpInside" id="795-bO-bjZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-kj-Fma">
@@ -1726,35 +1768,44 @@
                                     <constraint firstAttribute="height" constant="100" id="vyZ-TR-R9D"/>
                                 </constraints>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WtA-lu-qSr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="gME-qc-T1n">
+                                        <barButtonItem key="leftBarButtonItem" title="취소" id="WJV-3v-zeA"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Q7U-l4-uyn" firstAttribute="leading" secondItem="LUv-EW-Uay" secondAttribute="leading" constant="20" id="Yd4-vt-QW9"/>
-                            <constraint firstItem="Q7U-l4-uyn" firstAttribute="top" secondItem="LUv-EW-Uay" secondAttribute="top" constant="40" id="hy3-PM-gAr"/>
+                            <constraint firstItem="Q7U-l4-uyn" firstAttribute="top" secondItem="LUv-EW-Uay" secondAttribute="top" constant="60" id="hy3-PM-gAr"/>
                             <constraint firstItem="LUv-EW-Uay" firstAttribute="trailing" secondItem="Q7U-l4-uyn" secondAttribute="trailing" constant="20" id="twr-YB-og9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LUv-EW-Uay"/>
                     </view>
                     <connections>
-                        <outlet property="appleButton" destination="YQI-uV-nSt" id="okm-n9-koC"/>
-                        <outlet property="pearButton" destination="TnX-kj-Fma" id="byS-OG-Daw"/>
-                        <outlet property="waterMelonButton" destination="Yds-OH-urY" id="Q6W-VR-w6a"/>
+                        <outlet property="appleButton" destination="YQI-uV-nSt" id="9Qe-nJ-HmH"/>
+                        <outlet property="pearButton" destination="TnX-kj-Fma" id="i41-Wg-yEl"/>
+                        <outlet property="waterMelonButton" destination="Yds-OH-urY" id="bGt-2t-nfl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZN-Hf-jST" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3367" y="1534"/>
         </scene>
-        <!--Refregerator View Controller-->
+        <!--Fish View Controller-->
         <scene sceneID="yfT-Yd-MRh">
             <objects>
-                <viewController id="qGl-Yu-fRY" customClass="RefregeratorViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qGl-Yu-fRY" customClass="FishViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TPb-L2-KvN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gwx-sY-X86">
-                                <rect key="frame" x="20" y="40" width="335" height="100"/>
+                                <rect key="frame" x="20" y="60" width="335" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7Q-yt-9dg">
                                         <rect key="frame" x="0.0" y="0.0" width="98.5" height="100"/>
@@ -1785,35 +1836,48 @@
                                     <constraint firstAttribute="height" constant="100" id="C0A-68-Htu"/>
                                 </constraints>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqL-LX-eHb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="gYt-4P-Kfu">
+                                        <barButtonItem key="leftBarButtonItem" title="취소" id="Psy-FA-EWt">
+                                            <connections>
+                                                <action selector="dismissPush:" destination="qGl-Yu-fRY" id="b4N-pn-zrq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gwx-sY-X86" firstAttribute="leading" secondItem="OYO-tk-gy2" secondAttribute="leading" constant="20" id="8pb-k3-1qc"/>
                             <constraint firstItem="OYO-tk-gy2" firstAttribute="trailing" secondItem="gwx-sY-X86" secondAttribute="trailing" constant="20" id="YKp-dq-Swn"/>
-                            <constraint firstItem="gwx-sY-X86" firstAttribute="top" secondItem="OYO-tk-gy2" secondAttribute="top" constant="40" id="oBa-k1-HVd"/>
+                            <constraint firstItem="gwx-sY-X86" firstAttribute="top" secondItem="OYO-tk-gy2" secondAttribute="top" constant="60" id="oBa-k1-HVd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OYO-tk-gy2"/>
                     </view>
                     <connections>
-                        <outlet property="croakerButton" destination="ZSS-DK-wXj" id="vVv-Nq-rFx"/>
-                        <outlet property="hairtailButton" destination="t7d-K7-IK0" id="KBG-ln-GA0"/>
-                        <outlet property="mackerelButton" destination="E7Q-yt-9dg" id="aEp-Pl-rU8"/>
+                        <outlet property="croakerButton" destination="ZSS-DK-wXj" id="TID-Tt-85H"/>
+                        <outlet property="hairtailButton" destination="t7d-K7-IK0" id="BSk-SJ-Tod"/>
+                        <outlet property="mackerelButton" destination="E7Q-yt-9dg" id="2ig-gV-c8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6NT-yh-Ipr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3975" y="1535"/>
         </scene>
-        <!--Refregerator View Controller-->
+        <!--Dairy View Controller-->
         <scene sceneID="i8Q-KB-CgP">
             <objects>
-                <viewController id="bav-je-W4I" customClass="RefregeratorViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bav-je-W4I" customClass="DairyViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j6O-Fc-qIO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CBq-63-r65">
-                                <rect key="frame" x="20" y="40" width="335" height="100"/>
+                                <rect key="frame" x="20" y="60" width="335" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbl-aP-RlG">
                                         <rect key="frame" x="0.0" y="0.0" width="98.5" height="100"/>
@@ -1844,29 +1908,42 @@
                                     <constraint firstAttribute="height" constant="100" id="xFp-BM-y54"/>
                                 </constraints>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMe-6c-la6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="BD9-8l-aXE">
+                                        <barButtonItem key="leftBarButtonItem" title="취소" id="0oQ-Q5-GZl">
+                                            <connections>
+                                                <action selector="dismissButton:" destination="bav-je-W4I" id="Yez-ez-U7T"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CBq-63-r65" firstAttribute="leading" secondItem="csY-wr-Wsc" secondAttribute="leading" constant="20" id="9FJ-3Y-bsP"/>
-                            <constraint firstItem="CBq-63-r65" firstAttribute="top" secondItem="csY-wr-Wsc" secondAttribute="top" constant="40" id="PnW-lO-TW2"/>
+                            <constraint firstItem="CBq-63-r65" firstAttribute="top" secondItem="csY-wr-Wsc" secondAttribute="top" constant="60" id="PnW-lO-TW2"/>
                             <constraint firstItem="csY-wr-Wsc" firstAttribute="trailing" secondItem="CBq-63-r65" secondAttribute="trailing" constant="20" id="xrX-9h-5cf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="csY-wr-Wsc"/>
                     </view>
                     <connections>
-                        <outlet property="chocolateMilkButton" destination="DVo-aV-IeF" id="IiE-5K-cAR"/>
-                        <outlet property="milkButton" destination="as2-xm-QJ8" id="vPC-ge-hrE"/>
-                        <outlet property="yogurtButton" destination="Fbl-aP-RlG" id="51h-3Y-J6r"/>
+                        <outlet property="chocolateMilkButton" destination="DVo-aV-IeF" id="Ryg-jI-Ntq"/>
+                        <outlet property="milkButton" destination="as2-xm-QJ8" id="TOh-LZ-sE6"/>
+                        <outlet property="yogurtButton" destination="Fbl-aP-RlG" id="wCy-Yc-s8P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0Z-j8-Oks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4582" y="1533"/>
         </scene>
-        <!--Refregerator View Controller-->
+        <!--Seasoning Segmented Container View Controller-->
         <scene sceneID="2tU-Oa-6wk">
             <objects>
-                <viewController id="ZIe-QS-UjD" customClass="RefregeratorViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZIe-QS-UjD" customClass="SeasoningSegmentedContainerViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2CG-Xt-0rE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1945,11 +2022,11 @@
                         <viewLayoutGuide key="safeArea" id="MDG-UR-nUh"/>
                     </view>
                     <connections>
-                        <outlet property="maltSugarButton" destination="DKn-54-aK9" id="usH-bg-bDB"/>
-                        <outlet property="redPepperPasteButton" destination="I4Y-3B-9U1" id="gJr-gB-vKa"/>
-                        <outlet property="saltButton" destination="Cml-rX-10e" id="uBz-S4-IXu"/>
-                        <outlet property="soySauceButton" destination="b5Q-yG-lTa" id="cj1-CK-aHc"/>
-                        <outlet property="sugarButton" destination="Udi-GP-ySg" id="tKy-bh-PXB"/>
+                        <outlet property="maltSugarButton" destination="DKn-54-aK9" id="yrd-5C-fiG"/>
+                        <outlet property="redPepperPasteButton" destination="I4Y-3B-9U1" id="AfJ-on-3M2"/>
+                        <outlet property="saltButton" destination="Cml-rX-10e" id="jAL-6b-0Yg"/>
+                        <outlet property="soySauceButton" destination="b5Q-yG-lTa" id="Z2E-7u-sok"/>
+                        <outlet property="sugarButton" destination="Udi-GP-ySg" id="bAu-eN-vNB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sO1-lw-edS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1965,7 +2042,6 @@
         <image name="bookmark1" width="51" height="51"/>
         <image name="bookmark_filled" width="88" height="88"/>
         <image name="bookmark_outline" width="88" height="88"/>
-        <image name="chicken" width="528" height="528"/>
         <image name="eggs" width="528" height="528"/>
         <image name="leek" width="528" height="528"/>
         <image name="memo-1" width="51" height="51"/>
