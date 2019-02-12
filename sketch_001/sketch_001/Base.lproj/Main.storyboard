@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k3M-zx-WAo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -353,11 +353,7 @@
                         <viewLayoutGuide key="safeArea" id="iuE-Qi-3Ut"/>
                     </view>
                     <navigationItem key="navigationItem" title="나의 냉장고" id="MKs-pw-AtX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="a0n-ki-AGf">
-                            <connections>
-                                <segue destination="6ar-x8-WH9" kind="presentation" id="AeW-Eh-kGr"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="a0n-ki-AGf"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc7-AI-q2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -924,8 +920,6 @@
             <point key="canvasLocation" x="865" y="360"/>
         </scene>
         <!--View Controller-->
-<<<<<<< HEAD
-=======
         <scene sceneID="R3j-3j-91b">
             <objects>
                 <viewController id="7jb-l1-Olc" sceneMemberID="viewController">
@@ -1004,7 +998,6 @@
             <point key="canvasLocation" x="5262" y="824"/>
         </scene>
         <!--View Controller-->
->>>>>>> e5efd954d6ae8c07dd235786ea715a23f3020eff
         <scene sceneID="tHc-RZ-x5T">
             <objects>
                 <viewController id="60r-tk-byr" sceneMemberID="viewController">
@@ -1576,11 +1569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2BR-Un-6bz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="2481" y="-1404"/>
-=======
-            <point key="canvasLocation" x="865" y="954"/>
->>>>>>> e5efd954d6ae8c07dd235786ea715a23f3020eff
         </scene>
         <!--Meat View Controller-->
         <scene sceneID="e7n-4Y-jNf">
@@ -2042,6 +2031,7 @@
         <image name="bookmark1" width="51" height="51"/>
         <image name="bookmark_filled" width="88" height="88"/>
         <image name="bookmark_outline" width="88" height="88"/>
+        <image name="chicken" width="16" height="16"/>
         <image name="eggs" width="528" height="528"/>
         <image name="leek" width="528" height="528"/>
         <image name="memo-1" width="51" height="51"/>
