@@ -309,7 +309,6 @@
                                     <outlet property="foodImage" destination="hzb-bE-OsL" id="afL-w5-Qma"/>
                                     <outlet property="foodName" destination="fYA-UG-n2H" id="eHA-P3-eSf"/>
                                     <outlet property="foodTime" destination="g1q-cD-IVj" id="udu-AG-PlD"/>
-                                    <segue destination="6jY-ir-rKH" kind="show" identifier="detailRecipesSegue" id="ZJJ-Pe-wD1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -318,6 +317,9 @@
                             <outlet property="delegate" destination="SfX-ml-Va7" id="Tww-uS-9Ma"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="6jY-ir-rKH" kind="show" identifier="detailRecipesSegue" id="qxo-4F-rfp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZE-M0-tnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

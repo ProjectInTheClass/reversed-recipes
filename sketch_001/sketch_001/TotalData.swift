@@ -14,7 +14,7 @@ class TotalData  {
     var totalRecipes: [Food]?
     
     init() {
-        if let fullPath = Bundle.main.path(forResource: "csvjson", ofType: "json"),
+        if let fullPath = Bundle.main.path(forResource: "dataJson", ofType: "json"),
             let data = NSData(contentsOfFile: fullPath) as Data? {
             self.totalRecipes = try! decoder.decode([Food].self, from: data)
         }

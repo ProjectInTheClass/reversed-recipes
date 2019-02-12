@@ -34,11 +34,14 @@ class TableViewController: UITableViewController {
         return possibleFoodList!.count
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedFood = possibleFoodList![indexPath.row]
+        performSegue(withIdentifier: "detailRecipesSegue", sender: self)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodListCell", for: indexPath) as! FoodListCell
         let food = possibleFoodList![indexPath.row]
-        selectedFood = food
         
         cell.foodName.text = food.name
         cell.foodTime.text = food.time

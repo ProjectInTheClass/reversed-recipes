@@ -56,6 +56,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
                 food!.method4?.count != 0 ? countOfRecipe += 1 : print("nil")
                 food!.method5?.count != 0 ? countOfRecipe += 1 : print("nil")
                 food!.method6?.count != 0 ? countOfRecipe += 1 : print("nil")
+                food!.method7?.count != 0 ? countOfRecipe += 1 : print("nil")
                 
                 return countOfRecipe
             }
@@ -100,6 +101,8 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
                 cell.detailRecipe.text = food?.method5!
             case 5:
                 cell.detailRecipe.text = food?.method6!
+            case 6:
+                cell.detailRecipe.text = food?.method7!
             default:
                 print("default")
             }

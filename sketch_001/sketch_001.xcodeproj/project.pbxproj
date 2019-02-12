@@ -10,6 +10,7 @@
 		522DEE01221197EB00EB8ADA /* DetailIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */; };
 		522DEE032211B43F00EB8ADA /* MyRefrigeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DEE022211B43F00EB8ADA /* MyRefrigeratorViewController.swift */; };
 		522DEE0722126EA300EB8ADA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DEE0622126EA300EB8ADA /* TabBarController.swift */; };
+		5281CDFF2212F80F0022A01B /* dataJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 5281CDFE2212F80F0022A01B /* dataJson.json */; };
 		52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */; };
 		BB0459392202DD45003F75F4 /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0459382202DD45003F75F4 /* TotalData.swift */; };
 		BB045976220888A2003F75F4 /* csvjson.json in Resources */ = {isa = PBXBuildFile; fileRef = BB045975220888A2003F75F4 /* csvjson.json */; };
@@ -50,6 +51,7 @@
 		522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIngredientViewController.swift; sourceTree = "<group>"; };
 		522DEE022211B43F00EB8ADA /* MyRefrigeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRefrigeratorViewController.swift; sourceTree = "<group>"; };
 		522DEE0622126EA300EB8ADA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5281CDFE2212F80F0022A01B /* dataJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dataJson.json; sourceTree = "<group>"; };
 		52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		8B699AC0BBA30BFE232B4B3D /* Pods-sketch_001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sketch_001.debug.xcconfig"; path = "Target Support Files/Pods-sketch_001/Pods-sketch_001.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0459382202DD45003F75F4 /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				BB41278022101B6700CA5709 /* BookmarkTableViewController.swift */,
 				BB0459382202DD45003F75F4 /* TotalData.swift */,
 				BBB80A8C21FF382900D13866 /* Models.swift */,
+				5281CDFE2212F80F0022A01B /* dataJson.json */,
 				BB045975220888A2003F75F4 /* csvjson.json */,
 				BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */,
 				BB2E21E32211D36800520B0B /* DetailRecipesViewController.swift */,
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5281CDFF2212F80F0022A01B /* dataJson.json in Resources */,
 				BB7F238C21E77D250056BB42 /* LaunchScreen.storyboard in Resources */,
 				BBB80A8B21FF37C300D13866 /* Assets.xcassets in Resources */,
 				BB045976220888A2003F75F4 /* csvjson.json in Resources */,
