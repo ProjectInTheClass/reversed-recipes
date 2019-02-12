@@ -12,6 +12,7 @@ class TableViewController: UITableViewController {
 
     var plistCoding = PlistCoding()
     var possibleFoodList: [Food]?
+    var selectedFood: Food?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodListCell", for: indexPath) as! FoodListCell
         let food = possibleFoodList![indexPath.row]
+        selectedFood = food
         
         cell.foodName.text = food.name
         cell.foodTime.text = food.time
@@ -68,5 +70,13 @@ class TableViewController: UITableViewController {
 //            }
 //        }
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "detailRecipesSegue") {
+            let detailViewController = segue.destination as! DetailRecipesViewController
+            
+            detailViewController.food = selectedFood
+        }
     }
 }

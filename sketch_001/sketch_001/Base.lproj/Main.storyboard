@@ -165,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="-988" y="2083"/>
         </scene>
-        <!--Food List View Controller-->
+        <!--요리 보기-->
         <scene sceneID="LhJ-ho-5aq">
             <objects>
-                <viewController id="cml-vC-HhH" customClass="FoodListViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="요리 보기" id="cml-vC-HhH" customClass="FoodListViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P29-3W-7b7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,7 +309,7 @@
                                     <outlet property="foodImage" destination="hzb-bE-OsL" id="afL-w5-Qma"/>
                                     <outlet property="foodName" destination="fYA-UG-n2H" id="eHA-P3-eSf"/>
                                     <outlet property="foodTime" destination="g1q-cD-IVj" id="udu-AG-PlD"/>
-                                    <segue destination="KEe-WP-HpT" kind="show" id="gFZ-KV-7yk"/>
+                                    <segue destination="6jY-ir-rKH" kind="show" identifier="detailRecipesSegue" id="ZJJ-Pe-wD1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -724,12 +724,12 @@
             </objects>
             <point key="canvasLocation" x="3665" y="3392"/>
         </scene>
-        <!--Detail Recipes View Controller-->
+        <!--상세 보기-->
         <scene sceneID="jXm-bu-dgg">
             <objects>
-                <viewController id="6jY-ir-rKH" customClass="DetailRecipesViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="상세 보기" id="6jY-ir-rKH" customClass="DetailRecipesViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zBh-mu-esl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Z7-gF-itv">
@@ -941,7 +941,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQK-uz-6c0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4453.6000000000004" y="2632.5337331334335"/>
+            <point key="canvasLocation" x="1812" y="2820"/>
         </scene>
         <!--Food Recipes Table View Controller-->
         <scene sceneID="hG0-gE-Dmn">
@@ -1482,55 +1482,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXh-ZO-V1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-148" y="3729"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="gYO-hr-pBt">
-            <objects>
-                <viewController id="KEe-WP-HpT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xzb-8R-hmw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-4Y-pGF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="계란볶음밥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cd-aB-MWy">
-                                <rect key="frame" x="11" y="201" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGQ-lf-Tfh">
-                                <rect key="frame" x="123" y="204" width="39" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bookmark_outline" translatesAutoresizingMaskIntoConstraints="NO" id="Ii8-R5-KLf">
-                                <rect key="frame" x="334" y="201" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wxy-R3-bya">
-                                <rect key="frame" x="0.0" y="231" width="375" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8wI-t5-3rV">
-                                <rect key="frame" x="0.0" y="375" width="375" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ppb-RI-SPp"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F7M-ph-7LV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1812" y="2764"/>
         </scene>
         <!--Detail Recipe View Controller-->
         <scene sceneID="mw6-cy-mPN">

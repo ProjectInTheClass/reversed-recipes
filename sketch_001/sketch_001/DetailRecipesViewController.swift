@@ -11,18 +11,20 @@ import AlignedCollectionViewFlowLayout
 
 class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var food: Food?
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var detailFoodImage = "계란볶음밥"
-    var detailFoodTime = "10분"
-    var detailIngredients = ["계란", "양파", "밥", "에그", "ㅇㄹ", "df", "sdf"] //7
-    var detailSeasoning = ["소금", "설탕"]
-    var detailRecipes = [
-        "밥을 넣고 볶는다",
-        "ㅇㅇㄹㅇㄹㄴㅇㄹ",
-        "ㄴㅇㄹㄴㅇㄹㅇㄴㄹㄴㅇ",
-        "ㄴㅇㄹㅇㄴㄹㄴㄹ"
-    ]
+//    var detailFoodImage = "계란볶음밥"
+//    var detailFoodTime = "10분"
+//    var detailIngredients = ["계란", "양파", "밥", "에그", "ㅇㄹ", "df", "sdf"] //7
+//    var detailSeasoning = ["소금", "설탕"]
+//    var detailRecipes = [
+//        "밥을 넣고 볶는다",
+//        "ㅇㅇㄹㅇㄹㄴㅇㄹ",
+//        "ㄴㅇㄹㄴㅇㄹㅇㄴㄹㄴㅇ",
+//        "ㄴㅇㄹㅇㄴㄹㄴㄹ"
+//    ]
  
     let detailFoodImageCollectionIdentifier = "FoodImage"
     let detailIngredientsCollectionIdentifier = "Ingredients"
@@ -37,35 +39,70 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return 1
-        }else if section == 1 {
-            return detailIngredients.count
-        }else if section == 2 {
-            return detailSeasoning.count
         }else {
-            return detailRecipes.count
+            if section == 1 {
+                let ingredients = food!.ingredients!
+                let eachIngre = Set(ingredients.components(separatedBy: ", "))
+                return eachIngre.count
+            }else if section == 2 {
+                let seasonings = food!.seasoning!
+                let eachSeas = Set(seasonings.components(separatedBy: ", "))
+                return eachSeas.count
+            }else {
+                var countOfRecipe = 0
+                food!.method1?.count != 0 ? countOfRecipe += 1 : print("nil")
+                food!.method2?.count != 0 ? countOfRecipe += 1 : print("nil")
+                food!.method3?.count != 0 ? countOfRecipe += 1 : print("nil")
+                food!.method4?.count != 0 ? countOfRecipe += 1 : print("nil")
+                food!.method5?.count != 0 ? countOfRecipe += 1 : print("nil")
+                food!.method6?.count != 0 ? countOfRecipe += 1 : print("nil")
+                
+                return countOfRecipe
+            }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailFoodImageCollectionIdentifier, for: indexPath) as! DetailFoodImageCollectionViewCell
-            cell.detailFoodImage.image = UIImage(named: detailFoodImage)
-            cell.detailFoodName.text = detailFoodImage
-            cell.detailFoodTime.text = detailFoodTime
+            cell.detailFoodImage.image = UIImage(named: food!.thumbnail)
+            cell.detailFoodName.text = food?.thumbnail
+            cell.detailFoodTime.text = food?.time
             return cell
             
         }else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailIngredientsCollectionIdentifier, for: indexPath) as! DetailIngredientsCollectionViewCell
-            cell.detailIngredientName.text = detailIngredients[0]
+            let ingredients = food?.ingredients!
+            let eachIngre = Set(ingredients!.components(separatedBy: ", "))
+            let ingreArr = Array(eachIngre)
+            cell.detailIngredientName.text = ingreArr[indexPath.row]
             
             return cell
         }else if indexPath.section == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailSeasoningCollectionIdentifier, for: indexPath) as! DetailSeasoningCollectionViewCell
-            cell.detailSeasoningName.text = detailSeasoning[0]
+            let seasonings = food!.seasoning!
+            let eachSeas = Set(seasonings.components(separatedBy: ", "))
+            let seasArr = Array(eachSeas)
+            cell.detailSeasoningName.text = seasArr[indexPath.row]
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailRecipesCollectionIdentifier, for: indexPath) as! DetailRecipesCollectionViewCell
-            cell.detailRecipe.text = detailRecipes[0]
+            switch indexPath.row {
+            case 0:
+                cell.detailRecipe.text = food?.method1!
+            case 1:
+                cell.detailRecipe.text = food?.method2!
+            case 2:
+                cell.detailRecipe.text = food?.method3!
+            case 3:
+                cell.detailRecipe.text = food?.method4!
+            case 4:
+                cell.detailRecipe.text = food?.method5!
+            case 5:
+                cell.detailRecipe.text = food?.method6!
+            default:
+                print("default")
+            }
             
             return cell
         }
