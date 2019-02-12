@@ -35,7 +35,6 @@
 		BB7F238221E77D230056BB42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7F238121E77D230056BB42 /* AppDelegate.swift */; };
 		BB7F238721E77D230056BB42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7F238521E77D230056BB42 /* Main.storyboard */; };
 		BB7F238C21E77D250056BB42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7F238A21E77D250056BB42 /* LaunchScreen.storyboard */; };
-		BBAE18C52211979D0012498D /* DetailRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE18C42211979D0012498D /* DetailRecipeViewController.swift */; };
 		BBB80A8721FF30C700D13866 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A8621FF30C700D13866 /* TableViewController.swift */; };
 		BBB80A8921FF30DC00D13866 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A8821FF30DC00D13866 /* FoodListCell.swift */; };
 		BBB80A8B21FF37C300D13866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB80A8A21FF37C300D13866 /* Assets.xcassets */; };
@@ -46,15 +45,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		1620E09905DEF23E3311A9E3 /* Pods_sketch_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sketch_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3102549EBEE682BD8C3C4486 /* Pods-sketch_001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sketch_001.release.xcconfig"; path = "Target Support Files/Pods-sketch_001/Pods-sketch_001.release.xcconfig"; sourceTree = "<group>"; };
-		528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefregeratorViewController.swift; sourceTree = "<group>"; };
-=======
 		522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIngredientViewController.swift; sourceTree = "<group>"; };
 		522DEE022211B43F00EB8ADA /* MyRefrigeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRefrigeratorViewController.swift; sourceTree = "<group>"; };
 		522DEE0622126EA300EB8ADA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
->>>>>>> 82528258a5489d07c6062e25478f616ca84039ac
 		52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		8B699AC0BBA30BFE232B4B3D /* Pods-sketch_001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sketch_001.debug.xcconfig"; path = "Target Support Files/Pods-sketch_001/Pods-sketch_001.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0459382202DD45003F75F4 /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
@@ -83,7 +78,6 @@
 		BB7F238621E77D230056BB42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB7F238B21E77D250056BB42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7F238D21E77D250056BB42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBAE18C42211979D0012498D /* DetailRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipeViewController.swift; sourceTree = "<group>"; };
 		BBB80A8621FF30C700D13866 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BBB80A8821FF30DC00D13866 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
 		BBB80A8A21FF37C300D13866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,7 +104,6 @@
 				8B699AC0BBA30BFE232B4B3D /* Pods-sketch_001.debug.xcconfig */,
 				3102549EBEE682BD8C3C4486 /* Pods-sketch_001.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,17 +174,11 @@
 				BBB80A8C21FF382900D13866 /* Models.swift */,
 				BB045975220888A2003F75F4 /* csvjson.json */,
 				BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */,
-<<<<<<< HEAD
-				528F3908221180A8003A7AD3 /* RefregeratorViewController.swift */,
-				52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */,
-				BBAE18C42211979D0012498D /* DetailRecipeViewController.swift */,
 				BB2E21E32211D36800520B0B /* DetailRecipesViewController.swift */,
-=======
 				52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */,
 				522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */,
 				522DEE022211B43F00EB8ADA /* MyRefrigeratorViewController.swift */,
 				522DEE0622126EA300EB8ADA /* TabBarController.swift */,
->>>>>>> 82528258a5489d07c6062e25478f616ca84039ac
 			);
 			path = sketch_001;
 			sourceTree = "<group>";
@@ -338,7 +325,6 @@
 				BB04BFE521EC632A00A09975 /* NavigationControllers.swift in Sources */,
 				BB04BFE421EC632A00A09975 /* UIViewController+Navigation.swift in Sources */,
 				BBB80A8721FF30C700D13866 /* TableViewController.swift in Sources */,
-				BBAE18C52211979D0012498D /* DetailRecipeViewController.swift in Sources */,
 				BB04BFE321EC632A00A09975 /* CHContentViewController.swift in Sources */,
 				BB4127AF22108FED00CA5709 /* FoodListViewController.swift in Sources */,
 				BB7F238221E77D230056BB42 /* AppDelegate.swift in Sources */,
