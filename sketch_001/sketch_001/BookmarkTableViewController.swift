@@ -14,6 +14,7 @@ class BookmarkTableViewController: UITableViewController {
     var plistCoding = PlistCoding()
     var tmpIdArr = [Int]()
     var bookmarkedFoodArr: [Food]?
+    var selectedFood: Food?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +70,11 @@ class BookmarkTableViewController: UITableViewController {
         }
         return indexedPlist.filter({$0.bookmarked == true}).count
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedFood = bookmarkedFoodArr![indexPath.row]
+        performSegue(withIdentifier: "detailBookmarkSegue", sender: self)
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodListCell", for: indexPath)
@@ -98,5 +103,13 @@ class BookmarkTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "detailBookmarkSegue") {
+            let detailViewController = segue.destination as! DetailRecipesViewController
+            
+            detailViewController.food = selectedFood
+        }
     }
 }

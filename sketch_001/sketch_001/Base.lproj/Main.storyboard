@@ -731,7 +731,7 @@
             <objects>
                 <viewController title="상세 보기" id="6jY-ir-rKH" customClass="DetailRecipesViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zBh-mu-esl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Z7-gF-itv">
@@ -1693,6 +1693,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="북마크" id="rg3-Kg-el4"/>
+                    <connections>
+                        <segue destination="6jY-ir-rKH" kind="show" identifier="detailBookmarkSegue" id="3s0-OD-ijH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7W-np-Tgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2263,5 +2266,8 @@
         <image name="soy" width="500" height="500"/>
         <image name="계란볶음밥" width="1080" height="600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3s0-OD-ijH"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.67379269691492794" blue="0.0032097659437958503" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
