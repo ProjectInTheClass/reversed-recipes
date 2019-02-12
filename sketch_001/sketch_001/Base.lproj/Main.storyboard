@@ -1431,11 +1431,11 @@
             </objects>
             <point key="canvasLocation" x="-988" y="4967"/>
         </scene>
-        <!--장 보기-->
+        <!--장보기-->
         <scene sceneID="Uc9-md-afM">
             <objects>
                 <navigationController id="cNr-nn-YWk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="장 보기" image="memo-1" id="xoQ-3J-zfs"/>
+                    <tabBarItem key="tabBarItem" title="장보기" image="memo-1" id="xoQ-3J-zfs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2fp-Ga-MYs">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
