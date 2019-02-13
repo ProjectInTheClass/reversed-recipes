@@ -120,8 +120,8 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//    
 //        switch indexPath.section {
 //        case 0:
 //            ingredients.removeAll(where: {$0.name = })
@@ -131,7 +131,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
 //            <#code#>
 //        }
 //        tableView.deleteRows(at: [indexPath], with: .automatic)
-    }
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
