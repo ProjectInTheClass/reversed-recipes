@@ -78,6 +78,7 @@ class Food: Codable {
     var method4: String?
     var method5: String?
     var method6: String?
+    var method7: String?
     var id: Int?
     
     init(name: String, thumbnail: String, time: String) {

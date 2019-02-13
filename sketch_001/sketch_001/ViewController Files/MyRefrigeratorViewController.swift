@@ -16,11 +16,13 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     // 임시 나의 재료
     var ingredients = [
         Ingredient(name: "양파", icon: "onions", ´class´: .vegetable, expirationDate: 5),
-        Ingredient(name: "계란", icon: "eggs", ´class´: .eggs, expirationDate: 5),
+        Ingredient(name: "달걀", icon: "eggs", ´class´: .eggs, expirationDate: 5),
         Ingredient(name: "돼지고기", icon: "pork", ´class´: .meat, expirationDate: 5),
         Ingredient(name: "우유", icon: "milk", ´class´: .dairyGoods, expirationDate: 3),
         Ingredient(name: "대파", icon: "leek", ´class´: .vegetable, expirationDate: 3),
-        Ingredient(name: "밥", icon: "rice", ´class´: .rice, expirationDate: 3)
+        Ingredient(name: "밥", icon: "rice", ´class´: .rice, expirationDate: 3),
+        Ingredient(name: "김치", icon: "onions", ´class´: .vegetable, expirationDate: 10),
+        Ingredient(name: "마늘", icon: "onions", ´class´: .vegetable, expirationDate: 10)
     ]
     
     var tmpIngredient = [Ingredient]()
