@@ -8,10 +8,13 @@
 
 import UIKit
 
-class MyRefrigeratorViewController: UIViewController {
+class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalActionDelegate {
     
+
+    
+    @IBOutlet weak var ingredientTableView: UITableView!
     // 임시 나의 재료
-    let ingredients = [
+    var ingredients = [
         Ingredient(name: "양파", icon: "onions", ´class´: .vegetable, expirationDate: 5),
         Ingredient(name: "계란", icon: "eggs", ´class´: .eggs, expirationDate: 5),
         Ingredient(name: "돼지고기", icon: "pork", ´class´: .meat, expirationDate: 5),
@@ -19,6 +22,8 @@ class MyRefrigeratorViewController: UIViewController {
         Ingredient(name: "대파", icon: "leek", ´class´: .vegetable, expirationDate: 3),
         Ingredient(name: "밥", icon: "rice", ´class´: .rice, expirationDate: 3)
     ]
+    
+    var tmpIngredient = [Ingredient]()
     
     let seasonings = [
         Seasoning(name: "소금", icon: "salt"),
@@ -52,27 +57,83 @@ class MyRefrigeratorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ingredientTableView.delegate = self
+        ingredientTableView.dataSource = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         let tabBarController = self.tabBarController as! TabBarController
         totalData = tabBarController.totalData
+        print(ingredients.count)
+        ingredientTableView.delegate = self
+        ingredientTableView.dataSource = self
+        ingredientTableView.reloadData()
     }
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "myRefrigeratorEmbeddedSegue") {
-            let childViewController = segue.destination as! IngredientTableViewController
+    func completeModalAction(_ data: [String]) {
+        for ingredient in data {
+            ingredients.append(Ingredient(name: ingredient, icon: "계란", ´class´: .eggs, expirationDate: 5))
+            /////////////수정/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "식재료"
+        }else if section == 1{
+            return "조미료"
+        }else{
+            return nil
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0{
+            return ingredients.count
+        }else if section == 1{
+            return seasonings.count
+        }else{
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
+        
+        if indexPath.section == 0 {
+            let ingredient = ingredients[indexPath.row]
+            cell.ingredientIcon.image = UIImage(named: ingredient.icon)
+            cell.ingredientName.text = ingredient.name
+            cell.ingredientTerm.text = "\(ingredient.expirationDate)일"
+            cell.ingredientAmount.text = ""
             
-            childViewController.ingredients = ingredients
-            childViewController.seasonings = seasonings
+        }else{
+            let seasoning = seasonings[indexPath.row]
+            cell.ingredientIcon.image = UIImage(named: seasoning.icon)
+            cell.ingredientName.text = seasoning.name
+            cell.ingredientAmount.text = ""
+            cell.ingredientTerm.text = ""
+            cell.ingredientString.text = ""
+        }
+        return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addRefrigeratorSeague" {
+            let addIngredientView = segue.destination as! AddRefrigeratorViewController
+            let tmpIngredientArr = addIngredientView.selectedCell
+            addIngredientView.delegate = self
         }
         
-        if (segue.identifier == "foodListSegue") {
+        if segue.identifier == "foodListSegue" {
             let foodListViewController = segue.destination as! FoodListViewController
             
             foodListViewController.ingredients = ingredients
-            
             var ingredientsList = [String]()
             possibleFoodList = [Food]()
             
@@ -91,8 +152,19 @@ class MyRefrigeratorViewController: UIViewController {
                     }
                 }
             }
-            
             foodListViewController.possibleFoodList = possibleFoodList
         }
     }
 }
+
+        /*
+        if (segue.identifier == "myRefrigeratorEmbeddedSegue") {
+            let childViewController = segue.destination as! IngredientTableViewController
+            
+//            ingredients.append(contentsOf: tmpIngredient)
+            childViewController.ingredients = ingredients
+            childViewController.seasonings = seasonings
+//            childViewController.tableView.reloadData()
+//            childViewController.viewWillAppear(true)
+        }
+        *///컨테이너 뷰일때 쓰이던 것

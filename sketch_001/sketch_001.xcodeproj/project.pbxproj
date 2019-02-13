@@ -13,19 +13,6 @@
 		52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */; };
 		BB0459392202DD45003F75F4 /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0459382202DD45003F75F4 /* TotalData.swift */; };
 		BB045976220888A2003F75F4 /* csvjson.json in Resources */ = {isa = PBXBuildFile; fileRef = BB045975220888A2003F75F4 /* csvjson.json */; };
-		BB04BFE221EC632A00A09975 /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFD521EC632A00A09975 /* DrawingCanvasView.swift */; };
-		BB04BFE321EC632A00A09975 /* CHContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFD621EC632A00A09975 /* CHContentViewController.swift */; };
-		BB04BFE421EC632A00A09975 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFD721EC632A00A09975 /* UIViewController+Navigation.swift */; };
-		BB04BFE521EC632A00A09975 /* NavigationControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFD821EC632A00A09975 /* NavigationControllers.swift */; };
-		BB04BFE621EC632A00A09975 /* CHPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFD921EC632A00A09975 /* CHPagingScrollViewController.swift */; };
-		BB04BFE721EC632A00A09975 /* CHViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFDA21EC632A00A09975 /* CHViews.swift */; };
-		BB04BFE821EC632A00A09975 /* CHPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFDB21EC632A00A09975 /* CHPickerViewController.swift */; };
-		BB04BFE921EC632A00A09975 /* SwipeActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFDC21EC632A00A09975 /* SwipeActionTableViewCell.swift */; };
-		BB04BFEA21EC632A00A09975 /* FIlters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFDD21EC632A00A09975 /* FIlters.swift */; };
-		BB04BFEB21EC632A00A09975 /* CHTableViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFDE21EC632A00A09975 /* CHTableViewControllers.swift */; };
-		BB04BFEC21EC632A00A09975 /* CHModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFDF21EC632A00A09975 /* CHModalViewController.swift */; };
-		BB04BFED21EC632A00A09975 /* CHControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFE021EC632A00A09975 /* CHControls.swift */; };
-		BB04BFEE21EC632A00A09975 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04BFE121EC632A00A09975 /* RecordButton.swift */; };
 		BB2E21E42211D36800520B0B /* DetailRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E21E32211D36800520B0B /* DetailRecipesViewController.swift */; };
 		BB41278122101B6700CA5709 /* BookmarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB41278022101B6700CA5709 /* BookmarkTableViewController.swift */; };
 		BB4127852210608900CA5709 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4127842210608900CA5709 /* RecipesTableViewCell.swift */; };
@@ -35,6 +22,8 @@
 		BB7F238221E77D230056BB42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7F238121E77D230056BB42 /* AppDelegate.swift */; };
 		BB7F238721E77D230056BB42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7F238521E77D230056BB42 /* Main.storyboard */; };
 		BB7F238C21E77D250056BB42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7F238A21E77D250056BB42 /* LaunchScreen.storyboard */; };
+		BBB60DE022129C3C005F7A11 /* RefrigeratorAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB60DDF22129C3C005F7A11 /* RefrigeratorAddViewController.swift */; };
+		BBB60DE22212BC3D005F7A11 /* AddRefrigeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB60DE12212BC3D005F7A11 /* AddRefrigeratorViewController.swift */; };
 		BBB80A8721FF30C700D13866 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A8621FF30C700D13866 /* TableViewController.swift */; };
 		BBB80A8921FF30DC00D13866 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A8821FF30DC00D13866 /* FoodListCell.swift */; };
 		BBB80A8B21FF37C300D13866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB80A8A21FF37C300D13866 /* Assets.xcassets */; };
@@ -54,19 +43,6 @@
 		8B699AC0BBA30BFE232B4B3D /* Pods-sketch_001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sketch_001.debug.xcconfig"; path = "Target Support Files/Pods-sketch_001/Pods-sketch_001.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0459382202DD45003F75F4 /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
 		BB045975220888A2003F75F4 /* csvjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = csvjson.json; sourceTree = "<group>"; };
-		BB04BFD521EC632A00A09975 /* DrawingCanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
-		BB04BFD621EC632A00A09975 /* CHContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHContentViewController.swift; sourceTree = "<group>"; };
-		BB04BFD721EC632A00A09975 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
-		BB04BFD821EC632A00A09975 /* NavigationControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllers.swift; sourceTree = "<group>"; };
-		BB04BFD921EC632A00A09975 /* CHPagingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHPagingScrollViewController.swift; sourceTree = "<group>"; };
-		BB04BFDA21EC632A00A09975 /* CHViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHViews.swift; sourceTree = "<group>"; };
-		BB04BFDB21EC632A00A09975 /* CHPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHPickerViewController.swift; sourceTree = "<group>"; };
-		BB04BFDC21EC632A00A09975 /* SwipeActionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionTableViewCell.swift; sourceTree = "<group>"; };
-		BB04BFDD21EC632A00A09975 /* FIlters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIlters.swift; sourceTree = "<group>"; };
-		BB04BFDE21EC632A00A09975 /* CHTableViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHTableViewControllers.swift; sourceTree = "<group>"; };
-		BB04BFDF21EC632A00A09975 /* CHModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHModalViewController.swift; sourceTree = "<group>"; };
-		BB04BFE021EC632A00A09975 /* CHControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHControls.swift; sourceTree = "<group>"; };
-		BB04BFE121EC632A00A09975 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		BB2E21E32211D36800520B0B /* DetailRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipesViewController.swift; sourceTree = "<group>"; };
 		BB41278022101B6700CA5709 /* BookmarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewController.swift; sourceTree = "<group>"; };
 		BB4127842210608900CA5709 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,6 +54,8 @@
 		BB7F238621E77D230056BB42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB7F238B21E77D250056BB42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7F238D21E77D250056BB42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB60DDF22129C3C005F7A11 /* RefrigeratorAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorAddViewController.swift; sourceTree = "<group>"; };
+		BBB60DE12212BC3D005F7A11 /* AddRefrigeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRefrigeratorViewController.swift; sourceTree = "<group>"; };
 		BBB80A8621FF30C700D13866 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BBB80A8821FF30DC00D13866 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
 		BBB80A8A21FF37C300D13866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,26 +93,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BB04BFD421EC632A00A09975 /* PilotPlant */ = {
-			isa = PBXGroup;
-			children = (
-				BB04BFD521EC632A00A09975 /* DrawingCanvasView.swift */,
-				BB04BFD621EC632A00A09975 /* CHContentViewController.swift */,
-				BB04BFD721EC632A00A09975 /* UIViewController+Navigation.swift */,
-				BB04BFD821EC632A00A09975 /* NavigationControllers.swift */,
-				BB04BFD921EC632A00A09975 /* CHPagingScrollViewController.swift */,
-				BB04BFDA21EC632A00A09975 /* CHViews.swift */,
-				BB04BFDB21EC632A00A09975 /* CHPickerViewController.swift */,
-				BB04BFDC21EC632A00A09975 /* SwipeActionTableViewCell.swift */,
-				BB04BFDD21EC632A00A09975 /* FIlters.swift */,
-				BB04BFDE21EC632A00A09975 /* CHTableViewControllers.swift */,
-				BB04BFDF21EC632A00A09975 /* CHModalViewController.swift */,
-				BB04BFE021EC632A00A09975 /* CHControls.swift */,
-				BB04BFE121EC632A00A09975 /* RecordButton.swift */,
-			);
-			path = PilotPlant;
-			sourceTree = "<group>";
-		};
 		BB7F237521E77D230056BB42 = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +114,6 @@
 		BB7F238021E77D230056BB42 /* sketch_001 */ = {
 			isa = PBXGroup;
 			children = (
-				BB04BFD421EC632A00A09975 /* PilotPlant */,
 				BB7F238121E77D230056BB42 /* AppDelegate.swift */,
 				BB7F238521E77D230056BB42 /* Main.storyboard */,
 				BB7F238A21E77D250056BB42 /* LaunchScreen.storyboard */,
@@ -179,6 +136,8 @@
 				522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */,
 				522DEE022211B43F00EB8ADA /* MyRefrigeratorViewController.swift */,
 				522DEE0622126EA300EB8ADA /* TabBarController.swift */,
+				BBB60DDF22129C3C005F7A11 /* RefrigeratorAddViewController.swift */,
+				BBB60DE12212BC3D005F7A11 /* AddRefrigeratorViewController.swift */,
 			);
 			path = sketch_001;
 			sourceTree = "<group>";
@@ -305,35 +264,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB80AFF2201E93000D13866 /* IngredientTableViewCell.swift in Sources */,
-				BB04BFEB21EC632A00A09975 /* CHTableViewControllers.swift in Sources */,
-				BB04BFE621EC632A00A09975 /* CHPagingScrollViewController.swift in Sources */,
+				BBB60DE22212BC3D005F7A11 /* AddRefrigeratorViewController.swift in Sources */,
 				522DEE0722126EA300EB8ADA /* TabBarController.swift in Sources */,
 				BB41278122101B6700CA5709 /* BookmarkTableViewController.swift in Sources */,
 				BB4127892210612900CA5709 /* RecipesViewController.swift in Sources */,
-				BB04BFE721EC632A00A09975 /* CHViews.swift in Sources */,
 				522DEE01221197EB00EB8ADA /* DetailIngredientViewController.swift in Sources */,
 				BBB80AFD2201E6A900D13866 /* IngredientTableViewController.swift in Sources */,
-				BB04BFEA21EC632A00A09975 /* FIlters.swift in Sources */,
-				BB04BFE821EC632A00A09975 /* CHPickerViewController.swift in Sources */,
-				BB04BFE921EC632A00A09975 /* SwipeActionTableViewCell.swift in Sources */,
 				522DEE032211B43F00EB8ADA /* MyRefrigeratorViewController.swift in Sources */,
 				52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */,
-				BB04BFEC21EC632A00A09975 /* CHModalViewController.swift in Sources */,
-				BB04BFED21EC632A00A09975 /* CHControls.swift in Sources */,
 				BBB80A8D21FF382900D13866 /* Models.swift in Sources */,
 				BB0459392202DD45003F75F4 /* TotalData.swift in Sources */,
-				BB04BFE521EC632A00A09975 /* NavigationControllers.swift in Sources */,
-				BB04BFE421EC632A00A09975 /* UIViewController+Navigation.swift in Sources */,
 				BBB80A8721FF30C700D13866 /* TableViewController.swift in Sources */,
-				BB04BFE321EC632A00A09975 /* CHContentViewController.swift in Sources */,
 				BB4127AF22108FED00CA5709 /* FoodListViewController.swift in Sources */,
 				BB7F238221E77D230056BB42 /* AppDelegate.swift in Sources */,
 				BBB80A8921FF30DC00D13866 /* FoodListCell.swift in Sources */,
-				BB04BFE221EC632A00A09975 /* DrawingCanvasView.swift in Sources */,
 				BB2E21E42211D36800520B0B /* DetailRecipesViewController.swift in Sources */,
 				BB4127EF2211289D00CA5709 /* FoodRecipesTableViewController.swift in Sources */,
-				BB04BFEE21EC632A00A09975 /* RecordButton.swift in Sources */,
 				BB4127852210608900CA5709 /* RecipesTableViewCell.swift in Sources */,
+				BBB60DE022129C3C005F7A11 /* RefrigeratorAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KR257UWNPD;
+				DEVELOPMENT_TEAM = 4QW852N6BA;
 				INFOPLIST_FILE = sketch_001/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -500,7 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KR257UWNPD;
+				DEVELOPMENT_TEAM = 4QW852N6BA;
 				INFOPLIST_FILE = sketch_001/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
