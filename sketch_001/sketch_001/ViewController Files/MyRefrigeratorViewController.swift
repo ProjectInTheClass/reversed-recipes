@@ -28,7 +28,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     
     var tmpIngredient = [Ingredient]()
     
-    let seasonings = [
+    var seasonings = [
         Seasoning(name: "소금", icon: "salt"),
         Seasoning(name: "설탕", icon: "salt"),
         Seasoning(name: "간장", icon: "soy")
@@ -105,6 +105,18 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             return 0
         }
     }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if indexPath.section == 0 {
+                ingredients.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else {
+                seasonings.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
@@ -128,11 +140,11 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addRefrigeratorSeague" {
-            let addIngredientView = segue.destination as! AddRefrigeratorViewController
-            let tmpIngredientArr = addIngredientView.selectedCell
-            addIngredientView.delegate = self
-        }
+//        if segue.identifier == "addRefrigeratorSeague" {
+//            let addIngredientView = segue.destination as! AddRefrigeratorViewController
+//            let tmpIngredientArr = addIngredientView.selectedCell
+//            addIngredientView.delegate = self
+//        }
         
         if segue.identifier == "foodListSegue" {
             let foodListViewController = segue.destination as! FoodListViewController
