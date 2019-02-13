@@ -415,11 +415,8 @@
                                 <state key="normal" title="요리 보기"/>
                                 <connections>
                                     <action selector="showRecipes:" destination="bp0-wR-E1L" eventType="touchUpInside" id="3ov-pS-QbT"/>
-<<<<<<< HEAD
                                     <segue destination="cml-vC-HhH" kind="show" identifier="foodListSegue" id="Nfs-I8-Kep"/>
-=======
                                     <segue destination="cml-vC-HhH" kind="show" identifier="foodListSegue" id="f8i-MI-ytb"/>
->>>>>>> e8563ede491138d38ed3f2a40e27a20821568c0e
                                 </connections>
                             </button>
                         </subviews>
