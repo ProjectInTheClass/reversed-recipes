@@ -8,14 +8,17 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, ReloadRecipes {
 
     var plistCoding = PlistCoding()
     var possibleFoodList: [Food]?
     var selectedFood: Food?
+    var repossibleFoodList: [Food]?
+    var vc: FoodListViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        vc?.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,7 +34,11 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return possibleFoodList!.count
+        if repossibleFoodList == nil {
+            return possibleFoodList!.count
+        } else {
+            return repossibleFoodList!.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -41,7 +48,13 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodListCell", for: indexPath) as! FoodListCell
-        let food = possibleFoodList![indexPath.row]
+        let food: Food
+        
+        if repossibleFoodList == nil {
+            food = possibleFoodList![indexPath.row]
+        } else {
+            food = repossibleFoodList![indexPath.row]
+        }
         
         cell.foodName.text = food.name
         cell.foodTime.text = food.time
@@ -81,5 +94,20 @@ class TableViewController: UITableViewController {
             
             detailViewController.food = selectedFood
         }
+    }
+    
+    func reloadRecipes(ingreStrArr: [String]) {
+        repossibleFoodList = []
+        
+        for food in possibleFoodList! {
+            if let ingredients = food.ingredients{
+                let eachIngre = Set(ingredients.components(separatedBy: ", "))
+                if eachIngre.isSubset(of: ingreStrArr){
+                    repossibleFoodList?.append(food)
+                }
+            }
+        }
+        
+        super.tableView.reloadData()
     }
 }
