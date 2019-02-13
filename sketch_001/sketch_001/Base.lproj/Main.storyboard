@@ -290,8 +290,8 @@
                                                 <constraint firstAttribute="width" constant="34" id="J7v-vN-Nqk"/>
                                                 <constraint firstAttribute="height" constant="34" id="xFC-Dm-mmm"/>
                                             </constraints>
-                                            <state key="normal" image="bookmark_outline"/>
-                                            <state key="selected" image="bookmark_filled"/>
+                                            <state key="normal" image="bookmark_outline@80"/>
+                                            <state key="selected" image="bookmark_filled@80"/>
                                             <connections>
                                                 <action selector="bookmarkButtonTapped:" destination="0Kj-kE-rW0" eventType="touchDown" id="kqD-CW-QLG"/>
                                             </connections>
@@ -1684,6 +1684,13 @@
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+<<<<<<< HEAD
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mls-6L-p6V">
+                                            <rect key="frame" x="321" y="183" width="38" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="bookmark_outline@80"/>
+                                            <state key="selected" image="bookmark_filled@80"/>
+=======
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mls-6L-p6V">
                                             <rect key="frame" x="318" y="183" width="40" height="40"/>
                                             <constraints>
@@ -1692,6 +1699,7 @@
                                             </constraints>
                                             <state key="normal" image="bookmark_outline"/>
                                             <state key="selected" image="bookmark_filled"/>
+>>>>>>> 560fce1dac48d937aa3e1f6d64118c92f7cf9f1b
                                             <connections>
                                                 <action selector="bookmarkButtonTapped:" destination="lWh-PR-oQw" eventType="touchUpInside" id="szD-mg-cO3"/>
                                             </connections>
@@ -2473,8 +2481,9 @@
         <image name="Fish Food" width="528" height="528"/>
         <image name="Steak" width="528" height="528"/>
         <image name="bookmark1" width="51" height="51"/>
-        <image name="bookmark_filled" width="88" height="88"/>
-        <image name="bookmark_outline" width="88" height="88"/>
+        <image name="bookmark_filled@80" width="80" height="80"/>
+        <image name="bookmark_outline" width="25" height="25"/>
+        <image name="bookmark_outline@80" width="80" height="80"/>
         <image name="chicken" width="16" height="16"/>
         <image name="eggs" width="528" height="528"/>
         <image name="leek" width="528" height="528"/>

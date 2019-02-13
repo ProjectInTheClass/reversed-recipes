@@ -15,15 +15,16 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var showFoodButton: UIButton!
     @IBOutlet weak var ingredientTableView: UITableView!
     // 임시 나의 재료
+    
     var ingredients = [
-        Ingredient(name: "양파", icon: "onions", ´class´: .vegetable, expirationDate: 5),
-        Ingredient(name: "달걀", icon: "eggs", ´class´: .eggs, expirationDate: 5),
-        Ingredient(name: "돼지고기", icon: "pork", ´class´: .meat, expirationDate: 5),
-        Ingredient(name: "우유", icon: "milk", ´class´: .dairyGoods, expirationDate: 3),
-        Ingredient(name: "대파", icon: "leek", ´class´: .vegetable, expirationDate: 3),
-        Ingredient(name: "밥", icon: "rice", ´class´: .rice, expirationDate: 3),
-        Ingredient(name: "김치", icon: "onions", ´class´: .vegetable, expirationDate: 10),
-        Ingredient(name: "마늘", icon: "onions", ´class´: .vegetable, expirationDate: 10)
+        Ingredient(name: "양파", icon: "onions", ´class´: "vegetable", expirationDate: 5),
+        Ingredient(name: "달걀", icon: "eggs", ´class´: "eggs", expirationDate: 5),
+        Ingredient(name: "돼지고기", icon: "pork", ´class´: "meat", expirationDate: 5),
+        Ingredient(name: "우유", icon: "milk", ´class´: "dairyGoods", expirationDate: 3),
+        Ingredient(name: "대파", icon: "leek", ´class´: "vegetable", expirationDate: 3),
+        Ingredient(name: "밥", icon: "rice", ´class´: "rice", expirationDate: 3),
+        Ingredient(name: "김치", icon: "onions", ´class´: "vegetable", expirationDate: 10),
+        Ingredient(name: "마늘", icon: "onions", ´class´: "vegetable", expirationDate: 10)
     ]
     
     var tmpIngredient = [Ingredient]()
@@ -77,7 +78,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     
     func completeModalAction(_ data: [String]) {
         for ingredient in data {
-            ingredients.append(Ingredient(name: ingredient, icon: "계란", ´class´: .eggs, expirationDate: 5))
+            ingredients.append(Ingredient(name: ingredient, icon: "계란", ´class´: "eggs", expirationDate: 5))
             /////////////수정/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
     }
@@ -116,6 +117,20 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+//        switch indexPath.section {
+//        case 0:
+//            ingredients.removeAll(where: {$0.name = })
+//        case 1:
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
+//        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

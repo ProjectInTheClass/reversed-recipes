@@ -18,7 +18,10 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
     weak var delegate: ModalActionDelegate?
     var addRefrigeratorCollectionViewIdentifier = "AddRefrigerator"
     var selectedCell = [String]()
-    
+    let totalIngredientData = TotalIngredientsData()
+    let totalSeasoningData = TotalSeasoningData()
+    var totalIngredients: [Ingredient]?
+    var totalSeasoing: [Seasoning]?
     
     //////////////////////////////////////////////////////////////////////
     var tmpIngredientContents = [
@@ -31,30 +34,38 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
     // contents for test
     
     
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return tmpIngredientContents.keys.count
+        return Set(totalIngredients!.map({$0.´class´})).count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         switch section {
         case 0:
-            return tmpIngredientContents["고기류"]!.count
+            return totalIngredients!.filter({$0.´class´ == "고기류"}).count
         case 1:
-            return tmpIngredientContents["채소류"]!.count
+            return totalIngredients!.filter({$0.´class´ == "채소류"}).count
         case 2:
-            return tmpIngredientContents["계란류"]!.count
+            return totalIngredients!.filter({$0.´class´ == "난류"}).count
         case 3:
-            return tmpIngredientContents["조미료"]!.count
+            return totalIngredients!.filter({$0.´class´ == "밥류"}).count
+        case 4:
+            return totalIngredients!.filter({$0.´class´ == "유제품류"}).count
+        case 5:
+            return totalSeasoing!.count
         default:
             return 0
         }
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? SectionHeader{
-            sectionHeader.sectionHeader.text = ingredientsClassName[indexPath.section]
+            if indexPath.section < 5 {
+                sectionHeader.sectionHeader.text = totalIngredients?.map({$0.´class´})[indexPath.section]
+            }else{
+                sectionHeader.sectionHeader.text = "조미료"
+            }
             return sectionHeader
         }
         return UICollectionReusableView()
@@ -64,7 +75,6 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         let headerViewWidth = collectionView.bounds.width
         let headerViewHeight = collectionView.bounds.width/10.0
         return CGSize(width: headerViewWidth, height: headerViewHeight)
-
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -79,16 +89,20 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         
         switch indexPath.section {
         case 0:
-            cell.contentName.text = tmpIngredientContents["고기류"]![indexPath.item]
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "고기류"}).map({$0.name})[indexPath.item]
         case 1:
-            cell.contentName.text = tmpIngredientContents["채소류"]![indexPath.item]
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "채소류"}).map({$0.name})[indexPath.item]
         case 2:
-            cell.contentName.text = tmpIngredientContents["계란류"]![indexPath.item]
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "난류"}).map({$0.name})[indexPath.item]
         case 3:
-            cell.contentName.text = tmpIngredientContents["조미료"]![indexPath.item]
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "밥류"}).map({$0.name})[indexPath.item]
+        case 4:
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "유제품류"}).map({$0.name})[indexPath.item]
+        case 5:
+            cell.contentName.text = totalSeasoing!.map({$0.name})[indexPath.item]
         default:
-            cell.contentName.text = ""
-        }
+            return cell
+            }
         return cell
         }
     
@@ -124,8 +138,11 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        totalIngredients = totalIngredientData.totalIngredients
+        totalSeasoing = totalSeasoningData.totalSeasoning
         let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
         collectionView.collectionViewLayout = alignedFlowLayout
+
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
