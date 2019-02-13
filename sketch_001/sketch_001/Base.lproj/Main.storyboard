@@ -279,8 +279,8 @@
                                                 <constraint firstAttribute="width" constant="34" id="J7v-vN-Nqk"/>
                                                 <constraint firstAttribute="height" constant="34" id="xFC-Dm-mmm"/>
                                             </constraints>
-                                            <state key="normal" image="bookmark_outline"/>
-                                            <state key="selected" image="bookmark_filled"/>
+                                            <state key="normal" image="bookmark_outline@80"/>
+                                            <state key="selected" image="bookmark_filled@80"/>
                                             <connections>
                                                 <action selector="bookmarkButtonTapped:" destination="0Kj-kE-rW0" eventType="touchDown" id="kqD-CW-QLG"/>
                                             </connections>
@@ -415,7 +415,6 @@
                                 <state key="normal" title="요리 보기"/>
                                 <connections>
                                     <action selector="showRecipes:" destination="bp0-wR-E1L" eventType="touchUpInside" id="3ov-pS-QbT"/>
-                                    <segue destination="cml-vC-HhH" kind="show" identifier="foodListSegue" id="Nfs-I8-Kep"/>
                                     <segue destination="cml-vC-HhH" kind="show" identifier="foodListSegue" id="f8i-MI-ytb"/>
                                 </connections>
                             </button>
@@ -1669,10 +1668,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mls-6L-p6V">
-                                            <rect key="frame" x="320" y="183" width="38" height="38"/>
+                                            <rect key="frame" x="321" y="183" width="38" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="bookmark_outline"/>
-                                            <state key="selected" image="bookmark_filled"/>
+                                            <state key="normal" image="bookmark_outline@80"/>
+                                            <state key="selected" image="bookmark_filled@80"/>
                                             <connections>
                                                 <action selector="bookmarkButtonTapped:" destination="lWh-PR-oQw" eventType="touchUpInside" id="szD-mg-cO3"/>
                                             </connections>
@@ -2444,8 +2443,9 @@
         <image name="Fish Food" width="528" height="528"/>
         <image name="Steak" width="528" height="528"/>
         <image name="bookmark1" width="51" height="51"/>
-        <image name="bookmark_filled" width="88" height="88"/>
-        <image name="bookmark_outline" width="88" height="88"/>
+        <image name="bookmark_filled@80" width="80" height="80"/>
+        <image name="bookmark_outline" width="25" height="25"/>
+        <image name="bookmark_outline@80" width="80" height="80"/>
         <image name="chicken" width="16" height="16"/>
         <image name="eggs" width="528" height="528"/>
         <image name="leek" width="528" height="528"/>

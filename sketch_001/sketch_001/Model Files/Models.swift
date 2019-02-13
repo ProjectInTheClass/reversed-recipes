@@ -17,36 +17,15 @@ import Foundation
 //    Food(name: "참치마요", thumbnail: "참치마요", time: "5분", descript: "모두가 좋아하는 참치마요덮밥")
 //]
 
-class Ingredient {
+class Ingredient: Codable {
     var name: String
     var icon: String
-    var ´class´: Class
+    var ´class´: String
     var expirationDate: Int // 소비기한
-    var amount: AmountUnit? //양 측정 단위
+    var amount: String? //양 측정 단위
     //양 숫자를 나타내는 변수 추가
     
-    enum Class: String {
-        case vegetable
-        case meat
-        case fish
-        case fruit
-        case eggs
-        case dairyGoods
-        case rice
-    }
-    
-    enum AmountUnit: String {
-        case g
-        case bottle
-        case ea // 한 개
-        case bowl // 한 공기
-        case ml
-        case handful //한 움큼, 한 줌
-        case t // 1T
-        case slice // 한 장
-    }
-    
-    init(name: String, icon: String, ´class´: Class, expirationDate: Int) {
+    init(name: String, icon: String, ´class´: String, expirationDate: Int) {
         self.name = name
         self.icon = icon
         self.´class´ = ´class´
@@ -58,7 +37,7 @@ class Ingredient {
     }
 }
 
-struct Seasoning {
+struct Seasoning: Codable {
     var name: String
     var icon: String
 }
