@@ -27,7 +27,7 @@ class TotalIngredientsData  {
     var totalIngredients: [Ingredient]?
     
     init() {
-        if let fullPath = Bundle.main.path(forResource: "ingredientJson", ofType: "json"),
+        if let fullPath = Bundle.main.path(forResource: "ingreJson", ofType: "json"),
             let data = NSData(contentsOfFile: fullPath) as Data? {
             self.totalIngredients = try! decoder.decode([Ingredient].self, from: data)
         }
@@ -40,7 +40,7 @@ class TotalSeasoningData  {
     var totalSeasoning: [Seasoning]?
     
     init() {
-        if let fullPath = Bundle.main.path(forResource: "seasoningJson", ofType: "json"),
+        if let fullPath = Bundle.main.path(forResource: "seasJson", ofType: "json"),
             let data = NSData(contentsOfFile: fullPath) as Data? {
             self.totalSeasoning = try! decoder.decode([Seasoning].self, from: data)
         }

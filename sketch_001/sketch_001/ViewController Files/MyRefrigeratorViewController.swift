@@ -9,9 +9,8 @@
 import UIKit
 
 class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalActionDelegate {
-    
 
-    
+
     @IBOutlet weak var showFoodButton: UIButton!
     @IBOutlet weak var ingredientTableView: UITableView!
     // 임시 나의 재료
@@ -29,7 +28,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     
     var tmpIngredient = [Ingredient]()
     
-    let seasonings = [
+    var seasonings = [
         Seasoning(name: "소금", icon: "salt"),
         Seasoning(name: "설탕", icon: "salt"),
         Seasoning(name: "간장", icon: "soy")
@@ -76,12 +75,11 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         ingredientTableView.reloadData()
     }
     
-    func completeModalAction(_ data: [String]) {
-        for ingredient in data {
-            ingredients.append(Ingredient(name: ingredient, icon: "계란", ´class´: "eggs", expirationDate: 5))
-            /////////////수정/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        }
+    func completeModalAction(_ ingredient: [Ingredient], _ seasoning: [Seasoning]) {
+        ingredients.append(contentsOf: ingredient)
+        seasonings.append(contentsOf: seasoning)
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -107,20 +105,6 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-//        switch indexPath.section {
-//        case 0:
-//            ingredients.removeAll(where: {$0.name = })
-//        case 1:
-//            <#code#>
-//        default:
-//            <#code#>
-//        }
-//        tableView.deleteRows(at: [indexPath], with: .automatic)
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
         
@@ -143,9 +127,10 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "addRefrigeratorSeague" {
             let addIngredientView = segue.destination as! AddRefrigeratorViewController
-            let tmpIngredientArr = addIngredientView.selectedCell
+//            let tmpIngredientArr = addIngredientView.selectedCell
             addIngredientView.delegate = self
         }
         
