@@ -9,9 +9,8 @@
 import UIKit
 
 class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalActionDelegate {
-    
 
-    
+
     @IBOutlet weak var showFoodButton: UIButton!
     @IBOutlet weak var ingredientTableView: UITableView!
     // 임시 나의 재료
@@ -76,12 +75,11 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         ingredientTableView.reloadData()
     }
     
-    func completeModalAction(_ data: [String]) {
-        for ingredient in data {
-            ingredients.append(Ingredient(name: ingredient, icon: "계란", ´class´: "eggs", expirationDate: 5))
-            /////////////수정/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        }
+    func completeModalAction(_ ingredient: [Ingredient], _ seasoning: [Seasoning]) {
+        ingredients.append(contentsOf: ingredient)
+        seasonings.append(contentsOf: seasoning)
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -119,7 +117,6 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //    
 //        switch indexPath.section {
@@ -155,11 +152,13 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
 //        if segue.identifier == "addRefrigeratorSeague" {
 //            let addIngredientView = segue.destination as! AddRefrigeratorViewController
 //            let tmpIngredientArr = addIngredientView.selectedCell
 //            addIngredientView.delegate = self
 //        }
+
         
         if segue.identifier == "foodListSegue" {
             let foodListViewController = segue.destination as! FoodListViewController
