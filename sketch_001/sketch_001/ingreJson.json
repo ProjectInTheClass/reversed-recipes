@@ -1,0 +1,58 @@
+[
+  {
+    "name": "양파",
+    "icon": "onions",
+    "´class´": "채소류",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "달걀",
+    "icon": "eggs",
+    "´class´": "난류",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "돼지고기",
+    "icon": "pork",
+    "´class´": "고기류",
+    "expirationDate": 3,
+    "amount": ""
+  },
+  {
+    "name": "우유",
+    "icon": "milk",
+    "´class´": "유제품류",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "대파",
+    "icon": "leek",
+    "´class´": "채소류",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "밥",
+    "icon": "rice",
+    "´class´": "밥류",
+    "expirationDate": 2,
+    "amount": ""
+  },
+  {
+    "name": "김치",
+    "icon": "basic",
+    "´class´": "채소류",
+    "expirationDate": 60,
+    "amount": ""
+  },
+  {
+    "name": "마늘",
+    "icon": "basic",
+    "´class´": "채소류",
+    "expirationDate": 30,
+    "amount": ""
+  }
+]
