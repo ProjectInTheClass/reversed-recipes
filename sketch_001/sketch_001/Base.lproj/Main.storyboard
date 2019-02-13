@@ -173,17 +173,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q6a-mp-Qgd">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6a-mp-Qgd">
                                 <rect key="frame" x="0.0" y="124" width="375" height="543"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="SfX-ml-Va7" kind="embed" identifier="foodListEmbeddedSegue" id="cGz-PR-wl8"/>
                                 </connections>
                             </containerView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PiZ-GE-taw">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PiZ-GE-taw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.67379269689999999" blue="0.003209765944" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="G0b-Pu-t2G"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DdS-Bz-6YS">
                                     <size key="itemSize" width="187" height="54"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -222,6 +223,16 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PiZ-GE-taw" firstAttribute="trailing" secondItem="kz0-g5-7l9" secondAttribute="trailing" id="7BZ-bD-QMn"/>
+                            <constraint firstItem="Q6a-mp-Qgd" firstAttribute="top" secondItem="PiZ-GE-taw" secondAttribute="bottom" id="F3u-eV-CHW"/>
+                            <constraint firstItem="Q6a-mp-Qgd" firstAttribute="top" secondItem="PiZ-GE-taw" secondAttribute="bottom" id="JPs-lf-9Om"/>
+                            <constraint firstItem="Q6a-mp-Qgd" firstAttribute="leading" secondItem="kz0-g5-7l9" secondAttribute="leading" id="KuD-I6-oGW"/>
+                            <constraint firstAttribute="bottom" secondItem="Q6a-mp-Qgd" secondAttribute="bottom" id="OwG-ba-Hij"/>
+                            <constraint firstItem="Q6a-mp-Qgd" firstAttribute="trailing" secondItem="kz0-g5-7l9" secondAttribute="trailing" id="bdr-2A-Zjv"/>
+                            <constraint firstItem="PiZ-GE-taw" firstAttribute="leading" secondItem="kz0-g5-7l9" secondAttribute="leading" id="dZm-0R-abM"/>
+                            <constraint firstItem="PiZ-GE-taw" firstAttribute="top" secondItem="kz0-g5-7l9" secondAttribute="top" id="xmO-Ad-1x3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kz0-g5-7l9"/>
                     </view>
                     <connections>
@@ -415,7 +426,6 @@
                                 <state key="normal" title="요리 보기"/>
                                 <connections>
                                     <action selector="showRecipes:" destination="bp0-wR-E1L" eventType="touchUpInside" id="3ov-pS-QbT"/>
-                                    <segue destination="cml-vC-HhH" kind="show" identifier="foodListSegue" id="Nfs-I8-Kep"/>
                                     <segue destination="cml-vC-HhH" kind="show" identifier="foodListSegue" id="f8i-MI-ytb"/>
                                 </connections>
                             </button>
@@ -731,7 +741,7 @@
             <objects>
                 <viewController title="상세 보기" id="6jY-ir-rKH" customClass="DetailRecipesViewController" customModule="sketch_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zBh-mu-esl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Z7-gF-itv">
@@ -1650,27 +1660,31 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="245.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LwC-Jb-fvg">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LwC-Jb-fvg">
                                             <rect key="frame" x="16" y="11" width="343" height="171.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="343" id="M7f-0r-db8"/>
+                                                <constraint firstAttribute="height" constant="171.5" id="XJR-Lr-9AR"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="요리 이름" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARt-d7-QbN">
-                                            <rect key="frame" x="16" y="190" width="252" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요리 이름" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARt-d7-QbN">
+                                            <rect key="frame" x="16" y="190" width="74" height="24"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="부가 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxi-Bi-J3i">
-                                            <rect key="frame" x="16" y="214" width="342" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부가 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxi-Bi-J3i">
+                                            <rect key="frame" x="16" y="214" width="56" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mls-6L-p6V">
-                                            <rect key="frame" x="320" y="183" width="38" height="38"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mls-6L-p6V">
+                                            <rect key="frame" x="318" y="183" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="9HX-an-HVU"/>
+                                                <constraint firstAttribute="width" constant="40" id="A6i-5n-HOP"/>
+                                            </constraints>
                                             <state key="normal" image="bookmark_outline"/>
                                             <state key="selected" image="bookmark_filled"/>
                                             <connections>
@@ -1678,6 +1692,16 @@
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mls-6L-p6V" secondAttribute="trailing" constant="1" id="83i-eH-ZOJ"/>
+                                        <constraint firstItem="Dxi-Bi-J3i" firstAttribute="leading" secondItem="BzE-0l-Rft" secondAttribute="leadingMargin" id="AyV-d0-OG3"/>
+                                        <constraint firstItem="mls-6L-p6V" firstAttribute="top" secondItem="LwC-Jb-fvg" secondAttribute="bottom" constant="0.5" id="CTL-xn-94j"/>
+                                        <constraint firstItem="LwC-Jb-fvg" firstAttribute="top" secondItem="BzE-0l-Rft" secondAttribute="topMargin" id="DIu-Mz-7pz"/>
+                                        <constraint firstItem="LwC-Jb-fvg" firstAttribute="centerX" secondItem="BzE-0l-Rft" secondAttribute="centerX" id="FQs-0B-UaJ"/>
+                                        <constraint firstItem="Dxi-Bi-J3i" firstAttribute="top" secondItem="ARt-d7-QbN" secondAttribute="bottom" id="WMF-hw-eeF"/>
+                                        <constraint firstItem="ARt-d7-QbN" firstAttribute="leading" secondItem="BzE-0l-Rft" secondAttribute="leadingMargin" id="kyZ-8D-OxF"/>
+                                        <constraint firstItem="ARt-d7-QbN" firstAttribute="top" secondItem="LwC-Jb-fvg" secondAttribute="bottom" constant="7.5" id="wc4-Dq-9qZ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="bookmarkButton" destination="mls-6L-p6V" id="3Bf-oM-mnF"/>
@@ -2459,7 +2483,7 @@
         <image name="계란볶음밥" width="1080" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3s0-OD-ijH"/>
+        <segue reference="qxo-4F-rfp"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.67379269691492794" blue="0.0032097659437958503" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
