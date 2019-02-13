@@ -13,6 +13,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
     
     var food: Food?
     
+//    @IBOutlet weak var methodLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
 //    var detailFoodImage = "계란볶음밥"
@@ -63,6 +64,8 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         }
     }
     
+    var methodCound: Int?
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailFoodImageCollectionIdentifier, for: indexPath) as! DetailFoodImageCollectionViewCell
@@ -88,6 +91,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailRecipesCollectionIdentifier, for: indexPath) as! DetailRecipesCollectionViewCell
+
             switch indexPath.row {
             case 0:
                 cell.detailRecipe.text = food?.method1!
@@ -106,7 +110,6 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             default:
                 print("default")
             }
-            
             return cell
         }
     }
@@ -114,17 +117,64 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if indexPath.section == 0 {
-            return CGSize(width: view.bounds.width, height: 220)
+            return CGSize(width: view.bounds.width, height: view.bounds.width*0.66)
         }else if indexPath.section == 1 {
-            let collectionViewWidth = collectionView.bounds.width/5.0
+            let collectionViewWidth = (collectionView.bounds.width-30)/4
             let collectionViewHeight = collectionViewWidth
             return CGSize(width: collectionViewWidth, height: collectionViewWidth)
         }else if indexPath.section == 2 {
-            let collectionViewWidth = collectionView.bounds.width/5.0
+            let collectionViewWidth = (collectionView.bounds.width-30)/4
             let collectionViewHeight = collectionViewWidth
             return CGSize(width: collectionViewWidth, height: collectionViewWidth)
         }else {
-            return CGSize(width: view.bounds.width, height: CGFloat(exactly: 20.0)!)
+            let collectionViewHeight = CGFloat(100)
+            /*
+            var cellHeight = CGFloat(exactly: 0.0)
+            
+            guard let recipeCount = cell.detailRecipe.text?.count else{
+                return CGSize(width: 0, height: 0)
+            }
+            
+            
+            // 케이스마다 메서드의 글자 개수를 받아와서 몇 줄인지 정숫값으로 받아낸다.  받아낸 정숫값으로 CGSize의 높이를 찾아온다.
+            switch indexPath.row {
+            case 0:
+                
+            case 1:
+                
+            case 2:
+                
+            case 3:
+                
+            case 4:
+                
+            case 5:
+                
+            case 6:
+                
+            default:
+                print("default")
+            }
+            */
+            
+            
+            return CGSize(width: view.bounds.width, height: collectionViewHeight)
+            
+            
+            
+            
+          /*
+            methodCound = food.me
+            if let cellHeightTemp = food!.method1{
+              var cellHeight = 88*(cellHeightTemp.count-(cellHeightTemp.count % 28))/28
+                 return CGSize(width: view.bounds.width, height: CGFloat(exactly: cellHeight)!)// 3번 째 indexpath.row의 높이
+            }
+            else {
+               return CGSize(width: view.bounds.width, height: CGFloat(exactly: 0)!)// 3번 째 indexpath.row의 높이
+            }
+        */
+          //  var cellHeight:Int? = 88*(food!.method1?.count-(food!.method1.count % 28))/28
+ //        return CGSize(width: view.bounds.width, height: CGFloat(exactly: 88/*cellHeight*/)!)// 3번 째 indexpath.row의 높이
         }
     }
 
@@ -132,8 +182,8 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         collectionView.delegate = self
         collectionView.dataSource = self
         super.viewDidLoad()
-        let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
-            collectionView.collectionViewLayout = alignedFlowLayout
+//        let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
+//            collectionView.collectionViewLayout = alignedFlowLayout
     }
 }
 

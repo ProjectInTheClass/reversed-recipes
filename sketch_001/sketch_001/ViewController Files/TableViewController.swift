@@ -24,6 +24,7 @@ class TableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.tableView.reloadData()
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,6 +38,12 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedFood = possibleFoodList![indexPath.row]
         performSegue(withIdentifier: "detailRecipesSegue", sender: self)
+    }
+    
+     func tableViewConstantWidthHeightRatio(_ tableView: UITableView, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let tableViewWidth = tableView.bounds.width
+        let tableViewHeight = tableViewWidth*0.66
+        return CGSize(width: tableViewWidth, height: tableViewHeight)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

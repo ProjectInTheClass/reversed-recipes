@@ -23,7 +23,9 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         Ingredient(name: "대파", icon: "leek", ´class´: .vegetable, expirationDate: 3),
         Ingredient(name: "밥", icon: "rice", ´class´: .rice, expirationDate: 3),
         Ingredient(name: "김치", icon: "onions", ´class´: .vegetable, expirationDate: 10),
-        Ingredient(name: "마늘", icon: "onions", ´class´: .vegetable, expirationDate: 10)
+        Ingredient(name: "마늘", icon: "onions", ´class´: .vegetable, expirationDate: 10),
+        Ingredient(name: "고추", icon: "onions", ´class´: .vegetable, expirationDate: 10)
+        
     ]
     
     var tmpIngredient = [Ingredient]()
