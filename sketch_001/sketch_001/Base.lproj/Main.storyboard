@@ -419,9 +419,8 @@
                                     <outlet property="delegate" destination="Ddt-Fo-Kzj" id="sjn-ta-179"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFl-p8-jhK" customClass="CircluarButton" customModule="sketch_001" customModuleProvider="target">
-                                <rect key="frame" x="40" y="530" width="294" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFl-p8-jhK" customClass="CircluarButton" customModule="sketch_001" customModuleProvider="target">
+                                <rect key="frame" x="40" y="514" width="295" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.67379269689999999" blue="0.003209765944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="요리 보기"/>
                                 <connections>
@@ -431,6 +430,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iuE-Qi-3Ut" firstAttribute="bottom" secondItem="gFl-p8-jhK" secondAttribute="bottom" constant="70" id="CoW-2V-FfZ"/>
+                            <constraint firstItem="gFl-p8-jhK" firstAttribute="leading" secondItem="iuE-Qi-3Ut" secondAttribute="leading" constant="40" id="Guz-nT-YJg"/>
+                            <constraint firstItem="iuE-Qi-3Ut" firstAttribute="trailing" secondItem="gFl-p8-jhK" secondAttribute="trailing" constant="40" id="MbO-Lb-npX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iuE-Qi-3Ut"/>
                     </view>
                     <navigationItem key="navigationItem" title="나의 냉장고" id="MKs-pw-AtX">
@@ -442,6 +446,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ingredientTableView" destination="9Sc-kb-TDs" id="Bsi-da-LFa"/>
+                        <outlet property="showFoodButton" destination="gFl-p8-jhK" id="7fJ-wS-Ppr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc7-AI-q2c" userLabel="First Responder" sceneMemberID="firstResponder"/>

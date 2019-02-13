@@ -12,6 +12,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     
 
     
+    @IBOutlet weak var showFoodButton: UIButton!
     @IBOutlet weak var ingredientTableView: UITableView!
     // 임시 나의 재료
     var ingredients = [
@@ -62,6 +63,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
         
+        showFoodButton.layer.cornerRadius = 0.05 * showFoodButton.bounds.size.width
     }
     
     override func viewWillAppear(_ animated: Bool) {
