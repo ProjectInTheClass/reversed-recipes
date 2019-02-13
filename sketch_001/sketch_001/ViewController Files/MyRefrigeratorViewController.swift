@@ -9,13 +9,14 @@
 import UIKit
 
 class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalActionDelegate {
-    
 
-    
+
     @IBOutlet weak var showFoodButton: UIButton!
     @IBOutlet weak var ingredientTableView: UITableView!
     // 임시 나의 재료
+    
     var ingredients = [
+<<<<<<< HEAD
         Ingredient(name: "양파", icon: "onions", ´class´: .vegetable, expirationDate: 5),
         Ingredient(name: "달걀", icon: "eggs", ´class´: .eggs, expirationDate: 5),
         Ingredient(name: "돼지고기", icon: "pork", ´class´: .meat, expirationDate: 5),
@@ -26,11 +27,21 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         Ingredient(name: "마늘", icon: "onions", ´class´: .vegetable, expirationDate: 10),
         Ingredient(name: "고추", icon: "onions", ´class´: .vegetable, expirationDate: 10)
         
+=======
+        Ingredient(name: "양파", icon: "onions", ´class´: "vegetable", expirationDate: 5),
+        Ingredient(name: "달걀", icon: "eggs", ´class´: "eggs", expirationDate: 5),
+        Ingredient(name: "돼지고기", icon: "pork", ´class´: "meat", expirationDate: 5),
+        Ingredient(name: "우유", icon: "milk", ´class´: "dairyGoods", expirationDate: 3),
+        Ingredient(name: "대파", icon: "leek", ´class´: "vegetable", expirationDate: 3),
+        Ingredient(name: "밥", icon: "rice", ´class´: "rice", expirationDate: 3),
+        Ingredient(name: "김치", icon: "onions", ´class´: "vegetable", expirationDate: 10),
+        Ingredient(name: "마늘", icon: "onions", ´class´: "vegetable", expirationDate: 10)
+>>>>>>> 0d20a268d0dfabd207c060e8d537f974dc158c21
     ]
     
     var tmpIngredient = [Ingredient]()
     
-    let seasonings = [
+    var seasonings = [
         Seasoning(name: "소금", icon: "salt"),
         Seasoning(name: "설탕", icon: "salt"),
         Seasoning(name: "간장", icon: "soy")
@@ -77,12 +88,11 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         ingredientTableView.reloadData()
     }
     
-    func completeModalAction(_ data: [String]) {
-        for ingredient in data {
-            ingredients.append(Ingredient(name: ingredient, icon: "계란", ´class´: .eggs, expirationDate: 5))
-            /////////////수정/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        }
+    func completeModalAction(_ ingredient: [Ingredient], _ seasoning: [Seasoning]) {
+        ingredients.append(contentsOf: ingredient)
+        seasonings.append(contentsOf: seasoning)
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -107,7 +117,36 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             return 0
         }
     }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if indexPath.section == 0 {
+                ingredients.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else {
+                seasonings.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+    }
     
+<<<<<<< HEAD
+=======
+    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//    
+//        switch indexPath.section {
+//        case 0:
+//            ingredients.removeAll(where: {$0.name = })
+//        case 1:
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
+//        tableView.deleteRows(at: [indexPath], with: .automatic)
+//    }
+    
+>>>>>>> 4f0daebbfe5ed86ba77932e8ae488e8dbc061689
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
         
@@ -130,11 +169,20 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+<<<<<<< HEAD
+        
         if segue.identifier == "addRefrigeratorSeague" {
             let addIngredientView = segue.destination as! AddRefrigeratorViewController
-            let tmpIngredientArr = addIngredientView.selectedCell
+//            let tmpIngredientArr = addIngredientView.selectedCell
             addIngredientView.delegate = self
         }
+=======
+//        if segue.identifier == "addRefrigeratorSeague" {
+//            let addIngredientView = segue.destination as! AddRefrigeratorViewController
+//            let tmpIngredientArr = addIngredientView.selectedCell
+//            addIngredientView.delegate = self
+//        }
+>>>>>>> 4f0daebbfe5ed86ba77932e8ae488e8dbc061689
         
         if segue.identifier == "foodListSegue" {
             let foodListViewController = segue.destination as! FoodListViewController

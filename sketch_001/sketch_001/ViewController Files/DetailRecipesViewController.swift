@@ -80,6 +80,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             let eachIngre = Set(ingredients!.components(separatedBy: ", "))
             let ingreArr = Array(eachIngre)
             cell.detailIngredientName.text = ingreArr[indexPath.row]
+//            cell.detailIngredientImage.image = UIImage(named: ingre)
             
             return cell
         }else if indexPath.section == 2 {
