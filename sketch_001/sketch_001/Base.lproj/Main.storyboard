@@ -440,14 +440,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수량" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRA-Ki-UiH">
-                                                    <rect key="frame" x="103" y="25" width="21" height="14.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVk-ez-e7w">
-                                                    <rect key="frame" x="325" y="24" width="30" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVk-ez-e7w">
+                                                    <rect key="frame" x="355" y="32.5" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -466,14 +460,11 @@
                                                 <constraint firstItem="5uQ-Y5-GSj" firstAttribute="centerY" secondItem="RQ8-zU-4q5" secondAttribute="centerY" id="2Lu-am-WBJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="iVk-ez-e7w" secondAttribute="trailing" constant="20" id="8Ed-re-Yu1"/>
                                                 <constraint firstItem="iVk-ez-e7w" firstAttribute="centerY" secondItem="RQ8-zU-4q5" secondAttribute="centerY" id="CCY-OA-fBx"/>
-                                                <constraint firstItem="tRA-Ki-UiH" firstAttribute="leading" secondItem="9vO-hQ-fgu" secondAttribute="trailing" constant="5" id="XCB-nA-C2R"/>
-                                                <constraint firstItem="tRA-Ki-UiH" firstAttribute="centerY" secondItem="RQ8-zU-4q5" secondAttribute="centerY" id="hCk-xH-qQp"/>
                                                 <constraint firstItem="9vO-hQ-fgu" firstAttribute="centerY" secondItem="RQ8-zU-4q5" secondAttribute="centerY" id="hHl-xf-10K"/>
                                                 <constraint firstItem="5uQ-Y5-GSj" firstAttribute="leading" secondItem="RQ8-zU-4q5" secondAttribute="leading" constant="15" id="sam-Ts-ooc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="ingredientAmount" destination="tRA-Ki-UiH" id="eEO-EM-YDS"/>
                                             <outlet property="ingredientIcon" destination="5uQ-Y5-GSj" id="kb8-Wi-5JS"/>
                                             <outlet property="ingredientName" destination="9vO-hQ-fgu" id="7C5-fE-fzu"/>
                                             <outlet property="ingredientTerm" destination="iVk-ez-e7w" id="Vjh-eX-E5r"/>
