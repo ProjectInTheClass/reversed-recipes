@@ -14,6 +14,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var showFoodButton: UIButton!
     @IBOutlet weak var ingredientTableView: UITableView!
+    @IBOutlet weak var emptyHomeImage: UIImageView!
     // 임시 나의 재료
 //    var ingredients = [
 //        Ingredient(name: "양파", icon: "onions", ´class´: "vegetable", expirationDate: 5),
@@ -100,6 +101,10 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
 //        ingredientTableView.delegate = self
 //        ingredientTableView.dataSource = self
 //        ingredientTableView.reloadData(
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        tableView.headerView(forSection: 0)?.tintColor = UIColor(red: 255, green: 172, blue: 1, alpha: 0.5)
     }
     
     func completeModalAction(_ ingredient: [Ingredient], _ seasoning: [Seasoning]) {

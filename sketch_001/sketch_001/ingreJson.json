@@ -1,21 +1,21 @@
 [
   {
     "name": "양파",
-    "icon": "onions",
+    "icon": "양파",
     "´class´": "채소류",
     "expirationDate": 7,
     "amount": ""
   },
   {
     "name": "달걀",
-    "icon": "eggs",
+    "icon": "고추1",
     "´class´": "난류",
     "expirationDate": 30,
     "amount": ""
   },
   {
     "name": "돼지고기",
-    "icon": "pork",
+    "icon": "마늘",
     "´class´": "고기류",
     "expirationDate": 3,
     "amount": ""
