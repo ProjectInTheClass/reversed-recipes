@@ -1,6 +1,18 @@
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
 
+
+
+@font-face{
+    font-family: 'BMJUA';
+    src: url(./Users/cau/Desktop/reversed-recipes/docs/assets/css/BMJUA_otf.otf)format('truettype');
+}
+
+body {
+    font-family: BMJUA;
+}
+
+ 
 /*
 	Strongly Typed by HTML5 UP
 	html5up.net | @ajlkn
@@ -21,8 +33,8 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	font-size: 95%;
+	font: BMJUA;
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
@@ -105,7 +117,7 @@ input, select, textarea {
 		font-size: 15pt;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1 {
 		font-weight: 600;
 		text-transform: uppercase;
 		color: #FFAC01;
@@ -118,11 +130,11 @@ input, select, textarea {
 	}
 
 	h2 {
-		font-size: 1.65em;
-		font-weight: 400;
-		letter-spacing: 4px;
+		font-size: 2.00em;
+		font-weight: 500;
+		letter-spacing: 1px;
 		margin: 0 0 1.5em 0;
-		line-height: 1.75em;
+		line-height: 2.05em;
 	}
 
 	h3 {
