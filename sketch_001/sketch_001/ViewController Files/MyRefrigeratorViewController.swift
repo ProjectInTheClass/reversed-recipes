@@ -14,25 +14,27 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var showFoodButton: UIButton!
     @IBOutlet weak var ingredientTableView: UITableView!
     // 임시 나의 재료
-    
-    var ingredients = [
-        Ingredient(name: "양파", icon: "onions", ´class´: "vegetable", expirationDate: 5, startDate: "2017-01-01"),
-        Ingredient(name: "달걀", icon: "eggs", ´class´: "eggs", expirationDate: 5),
-        Ingredient(name: "돼지고기", icon: "pork", ´class´: "meat", expirationDate: 5),
-        Ingredient(name: "우유", icon: "milk", ´class´: "dairyGoods", expirationDate: 3),
-        Ingredient(name: "대파", icon: "leek", ´class´: "vegetable", expirationDate: 3),
-        Ingredient(name: "밥", icon: "rice", ´class´: "rice", expirationDate: 3),
-        Ingredient(name: "김치", icon: "onions", ´class´: "vegetable", expirationDate: 10),
-        Ingredient(name: "마늘", icon: "onions", ´class´: "vegetable", expirationDate: 10)
-    ]
+//    var ingredients = [
+//        Ingredient(name: "양파", icon: "onions", ´class´: "vegetable", expirationDate: 5),
+//        Ingredient(name: "달걀", icon: "eggs", ´class´: "eggs", expirationDate: 5),
+//        Ingredient(name: "돼지고기", icon: "pork", ´class´: "meat", expirationDate: 5),
+//        Ingredient(name: "우유", icon: "milk", ´class´: "dairyGoods", expirationDate: 3),
+//        Ingredient(name: "대파", icon: "leek", ´class´: "vegetable", expirationDate: 3),
+//        Ingredient(name: "밥", icon: "rice", ´class´: "rice", expirationDate: 3),
+//        Ingredient(name: "김치", icon: "onions", ´class´: "vegetable", expirationDate: 10),
+//        Ingredient(name: "마늘", icon: "onions", ´class´: "vegetable", expirationDate: 10)
+//    ]
+
+    var ingredients: [Ingredient]?
+    var seasonings: [Seasoning]?
     
     var tmpIngredient = [Ingredient]()
-    
-    var seasonings = [
-        Seasoning(name: "소금", icon: "salt"),
-        Seasoning(name: "설탕", icon: "salt"),
-        Seasoning(name: "간장", icon: "soy")
-    ]
+
+//    var seasonings = [
+//        Seasoning(name: "소금", icon: "salt"),
+//        Seasoning(name: "설탕", icon: "salt"),
+//        Seasoning(name: "간장", icon: "soy")
+//    ]
     
     var totalData: TotalData?
     var possibleFoodList: [Food]?
@@ -63,6 +65,8 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
+        ingredients = []
+        seasonings = []
         
         showFoodButton.layer.cornerRadius = 0.05 * showFoodButton.bounds.size.width
     }
@@ -70,19 +74,38 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     override func viewWillAppear(_ animated: Bool) {
         let tabBarController = self.tabBarController as! TabBarController
         totalData = tabBarController.totalData
-        print(ingredients.count)
-        ingredientTableView.delegate = self
-        ingredientTableView.dataSource = self
-        ingredientTableView.reloadData()
+//        print(ingredients.count)
+//        ingredientTableView.delegate = self
+//        ingredientTableView.dataSource = self
+//        ingredientTableView.reloadData()
     }
     
     func completeModalAction(_ ingredient: [Ingredient], _ seasoning: [Seasoning]) {
-        ingredients.append(contentsOf: ingredient)
-        seasonings.append(contentsOf: seasoning)
+
+            for eachIngredient in ingredient {
+                if ingredients!.contains(where: {$0.name == eachIngredient.name}){
+                    print("이미 있습니다")
+                }else{
+                    ingredients!.append(eachIngredient)
+                    print("tmp", ingredients)
+                }
+            }
+        
+//        ingredients = tmpIngredient
+        print("myIngre", ingredients)
+        
+            for seasoning in seasoning {
+                if seasonings!.contains(where: {$0.name == seasoning.name}){
+                    print("이미 있습니다.")
+                }else{
+                    seasonings!.append(seasoning)
+                }
+        }
+        self.ingredientTableView.reloadData()
     }
     
     func changeDate(changedIngre: Ingredient) {
-        for ingredient in ingredients {
+        for ingredient in ingredients! {
             if changedIngre.name == ingredient.name {
                 ingredient.startDate = changedIngre.startDate
                 break
@@ -106,9 +129,17 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0{
-            return ingredients.count
+            if let tmpIngredients = ingredients{
+                return tmpIngredients.count
+            }else{
+                return 0
+            }
         }else if section == 1{
-            return seasonings.count
+            if let tmpSeasonings = seasonings{
+                return tmpSeasonings.count
+            }else{
+                return 0
+            }
         }else{
             return 0
         }
@@ -117,50 +148,48 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if indexPath.section == 0 {
-                ingredients.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                if var tmpIngredients = ingredients{
+                    tmpIngredients.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }else{
+                    print("nil")
+                }
+//                ingredients.remove(at: indexPath.row)
+//                tableView.deleteRows(at: [indexPath], with: .fade)
             } else {
-                seasonings.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                if var tmpSeasonings = seasonings{
+                    tmpSeasonings.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+//                seasonings.remove(at: indexPath.row)
+//                tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
     }
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//    
-//        switch indexPath.section {
-//        case 0:
-//            ingredients.removeAll(where: {$0.name = })
-//        case 1:
-//            <#code#>
-//        default:
-//            <#code#>
-//        }
-//        tableView.deleteRows(at: [indexPath], with: .automatic)
-//    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
         
         if indexPath.section == 0 {
-            let ingredient = ingredients[indexPath.row]
-            cell.ingredientIcon.image = UIImage(named: ingredient.icon)
-            cell.ingredientName.text = ingredient.name
-            cell.ingredientTerm.text = "\(ingredient.expirationDate)일"
-            cell.ingredientAmount.text = ""
-            
+            if let ingredient = ingredients?[indexPath.row]{
+                cell.ingredientIcon.image = UIImage(named: ingredient.icon)
+                cell.ingredientName.text = ingredient.name
+                cell.ingredientTerm.text = "\(ingredient.expirationDate)일"
+                cell.ingredientAmount.text = ""
+            }
         }else{
-            let seasoning = seasonings[indexPath.row]
-            cell.ingredientIcon.image = UIImage(named: seasoning.icon)
-            cell.ingredientName.text = seasoning.name
-            cell.ingredientAmount.text = ""
-            cell.ingredientTerm.text = ""
-            cell.ingredientString.text = ""
+            if let seasoning = seasonings?[indexPath.row]{
+                cell.ingredientIcon.image = UIImage(named: seasoning.icon)
+                cell.ingredientName.text = seasoning.name
+                cell.ingredientAmount.text = ""
+                cell.ingredientTerm.text = ""
+                cell.ingredientString.text = ""
+            }
         }
         return cell
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            selectedIngredient = ingredients[indexPath.row]
+            selectedIngredient = ingredients![indexPath.row]
             performSegue(withIdentifier: "detailIngredientSegue", sender: self)
         } else {
             print("selected seasonings")
@@ -168,6 +197,13 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "addRefrigeratorSeague" {
+            let addIngredientView = segue.destination as! AddRefrigeratorViewController
+//            let tmpIngredientArr = addIngredientView.selectedCell
+            addIngredientView.delegate = self
+        }
+
 //        if segue.identifier == "addRefrigeratorSeague" {
 //            let addIngredientView = segue.destination as! AddRefrigeratorViewController
 //            let tmpIngredientArr = addIngredientView.selectedCell
@@ -188,10 +224,14 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             foodListViewController.ingredients = ingredients
             var ingredientsList = [String]()
             possibleFoodList = [Food]()
-            
-            for ingredient in ingredients {
-                ingredientsList.append(ingredient.name)
+            if let tmpIngredients = ingredients{
+                for ingredient in tmpIngredients {
+                    ingredientsList.append(ingredient.name)
+                }
             }
+//            for ingredient in ingredients {
+//                ingredientsList.append(ingredient.name)
+//            }
             guard let totalRecipes = totalData?.totalRecipes else {
                 return
             }

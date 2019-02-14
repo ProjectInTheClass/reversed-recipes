@@ -15,17 +15,6 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
     
 //    @IBOutlet weak var methodLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    
-//    var detailFoodImage = "계란볶음밥"
-//    var detailFoodTime = "10분"
-//    var detailIngredients = ["계란", "양파", "밥", "에그", "ㅇㄹ", "df", "sdf"] //7
-//    var detailSeasoning = ["소금", "설탕"]
-//    var detailRecipes = [
-//        "밥을 넣고 볶는다",
-//        "ㅇㅇㄹㅇㄹㄴㅇㄹ",
-//        "ㄴㅇㄹㄴㅇㄹㅇㄴㄹㄴㅇ",
-//        "ㄴㅇㄹㅇㄴㄹㄴㄹ"
-//    ]
  
     let detailFoodImageCollectionIdentifier = "FoodImage"
     let detailIngredientsCollectionIdentifier = "Ingredients"
@@ -35,7 +24,6 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 4
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
@@ -115,12 +103,28 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        switch section {
+        case 0:
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        case 1:
+            return UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
+        case 2:
+            return UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
+        default:
+            return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        }
+        
+        return UIEdgeInsets(top: 30, left: 0, bottom: 10, right: 0)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if indexPath.section == 0 {
             return CGSize(width: view.bounds.width, height: view.bounds.width*0.66)
         }else if indexPath.section == 1 {
-            let collectionViewWidth = (collectionView.bounds.width-30)/4
+            let collectionViewWidth = (UIScreen.main.bounds.width-10)/6
             let collectionViewHeight = collectionViewWidth
             return CGSize(width: collectionViewWidth, height: collectionViewWidth)
         }else if indexPath.section == 2 {

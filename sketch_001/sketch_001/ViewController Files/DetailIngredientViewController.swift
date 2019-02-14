@@ -47,7 +47,7 @@ class DetailIngredientViewController: UIViewController {
     @IBAction func handleDateChanged() {
         let calendar = Calendar(identifier: .gregorian)
         let startDateStr = dateFormatter.string(from: datePicker.date)
-        let endDate = calendar.date(byAdding: DateComponents(day: 5), to: datePicker.date)
+        let endDate = calendar.date(byAdding: DateComponents(day: ingredient!.expirationDate), to: datePicker.date)
         let endDateStr = dateFormatter.string(from: endDate!)
         startDateLabel.text = startDateStr
         endDateLabel.text = endDateStr
