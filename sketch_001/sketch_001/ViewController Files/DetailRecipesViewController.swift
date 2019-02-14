@@ -133,6 +133,29 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             return CGSize(width: collectionViewWidth, height: collectionViewWidth)
         }else {
             let collectionViewHeight = CGFloat(100)
+            var height: Int?
+            
+            switch indexPath.row {
+            case 0:
+                height = (100 + 70 * (food!.method1!.count / 20))
+            case 1:
+                height = (100 + 70 * (food!.method2!.count / 20))
+            case 2:
+                height = (100 + 70 * (food!.method3!.count / 20))
+            case 3:
+                height = (100 + 70 * (food!.method4!.count / 20))
+            case 4:
+                height = (100 + 70 * (food!.method5!.count / 20))
+            case 5:
+                height = (100 + 70 * (food!.method6!.count / 20))
+            case 6:
+                height = (100 + 70 * (food!.method7!.count / 20))
+            default:
+                print("error in cell size")
+            }
+            
+            return CGSize(width: view.bounds.width, height: CGFloat(height!))
+            
             /*
             var cellHeight = CGFloat(exactly: 0.0)
             
@@ -163,7 +186,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             */
             
             
-            return CGSize(width: view.bounds.width, height: collectionViewHeight)
+//            return CGSize(width: view.bounds.width, height: collectionViewHeight)
             
             
             

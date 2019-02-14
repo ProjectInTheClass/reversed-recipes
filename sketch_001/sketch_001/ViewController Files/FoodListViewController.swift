@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class FoodListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var ingredients: [Ingredient]?
     var possibleFoodList: [Food]?
@@ -25,8 +25,32 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
         return ingredients!.count
     }
     
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let cell = collectionView.cellForItem(at: indexPath)?.contentView as! IngredientsListCollectionViewCell
+//
+//        if cell.ingredientName.text!.count > 3 {
+//            return CGSize(width: 160, height: 40)
+//        } else {
+//            return CGSize(width: 80, height: 40)
+//        }
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let cell = collectionView.cellForItem(at: indexPath) as? IngredientsListCollectionViewCell
+//
+//        if cell?.ingredientName.text?.count == 4 {
+//            return CGSize(width: 150, height: 54)
+//        }
+        
+        if ingredients![indexPath.row].name.count == 4 {
+            return CGSize(width: 150, height: 54)
+        }
+        
+        return CGSize(width: 117, height: 54)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! IngredientsListCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! IngredientsListCollectionViewCell
         
         let ingredient = ingredients![indexPath.row]
         cell.ingredientImage.image = UIImage(named: ingredient.icon)
@@ -34,7 +58,14 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.ingredientButton.layer.cornerRadius = 0.05 * cell.ingredientButton.bounds.size.width
         cell.ingreStr = ingreStr
         cell.delegate = delegate
-//        cell.contentView.layer.cornerRadius = 6.0
+
+        if cell.ingredientName.text!.count == 4 {
+            cell.ingredientButton.frame.size = CGSize(width: 130, height: 40)
+        } else {
+            cell.ingredientButton.frame.size = CGSize(width: 95, height: 40)
+        }
+
+        //        cell.contentView.layer.cornerRadius = 6.0
 //        cell.contentView.layer.borderWidth = 1.0
 //        cell.contentView.layer.borderColor = UIColor.clear.cgColor
 //        cell.contentView.layer.masksToBounds = true
