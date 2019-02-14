@@ -12,7 +12,6 @@ class FoodListCell: UITableViewCell {
 
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var foodName: UILabel!
-    @IBOutlet weak var foodDescript: UILabel!
     @IBOutlet weak var foodTime: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
     

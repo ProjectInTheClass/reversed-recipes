@@ -65,7 +65,7 @@ class TableViewController: UITableViewController, ReloadRecipes {
         
         cell.foodName.text = food.name
         cell.foodTime.text = food.time
-        cell.foodDescript.text = food.descript
+//        cell.foodDescript.text = food.descript
         cell.foodImage.image = UIImage(named: food.thumbnail)
         cell.food = food
         
