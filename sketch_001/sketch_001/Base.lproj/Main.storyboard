@@ -958,37 +958,25 @@
                                         <size key="customSize" width="84" height="74"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Recipes" id="HGP-Tm-B9a" customClass="DetailRecipesCollectionViewCell" customModule="sketch_001" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="436" width="373" height="88"/>
+                                        <rect key="frame" x="0.0" y="436" width="373" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="373" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-<<<<<<< HEAD
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAt-G1-qym">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAt-G1-qym">
                                                     <rect key="frame" x="86" y="13" width="287" height="65"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-=======
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAt-G1-qym">
-                                                    <rect key="frame" x="20" y="0.0" width="333" height="88"/>
->>>>>>> 785a2114074d6f6592ed5cf4d109ebf9d9dca6c0
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
-<<<<<<< HEAD
-                                        <size key="customSize" width="373" height="90"/>
-=======
                                         <constraints>
                                             <constraint firstItem="YAt-G1-qym" firstAttribute="leading" secondItem="HGP-Tm-B9a" secondAttribute="leading" constant="20" id="I4P-jl-t3J"/>
                                             <constraint firstAttribute="bottom" secondItem="YAt-G1-qym" secondAttribute="bottom" id="PKi-3p-Sju"/>
                                             <constraint firstAttribute="trailing" secondItem="YAt-G1-qym" secondAttribute="trailing" constant="20" id="Q7r-sC-A6G"/>
                                             <constraint firstItem="YAt-G1-qym" firstAttribute="top" secondItem="HGP-Tm-B9a" secondAttribute="top" id="jZL-ee-YlU"/>
                                         </constraints>
-                                        <size key="customSize" width="373" height="88"/>
->>>>>>> 785a2114074d6f6592ed5cf4d109ebf9d9dca6c0
+                                        <size key="customSize" width="373" height="90"/>
                                         <connections>
                                             <outlet property="detailRecipe" destination="YAt-G1-qym" id="bYC-om-u7c"/>
                                         </connections>
@@ -1011,11 +999,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQK-uz-6c0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="1812" y="2819.6401799100454"/>
-=======
-            <point key="canvasLocation" x="1896.8" y="2755.7721139430287"/>
->>>>>>> 785a2114074d6f6592ed5cf4d109ebf9d9dca6c0
         </scene>
         <!--Food Recipes Table View Controller-->
         <scene sceneID="hG0-gE-Dmn">

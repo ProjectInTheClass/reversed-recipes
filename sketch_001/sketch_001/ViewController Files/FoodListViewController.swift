@@ -61,9 +61,15 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         ingreStr = IngreStr()
         ingreStr?.ingredientsList = []
-        for ingredient in ingredients! {
-            ingreStr?.ingredientsList?.append(ingredient.name)
+        if let tmpIngredients = ingredients {
+            for ingredient in tmpIngredients {
+                ingreStr?.ingredientsList?.append(ingredient.name)
+            }
         }
+        
+//        for ingredient in ingredients! {
+//            ingreStr?.ingredientsList?.append(ingredient.name)
+//        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

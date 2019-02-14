@@ -17,10 +17,17 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
     @IBOutlet weak var collectionView: UICollectionView!
     weak var delegate: ModalActionDelegate?
     var addRefrigeratorCollectionViewIdentifier = "AddRefrigerator"
+    
     var selectedIngredientCell = [Ingredient]()
     var selectedSeasoningCell = [Seasoning]()
+    // delegate로 넘길 데이터
+    
+    var selectedIngredientString = [String]()
+    var selectedSeasoningString = [String]()
+    
     var totalIngredientData: TotalIngredientsData?
     var totalSeasoningData: TotalSeasoningData?
+    
     var totalIngredients: [Ingredient]?
     var totalSeasoning: [Seasoning]?
     
@@ -62,6 +69,7 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
         let headerViewWidth = collectionView.bounds.width
         let headerViewHeight = collectionView.bounds.width/10.0
         return CGSize(width: headerViewWidth, height: headerViewHeight)
@@ -74,22 +82,30 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         return CGSize(width: collectionViewWidth, height: collectionViewWidth)
     }
     
-    var selectedIndexPath: [IndexPath] = []
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+        let cell = collectionView.cellForItem(at: indexPath) as! AddRefrigeratorCollectionViewCell
 
-        if selectedIndexPath.contains(indexPath){
-            selectedIndexPath.removeAll(where: {$0 == indexPath})
-            //이미 터치된 경우
-        }else{
-            selectedIndexPath.append(indexPath)
-            //터치가 안돼있을 경우
+        switch indexPath.section {
+        case 0...4:
+            if selectedIngredientString.contains(cell.contentName.text!){
+                selectedIngredientString.removeAll(where: {$0 == cell.contentName.text})
+            }else{
+                selectedIngredientString.append(cell.contentName.text!)
+            }
+        default:
+            if selectedSeasoningString.contains(cell.contentName.text!){
+                selectedSeasoningString.removeAll(where: {$0 == cell.contentName.text!})
+            }else{
+                selectedSeasoningString.append(cell.contentName.text!)
+            }
         }
-        print(selectedIndexPath)
-        print("ingre", selectedIngredientCell)
-        print("seasoning", selectedSeasoningCell)
+        
+        print(cell.contentName.text)
+        print("ingre", selectedIngredientString)
+        print("seasoning", selectedSeasoningString)
 
-        //리로드 시키는 함수
         collectionView.reloadData()
     }
     
@@ -113,22 +129,24 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
             print("empty")
             }
         
-        if selectedIndexPath.contains(indexPath){
-//            switch indexPath.section {
-//            case 0...4:
-//                selectedIngredientCell = totalIngredients!.map({$0.name == cell.contentName.text})
-//            default:
-//                selectedSeasoningCell = totalSeasoning!.map({$0.name == cell.contentName.text})
-//            }
-            cell.backgroundColor = UIColor.gray
-            
-        }else{
-
-            cell.backgroundColor = UIColor.white
+        switch indexPath.section {
+        case 0...4:
+            if selectedIngredientString.contains(cell.contentName.text!){
+                cell.backgroundColor = UIColor.gray
+            }else{
+                cell.backgroundColor = UIColor.white
+            }
+        default:
+            if selectedSeasoningString.contains(cell.contentName.text!){
+                cell.backgroundColor = UIColor.gray
+            }else{
+                cell.backgroundColor = UIColor.white
+            }
         }
 
-        return cell
         
+
+        return cell
     }
  
     
@@ -142,18 +160,19 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         totalSeasoning = totalSeasoningData?.totalSeasoning
         let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
         collectionView.collectionViewLayout = alignedFlowLayout
-
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
 
-        for i in selectedIndexPath{
-            
-        }
         if let delegate = self.delegate {
-            let selectedIngredient = selectedIngredientCell
-            let selectedSeasoning = selectedSeasoningCell
-            delegate.completeModalAction(selectedIngredient, selectedSeasoning)
+            for ingredient in selectedIngredientString {
+                selectedIngredientCell.append(totalIngredients!.first(where: {$0.name == ingredient})!)
+            }
+            for seasoning in selectedSeasoningString {
+                selectedSeasoningCell.append(totalSeasoning!.first(where: {$0.name == seasoning})!)
+            }
+        
+            delegate.completeModalAction(selectedIngredientCell, selectedSeasoningCell)
         }
         self.dismiss(animated: true, completion: nil)
     }
