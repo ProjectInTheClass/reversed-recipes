@@ -109,77 +109,29 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         case 0:
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         case 1:
-            return UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
+            return UIEdgeInsets(top: 15, left: 15, bottom: 5, right: 15)
         case 2:
-            return UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
+            return UIEdgeInsets(top: 5, left: 15, bottom: 20, right: 15)
         default:
-            return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+            return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         }
         
-        return UIEdgeInsets(top: 30, left: 0, bottom: 10, right: 0)
+//        return UIEdgeInsets(top: 30, left: 0, bottom: 10, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+        let width = UIScreen.main.bounds.width
+//        return CGSize(width: (width / 4) - 30, height: 75)
         if indexPath.section == 0 {
             return CGSize(width: view.bounds.width, height: view.bounds.width*0.66)
         }else if indexPath.section == 1 {
-            let collectionViewWidth = (UIScreen.main.bounds.width-10)/6
-            let collectionViewHeight = collectionViewWidth
-            return CGSize(width: collectionViewWidth, height: collectionViewWidth)
+            return CGSize(width: (width / 4) - 30, height: 75)
         }else if indexPath.section == 2 {
-            let collectionViewWidth = (collectionView.bounds.width-30)/4
-            let collectionViewHeight = collectionViewWidth
-            return CGSize(width: collectionViewWidth, height: collectionViewWidth)
+            return CGSize(width: (width / 4) - 30, height: 75)
         }else {
-            let collectionViewHeight = CGFloat(100)
-            /*
-            var cellHeight = CGFloat(exactly: 0.0)
-            
-            guard let recipeCount = cell.detailRecipe.text?.count else{
-                return CGSize(width: 0, height: 0)
-            }
-            
-            
-            // 케이스마다 메서드의 글자 개수를 받아와서 몇 줄인지 정숫값으로 받아낸다.  받아낸 정숫값으로 CGSize의 높이를 찾아온다.
-            switch indexPath.row {
-            case 0:
-                
-            case 1:
-                
-            case 2:
-                
-            case 3:
-                
-            case 4:
-                
-            case 5:
-                
-            case 6:
-                
-            default:
-                print("default")
-            }
-            */
-            
+            let collectionViewHeight = CGFloat(50)
             
             return CGSize(width: view.bounds.width, height: collectionViewHeight)
-            
-            
-            
-            
-          /*
-            methodCound = food.me
-            if let cellHeightTemp = food!.method1{
-              var cellHeight = 88*(cellHeightTemp.count-(cellHeightTemp.count % 28))/28
-                 return CGSize(width: view.bounds.width, height: CGFloat(exactly: cellHeight)!)// 3번 째 indexpath.row의 높이
-            }
-            else {
-               return CGSize(width: view.bounds.width, height: CGFloat(exactly: 0)!)// 3번 째 indexpath.row의 높이
-            }
-        */
-          //  var cellHeight:Int? = 88*(food!.method1?.count-(food!.method1.count % 28))/28
- //        return CGSize(width: view.bounds.width, height: CGFloat(exactly: 88/*cellHeight*/)!)// 3번 째 indexpath.row의 높이
         }
     }
 
