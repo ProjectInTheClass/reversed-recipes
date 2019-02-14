@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemoViewController: UIViewController {
+class MemoViewController: UIViewController, SaveData {
 
     @IBOutlet weak var memoTextView: UITextView!
 
@@ -17,6 +17,9 @@ class MemoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.delegateMemo = self
+        
         let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         docsDir = dirPath[0].appendingPathComponent("memo.dat")
         
@@ -25,18 +28,22 @@ class MemoViewController: UIViewController {
             let content = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as! String
             memoTextView.text = content
         } catch {
-            print("Error!")
+            print("error during the load in viewDidLoad() of Memo")
         }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        saveData()
+    }
+    
+    func saveData() {
         let content = memoTextView.text
         
         do {
             let data = try NSKeyedArchiver.archivedData(withRootObject: content!, requiringSecureCoding: false)
             try data.write(to: docsDir!)
         } catch {
-            print("Error!")
+            print("error during the save in saveData() of Memo")
         }
     }
 }

@@ -12,7 +12,8 @@ class DetailIngredientViewController: UIViewController {
 
     var ingredient: Ingredient?
     var delegate: ChangeDate?
-    var isChanged: Bool?
+    var isChangedDate: Bool?
+    var isChangedFrozen: Bool?
     
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -22,22 +23,30 @@ class DetailIngredientViewController: UIViewController {
     @IBOutlet weak var frozenSwitch: UISwitch!
     
     @IBAction func close(_ sender: Any) {
-        if isChanged! {
+        if isChangedDate! {
             delegate?.changeDate(changedIngre: ingredient!)
+        }
+        
+        if isChangedFrozen! {
+            delegate?.changeFrozen(changedIngre: ingredient!)
         }
         
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func handleFrozen(_ sender: Any) {
+        isChangedFrozen = true
+        
         if frozenSwitch.isOn {
             // ingredient.frozen = true
             print("frozen on")
             endDateLabel.textColor = UIColor.gray
+            ingredient?.isFrozen = true
         } else {
             // ingredient.frozen = false
             print("frozen off")
             endDateLabel.textColor = UIColor.black
+            ingredient?.isFrozen = false
         }
     }
     
@@ -52,7 +61,7 @@ class DetailIngredientViewController: UIViewController {
         startDateLabel.text = startDateStr
         endDateLabel.text = endDateStr
         ingredient?.startDate = startDateStr
-        isChanged = true
+        isChangedDate = true
 //        let todayDate = Date()
 //        let remainingDate = todayDate.timeIntervalSince(datePicker.date)
 //        let remainingDays = Int(remainingDate / 86400)
@@ -64,17 +73,24 @@ class DetailIngredientViewController: UIViewController {
         dateFormatter.dateStyle = .medium
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
-        isChanged = false
+        isChangedDate = false
+        isChangedFrozen = false
         
         iconImage.image = UIImage(named: ingredient!.icon)
         nameLabel.text = ingredient!.name
         classLabel.text = ingredient!.´class´
         
+        if ingredient?.isFrozen == true {
+            endDateLabel.textColor = UIColor.gray
+            frozenSwitch.isOn = true
+        }
+        
         if let date = ingredient?.startDate {
             startDateLabel.text = date
             datePicker.date = dateFormatter.date(from: date)!
         } else {
-            startDateLabel.text = dateFormatter.string(from: datePicker.date)
+//            startDateLabel.text = dateFormatter.string(from: datePicker.date)
+            print("ingredient.startDate error!")
         }
     }
     
@@ -85,4 +101,5 @@ class DetailIngredientViewController: UIViewController {
 
 protocol ChangeDate {
     func changeDate(changedIngre: Ingredient)
+    func changeFrozen(changedIngre: Ingredient)
 }
