@@ -776,7 +776,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="373" height="258"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="계란볶음밥" translatesAutoresizingMaskIntoConstraints="NO" id="8Ir-c6-Jgw">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ir-c6-Jgw">
                                                     <rect key="frame" x="0.0" y="0.0" width="373" height="200"/>
                                                     <color key="backgroundColor" red="0.9994729161" green="0.86872255799999998" blue="0.70004218819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -834,7 +834,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.22960315479999999" green="0.78892082249999995" blue="0.41664338210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Cqr-te-jbU" secondAttribute="trailing" id="Bmm-pT-9gy"/>
                                             <constraint firstAttribute="bottom" secondItem="Cqr-te-jbU" secondAttribute="bottom" constant="4" id="N4c-d6-Q1s"/>
@@ -897,7 +897,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.88146603320000005" green="1" blue="0.56598085710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="OsR-up-djq" firstAttribute="top" secondItem="fQs-N9-3Ds" secondAttribute="bottom" constant="4" id="HL9-6E-Azj"/>
                                             <constraint firstAttribute="trailing" secondItem="OsR-up-djq" secondAttribute="trailing" id="SRj-It-bQk"/>
@@ -1493,11 +1493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udQ-k6-ML6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="-1100" y="1376.7616191904049"/>
-=======
-            <point key="canvasLocation" x="822" y="1227"/>
->>>>>>> 115f8182c0431db98f2cd1ec7b8dfd08b9274c51
         </scene>
         <!--냉장고 채우기-->
         <scene sceneID="l5a-SJ-jXd">

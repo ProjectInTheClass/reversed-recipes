@@ -13,6 +13,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
     
     var food: Food?
     
+    
 //    @IBOutlet weak var methodLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
  
@@ -68,16 +69,18 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             let eachIngre = Set(ingredients!.components(separatedBy: ", "))
             let ingreArr = Array(eachIngre)
             cell.detailIngredientName.text = ingreArr[indexPath.row]
-//            cell.detailIngredientImage.image = UIImage(named: ingre)
-            
+            cell.detailIngredientImage.image = UIImage(named: ingreArr[indexPath.row])
             return cell
+            
         }else if indexPath.section == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailSeasoningCollectionIdentifier, for: indexPath) as! DetailSeasoningCollectionViewCell
             let seasonings = food!.seasoning!
             let eachSeas = Set(seasonings.components(separatedBy: ", "))
             let seasArr = Array(eachSeas)
             cell.detailSeasoningName.text = seasArr[indexPath.row]
+            cell.detailSeasoningImage.image = UIImage(named: seasArr[indexPath.row])
             return cell
+            
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailRecipesCollectionIdentifier, for: indexPath) as! DetailRecipesCollectionViewCell
 
