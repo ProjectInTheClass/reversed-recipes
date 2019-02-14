@@ -66,11 +66,26 @@ class Food: Codable {
         self.time = time
     }
     
-    init(name: String, thumbnail: String, time: String, descript: String) {
+    init(name: String, thumbnail: String, time: String, descript: String?) {
         self.name = name
         self.thumbnail = thumbnail
         self.time = time
         self.descript = descript
+    }
+    
+    convenience init(name: String, thumbnail: String, time: String, descript: String?, ingredients: String?, ingreAmount: String?, seasoning: String?, method1: String?, method2: String?, method3: String?, method4: String?, method5: String?, method6: String?, method7: String?, id: Int?) {
+        self.init(name: name, thumbnail: thumbnail, time: time, descript: descript)
+        self.ingredients = ingredients
+        self.ingreAmount = ingreAmount
+        self.seasoning = seasoning
+        self.method1 = method1
+        self.method2 = method1
+        self.method3 = method1
+        self.method4 = method1
+        self.method5 = method1
+        self.method6 = method1
+        self.method7 = method1
+        self.id = id
     }
 }
 

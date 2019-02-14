@@ -117,9 +117,12 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
+<<<<<<< HEAD
 
 
     
+=======
+>>>>>>> 785a2114074d6f6592ed5cf4d109ebf9d9dca6c0
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //    
 //        switch indexPath.section {
@@ -133,7 +136,10 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
 //        tableView.deleteRows(at: [indexPath], with: .automatic)
 //    }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 785a2114074d6f6592ed5cf4d109ebf9d9dca6c0
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
         
@@ -157,6 +163,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+<<<<<<< HEAD
         
         if segue.identifier == "addRefrigeratorSeague" {
             let addIngredientView = segue.destination as! AddRefrigeratorViewController
@@ -164,6 +171,8 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             addIngredientView.delegate = self
         }
 
+=======
+>>>>>>> 785a2114074d6f6592ed5cf4d109ebf9d9dca6c0
 //        if segue.identifier == "addRefrigeratorSeague" {
 //            let addIngredientView = segue.destination as! AddRefrigeratorViewController
 //            let tmpIngredientArr = addIngredientView.selectedCell
