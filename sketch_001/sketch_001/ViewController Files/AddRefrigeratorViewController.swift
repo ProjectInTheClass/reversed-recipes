@@ -22,21 +22,10 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
     var totalIngredientData: TotalIngredientsData?
     var totalSeasoningData: TotalSeasoningData?
     var totalIngredients: [Ingredient]?
-    var totalSeasoing: [Seasoning]?
-    
-    //////////////////////////////////////////////////////////////////////
-    var tmpIngredientContents = [
-        "고기류" : ["돼지고기", "소고기", "닭고기", "양고기"],
-        "채소류" : ["양파", "당근", "무", "대파"],
-        "계란류" : ["계란", "메추리알"],
-        "조미료" : ["설탕", "소금", "간장", "물엿", "고추장", "고춧가루", "후추"]]
-    var ingredientsClassName = ["고기류", "채소류", "계란류", "조미료"]
-    //////////////////////////////////////////////////////////////////////
-    // contents for test
-    
+    var totalSeasoning: [Seasoning]?
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return Set(totalIngredients!.map({$0.´class´})).count
+        return Set(totalIngredients!.map({$0.´class´})).count + 1 //조미료
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,7 +42,7 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         case 4:
             return totalIngredients!.filter({$0.´class´ == "유제품류"}).count
         case 5:
-            return totalSeasoing!.count
+            return totalSeasoning!.count
         default:
             return 0
         }
@@ -85,6 +74,25 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         return CGSize(width: collectionViewWidth, height: collectionViewWidth)
     }
     
+    var selectedIndexPath: [IndexPath] = []
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        if selectedIndexPath.contains(indexPath){
+            selectedIndexPath.removeAll(where: {$0 == indexPath})
+            //이미 터치된 경우
+        }else{
+            selectedIndexPath.append(indexPath)
+            //터치가 안돼있을 경우
+        }
+        print(selectedIndexPath)
+        print("ingre", selectedIngredientCell)
+        print("seasoning", selectedSeasoningCell)
+
+        //리로드 시키는 함수
+        collectionView.reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: addRefrigeratorCollectionViewIdentifier, for: indexPath) as! AddRefrigeratorCollectionViewCell
         
@@ -100,146 +108,29 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         case 4:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "유제품류"}).map({$0.name})[indexPath.item]
         case 5:
-            cell.contentName.text = totalSeasoing!.map({$0.name})[indexPath.item]
-        default:
-            return cell
-            }
-        return cell
-        }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell: UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
-        // 현재 체크가 되어있는 지 확인
-        var selectedIngredientSection: Ingredient?
-        var selectedSeasoningSection: Seasoning?
-        
-        if indexPath.section < 5 {
-            switch indexPath.section {
-            case 0:
-                selectedIngredientSection = totalIngredients!.filter({$0.´class´ == "고기류"})[indexPath.row]
-            case 1:
-                selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "채소류"})[indexPath.row]
-            case 2:
-                selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "난류"})[indexPath.row]
-            case 3:
-                selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "밥류"})[indexPath.row]
-            default:
-                selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "유제품류"})[indexPath.row]
-            }
-            if selectedIngredientCell.contains(where: {$0.name == selectedIngredientSection?.name}){
-                selectedIngredientCell.removeAll(where: {$0.name == selectedIngredientSection?.name})
-                cell.backgroundColor = UIColor.white
-            }else{
-                selectedIngredientCell.append(selectedIngredientSection!)
-                cell.backgroundColor = UIColor.gray
-            }
-            
-        }else{
-            selectedSeasoningSection = totalSeasoing?[indexPath.row]
-            if selectedSeasoningCell.contains(where: {$0.name == selectedSeasoningSection?.name}){
-                selectedSeasoningCell.removeAll(where: {$0.name == selectedSeasoningSection?.name})
-                cell.backgroundColor = UIColor.white
-            }else{
-                selectedSeasoningCell.append(selectedSeasoningSection!)
-                cell.backgroundColor = UIColor.gray
-            }
-        }
-        
-        
-//        switch indexPath.section {
-//        case 0:
-//            selectedIngredientSection = totalIngredients!.filter({$0.´class´ == "고기류"})[indexPath.row]
-//        case 1:
-//            selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "채소류"})[indexPath.row]
-//        case 2:
-//            selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "난류"})[indexPath.row]
-//        case 3:
-//            selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "밥류"})[indexPath.row]
-//        case 4:
-//            selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "유제품류"})[indexPath.row]
-//        case 5:
-//            selectedSeasoningSection = totalSeasoing?[indexPath.row]
-//        default:
-//            print("empty")
-//        }
-//        
-//        if selectedIngredientCell.contains(where: {$0.name == selectedIngredientSection?.name}){
-//            selectedIngredientCell.removeAll(where: {$0.name == selectedIngredientSection?.name})
-//            cell.backgroundColor = UIColor.white
-//        }else{
-//            selectedIngredientCell.append(selectedIngredientSection!)
-//            cell.backgroundColor = UIColor.gray
-//        }
-//        //check ingre
-//        
-//        if selectedSeasoningCell.contains(where: {$0.name == selectedSeasoningSection?.name}){
-//            selectedSeasoningCell.removeAll(where: {$0.name == selectedSeasoningSection?.name})
-//            cell.backgroundColor = UIColor.white
-//        }else{
-//            selectedSeasoningCell.append(selectedSeasoningSection!)
-//            cell.backgroundColor = UIColor.gray
-//        }
-//        
-        print(selectedIngredientCell)
-        print(selectedSeasoningCell)
-        
-        /*
-        if selectedIngredientCell.contains(sel){
-            selectedCell.removeAll(where: {$0 == selectedIngredient})
-            cell.backgroundColor = UIColor.white
-        }else{
-            selectedCell.append(selectedIngredient)
-            cell.backgroundColor = UIColor.gray
-        }
-        print(selectedCell)
- */
-    }
-
-    
-
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell : UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
-        var selectedIngredientSection: Ingredient?
-        var selectedSeasoningSection: Seasoning?
-        
-        switch indexPath.section {
-        case 0:
-            selectedIngredientSection = totalIngredients!.filter({$0.´class´ == "고기류"})[indexPath.row]
-        case 1:
-            selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "채소류"})[indexPath.row]
-        case 2:
-            selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "난류"})[indexPath.row]
-        case 3:
-            selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "밥류"})[indexPath.row]
-        case 4:
-            selectedIngredientSection = totalIngredients?.filter({$0.´class´ == "유제품류"})[indexPath.row]
-        case 5:
-            selectedSeasoningSection = totalSeasoing?[indexPath.row]
+            cell.contentName.text = totalSeasoning![indexPath.item].name
         default:
             print("empty")
-        }
+            }
         
-        if selectedIngredientCell.contains(where: {$0.name == selectedIngredientSection?.name}){
-            cell.backgroundColor = UIColor.white
-        }else{
+        if selectedIndexPath.contains(indexPath){
+//            switch indexPath.section {
+//            case 0...4:
+//                selectedIngredientCell = totalIngredients!.map({$0.name == cell.contentName.text})
+//            default:
+//                selectedSeasoningCell = totalSeasoning!.map({$0.name == cell.contentName.text})
+//            }
             cell.backgroundColor = UIColor.gray
+            
+        }else{
+
+            cell.backgroundColor = UIColor.white
         }
-        //check ingre
+
+        return cell
         
-        if selectedSeasoningCell.contains(where: {$0.name == selectedSeasoningSection?.name}){
-            cell.backgroundColor = UIColor.white
-        }else{
-            cell.backgroundColor = UIColor.gray
-        }
-//
-//        let selectedIngredient = tmpIngredientContents[ingredientsClassName[indexPath.section]]![indexPath.row]
-//
-//        if selectedCell.contains(selectedIngredient) {
-//            cell.backgroundColor = UIColor.gray
-//        }else{
-//            cell.backgroundColor = UIColor.white
-//        }
     }
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -248,13 +139,17 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         totalIngredientData = TotalIngredientsData()
         totalSeasoningData = TotalSeasoningData()
         totalIngredients = totalIngredientData?.totalIngredients
-        totalSeasoing = totalSeasoningData?.totalSeasoning
+        totalSeasoning = totalSeasoningData?.totalSeasoning
         let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
         collectionView.collectionViewLayout = alignedFlowLayout
 
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
+
+        for i in selectedIndexPath{
+            
+        }
         if let delegate = self.delegate {
             let selectedIngredient = selectedIngredientCell
             let selectedSeasoning = selectedSeasoningCell
