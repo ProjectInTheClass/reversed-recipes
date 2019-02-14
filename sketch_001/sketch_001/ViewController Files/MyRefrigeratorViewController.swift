@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalActionDelegate, ChangeDate {
+class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalActionDelegate, ChangeDate, SaveData {
     
     var docsDir: URL?
 
@@ -65,36 +65,34 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.delegateRefri = self
+        
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
         ingredients = []
         seasonings = []
         
-//        let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        docsDir = dirPath[0].appendingPathComponent("myRefrigerator.dat")
-//
-//        do {
-//            let data = try Data(contentsOf: docsDir!)
-//            let content = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as! [Ingredient]
-//            ingredients = content
-//        } catch {
-//            print("Error! in the myrefri viewDidLoad()")
-//        }
+        let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docsDirOfIngre = dirPath[0].appendingPathComponent("myIngredient.dat")
+        let docsDirOfSeas = dirPath[0].appendingPathComponent("mySeason.dat")
+        
+        do {
+            let dataIngre = try Data(contentsOf: docsDirOfIngre)
+            let dataSeas = try Data(contentsOf: docsDirOfSeas)
+            ingredients = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dataIngre) as? [Ingredient]
+            seasonings = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dataSeas) as? [Seasoning]
+        } catch {
+            print("error during the load in viewDidLoad() of MyRefri")
+        }
         
         showFoodButton.layer.cornerRadius = 0.05 * showFoodButton.bounds.size.width
     }
     
-//
-//    override func viewDidDisappear(_ animated: Bool) {
-//        if let content = ingredients {
-//        do {
-//            let data = try NSKeyedArchiver.archivedData(withRootObject: content, requiringSecureCoding: false)
-//            try data.write(to: docsDir!)
-//        } catch {
-//            print("Error!")
-//            }
-//        }
-//    }
+    override func viewDidDisappear(_ animated: Bool) {
+        saveData()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         let tabBarController = self.tabBarController as! TabBarController
@@ -110,25 +108,32 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func completeModalAction(_ ingredient: [Ingredient], _ seasoning: [Seasoning]) {
-
-            for eachIngredient in ingredient {
-                if ingredients!.contains(where: {$0.name == eachIngredient.name}){
-                    print("이미 있습니다")
-                }else{
-                    ingredients!.append(eachIngredient)
-                    print("tmp", ingredients)
-                }
-            }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         
+        let todayDate = Date()
+        let todayDateStr = dateFormatter.string(from: todayDate)
+        
+        for eachIngredient in ingredient {
+            if ingredients!.contains(where: {$0.name == eachIngredient.name}){
+                print("이미 있습니다")
+            }else{
+                eachIngredient.startDate = todayDateStr
+                ingredients!.append(eachIngredient)
+                print("tmp", ingredients)
+            }
+        }
+    
 //        ingredients = tmpIngredient
         print("myIngre", ingredients)
         
-            for seasoning in seasoning {
-                if seasonings!.contains(where: {$0.name == seasoning.name}){
-                    print("이미 있습니다.")
-                }else{
-                    seasonings!.append(seasoning)
-                }
+        for seasoning in seasoning {
+            if seasonings!.contains(where: {$0.name == seasoning.name}){
+                print("이미 있습니다.")
+            }else{
+                seasonings!.append(seasoning)
+            }
         }
         self.ingredientTableView.reloadData()
     }
@@ -139,6 +144,33 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
                 ingredient.startDate = changedIngre.startDate
                 break
             }
+        }
+    }
+    
+    func changeFrozen(changedIngre: Ingredient) {
+        for ingredient in ingredients! {
+            if changedIngre.name == ingredient.name {
+                ingredient.isFrozen = changedIngre.isFrozen
+                break
+            }
+        }
+    }
+    
+    func saveData() {
+        let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        let docsDirOfIngre = dirPath[0].appendingPathComponent("myIngredient.dat")
+        let docsDirOfSeas = dirPath[0].appendingPathComponent("mySeason.dat")
+        
+        do {
+            let ingredientsNS = ingredients as NSArray?
+            let seasoningsNS = seasonings as NSArray?
+            let dataIngre = try NSKeyedArchiver.archivedData(withRootObject: ingredientsNS!, requiringSecureCoding: false)
+            let dataSeas = try NSKeyedArchiver.archivedData(withRootObject: seasoningsNS!, requiringSecureCoding: false)
+            try dataIngre.write(to: docsDirOfIngre)
+            try dataSeas.write(to: docsDirOfSeas)
+        } catch {
+            print("error during the save in saveData() of MyRefri")
         }
     }
     

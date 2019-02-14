@@ -17,12 +17,13 @@ import Foundation
 //    Food(name: "참치마요", thumbnail: "참치마요", time: "5분", descript: "모두가 좋아하는 참치마요덮밥")
 //]
 
-class Ingredient: Codable {
+class Ingredient: NSObject, NSCoding, Codable {
     var name: String
     var icon: String
     var ´class´: String
     var expirationDate: Int // 소비 기한
     var startDate: String? // 구매 날짜
+    var isFrozen: Bool?
 //    var amount: String? //양 측정 단위
     //양 숫자를 나타내는 변수 추가
     
@@ -38,8 +39,22 @@ class Ingredient: Codable {
         self.startDate = startDate
     }
     
-    func isFrozen(ingredient: Ingredient) -> Bool {
-        return true
+    required init?(coder aDecoder: NSCoder) {
+        self.name = aDecoder.decodeObject(forKey: "name") as! String
+        self.icon = aDecoder.decodeObject(forKey: "icon") as! String
+        self.´class´ = aDecoder.decodeObject(forKey: "´class´") as! String
+        self.expirationDate = Int(aDecoder.decodeInteger(forKey: "expirationDate"))
+        self.startDate = aDecoder.decodeObject(forKey: "startDate") as? String
+        self.isFrozen = aDecoder.decodeObject(forKey: "isFrozen") as? Bool
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.name, forKey: "name")
+        aCoder.encode(self.icon, forKey: "icon")
+        aCoder.encode(self.´class´, forKey: "´class´")
+        aCoder.encode(self.expirationDate, forKey: "expirationDate")
+        aCoder.encode(self.startDate, forKey: "startDate")
+        aCoder.encode(self.isFrozen, forKey: "isFrozen")
     }
 }
 
