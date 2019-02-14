@@ -68,7 +68,6 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.delegateRefri = self
-        
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
         ingredients = []
@@ -88,6 +87,14 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         }
         
         showFoodButton.layer.cornerRadius = 0.05 * showFoodButton.bounds.size.width
+        
+        if (ingredients!.count + seasonings!.count) == 0 {
+            emptyHomeImage.isHidden = false
+        }else{
+            emptyHomeImage.isHidden = true
+        }
+        
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -97,6 +104,11 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     override func viewWillAppear(_ animated: Bool) {
         let tabBarController = self.tabBarController as! TabBarController
         totalData = tabBarController.totalData
+        if (ingredients!.count + seasonings!.count) == 0 {
+            emptyHomeImage.isHidden = false
+        }else{
+            emptyHomeImage.isHidden = true
+        }
 //        print(ingredients.count)
 //        ingredientTableView.delegate = self
 //        ingredientTableView.dataSource = self
@@ -226,12 +238,17 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
+        
+        tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
         
+        var checkTerm: String?
+        
         if indexPath.section == 0 {
             if let ingredient = ingredients?[indexPath.row]{
+                
                 cell.ingredientIcon.image = UIImage(named: ingredient.icon)
                 cell.ingredientName.text = ingredient.name
                 cell.ingredientTerm.text = "\(ingredient.expirationDate)일"

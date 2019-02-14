@@ -20,12 +20,10 @@
 		BB2E21E42211D36800520B0B /* DetailRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E21E32211D36800520B0B /* DetailRecipesViewController.swift */; };
 		BB41278122101B6700CA5709 /* BookmarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB41278022101B6700CA5709 /* BookmarkTableViewController.swift */; };
 		BB4127852210608900CA5709 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4127842210608900CA5709 /* RecipesTableViewCell.swift */; };
-		BB4127892210612900CA5709 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4127882210612900CA5709 /* RecipesViewController.swift */; };
 		BB4127AF22108FED00CA5709 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4127AE22108FED00CA5709 /* FoodListViewController.swift */; };
 		BB4127EF2211289D00CA5709 /* FoodRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */; };
 		BB7F238721E77D230056BB42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7F238521E77D230056BB42 /* Main.storyboard */; };
 		BB7F238C21E77D250056BB42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7F238A21E77D250056BB42 /* LaunchScreen.storyboard */; };
-		BBB60DE022129C3C005F7A11 /* RefrigeratorAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB60DDF22129C3C005F7A11 /* RefrigeratorAddViewController.swift */; };
 		BBB60DE22212BC3D005F7A11 /* AddRefrigeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB60DE12212BC3D005F7A11 /* AddRefrigeratorViewController.swift */; };
 		BBB80A8721FF30C700D13866 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A8621FF30C700D13866 /* TableViewController.swift */; };
 		BBB80A8921FF30DC00D13866 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A8821FF30DC00D13866 /* FoodListCell.swift */; };
@@ -52,14 +50,12 @@
 		BB2E21E32211D36800520B0B /* DetailRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipesViewController.swift; sourceTree = "<group>"; };
 		BB41278022101B6700CA5709 /* BookmarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewController.swift; sourceTree = "<group>"; };
 		BB4127842210608900CA5709 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
-		BB4127882210612900CA5709 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		BB4127AE22108FED00CA5709 /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipesTableViewController.swift; sourceTree = "<group>"; };
 		BB7F237E21E77D230056BB42 /* sketch_001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sketch_001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7F238621E77D230056BB42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB7F238B21E77D250056BB42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7F238D21E77D250056BB42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBB60DDF22129C3C005F7A11 /* RefrigeratorAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorAddViewController.swift; sourceTree = "<group>"; };
 		BBB60DE12212BC3D005F7A11 /* AddRefrigeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRefrigeratorViewController.swift; sourceTree = "<group>"; };
 		BBB80A8621FF30C700D13866 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BBB80A8821FF30DC00D13866 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
@@ -101,7 +97,6 @@
 		5281CE01221307860022A01B /* ViewController Files */ = {
 			isa = PBXGroup;
 			children = (
-				BB4127882210612900CA5709 /* RecipesViewController.swift */,
 				BB4127AE22108FED00CA5709 /* FoodListViewController.swift */,
 				BB41278022101B6700CA5709 /* BookmarkTableViewController.swift */,
 				BB4127EE2211289D00CA5709 /* FoodRecipesTableViewController.swift */,
@@ -109,7 +104,6 @@
 				522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */,
 				522DEE022211B43F00EB8ADA /* MyRefrigeratorViewController.swift */,
 				522DEE0622126EA300EB8ADA /* TabBarController.swift */,
-				BBB60DDF22129C3C005F7A11 /* RefrigeratorAddViewController.swift */,
 				52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */,
 				BBB60DE12212BC3D005F7A11 /* AddRefrigeratorViewController.swift */,
 				BBB80A8621FF30C700D13866 /* TableViewController.swift */,
@@ -307,7 +301,6 @@
 				BBB60DE22212BC3D005F7A11 /* AddRefrigeratorViewController.swift in Sources */,
 				522DEE0722126EA300EB8ADA /* TabBarController.swift in Sources */,
 				BB41278122101B6700CA5709 /* BookmarkTableViewController.swift in Sources */,
-				BB4127892210612900CA5709 /* RecipesViewController.swift in Sources */,
 				522DEE01221197EB00EB8ADA /* DetailIngredientViewController.swift in Sources */,
 				BBB80AFD2201E6A900D13866 /* IngredientTableViewController.swift in Sources */,
 				522DEE032211B43F00EB8ADA /* MyRefrigeratorViewController.swift in Sources */,
@@ -321,7 +314,6 @@
 				BB2E21E42211D36800520B0B /* DetailRecipesViewController.swift in Sources */,
 				BB4127EF2211289D00CA5709 /* FoodRecipesTableViewController.swift in Sources */,
 				BB4127852210608900CA5709 /* RecipesTableViewCell.swift in Sources */,
-				BBB60DE022129C3C005F7A11 /* RefrigeratorAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
