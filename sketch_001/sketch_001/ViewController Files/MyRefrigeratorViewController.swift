@@ -254,6 +254,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
                     cell.ingredientTerm.isEnabled = false
                 } else {
                     if ingredient.expirationDate != -1 {
+                        cell.ingredientTerm.isEnabled = true
                         let dateFormatter = DateFormatter()
                         dateFormatter.dateStyle = .medium
                         dateFormatter.dateFormat = "yyyy-MM-dd"
