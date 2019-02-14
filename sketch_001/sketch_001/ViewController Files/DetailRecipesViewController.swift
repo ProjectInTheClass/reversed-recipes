@@ -13,6 +13,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
     
     var food: Food?
     
+    
 //    @IBOutlet weak var methodLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
  
@@ -68,16 +69,18 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             let eachIngre = Set(ingredients!.components(separatedBy: ", "))
             let ingreArr = Array(eachIngre)
             cell.detailIngredientName.text = ingreArr[indexPath.row]
-//            cell.detailIngredientImage.image = UIImage(named: ingre)
-            
+            cell.detailIngredientImage.image = UIImage(named: ingreArr[indexPath.row])
             return cell
+            
         }else if indexPath.section == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailSeasoningCollectionIdentifier, for: indexPath) as! DetailSeasoningCollectionViewCell
             let seasonings = food!.seasoning!
             let eachSeas = Set(seasonings.components(separatedBy: ", "))
             let seasArr = Array(eachSeas)
             cell.detailSeasoningName.text = seasArr[indexPath.row]
+            cell.detailSeasoningImage.image = UIImage(named: seasArr[indexPath.row])
             return cell
+            
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailRecipesCollectionIdentifier, for: indexPath) as! DetailRecipesCollectionViewCell
 
@@ -109,28 +112,25 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         case 0:
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         case 1:
-            return UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
+            return UIEdgeInsets(top: 15, left: 15, bottom: 5, right: 15)
         case 2:
-            return UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
+            return UIEdgeInsets(top: 5, left: 15, bottom: 20, right: 15)
         default:
-            return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+            return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         }
         
-        return UIEdgeInsets(top: 30, left: 0, bottom: 10, right: 0)
+//        return UIEdgeInsets(top: 30, left: 0, bottom: 10, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+        let width = UIScreen.main.bounds.width
+//        return CGSize(width: (width / 4) - 30, height: 75)
         if indexPath.section == 0 {
             return CGSize(width: view.bounds.width, height: view.bounds.width*0.66)
         }else if indexPath.section == 1 {
-            let collectionViewWidth = (UIScreen.main.bounds.width-10)/6
-            let collectionViewHeight = collectionViewWidth
-            return CGSize(width: collectionViewWidth, height: collectionViewWidth)
+            return CGSize(width: (width / 4) - 30, height: 75)
         }else if indexPath.section == 2 {
-            let collectionViewWidth = (collectionView.bounds.width-30)/4
-            let collectionViewHeight = collectionViewWidth
-            return CGSize(width: collectionViewWidth, height: collectionViewWidth)
+            return CGSize(width: (width / 4) - 30, height: 75)
         }else {
             let collectionViewHeight = CGFloat(100)
             var height: Int?

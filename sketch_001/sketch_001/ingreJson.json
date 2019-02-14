@@ -54,5 +54,12 @@
     "´class´": "채소류",
     "expirationDate": 30,
     "amount": ""
+  },
+  {
+      "name": "마늘2",
+      "icon": "basic",
+      "´class´": "채소류",
+      "expirationDate": 30,
+      "amount": ""
   }
 ]
