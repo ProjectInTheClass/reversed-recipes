@@ -87,18 +87,25 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             switch indexPath.row {
             case 0:
                 cell.detailRecipe.text = food?.method1!
+                cell.detailRecipeMethod.image = UIImage(named: "method1")
             case 1:
                 cell.detailRecipe.text = food?.method2!
+                cell.detailRecipeMethod.image = UIImage(named: "method2")
             case 2:
                 cell.detailRecipe.text = food?.method3!
+                cell.detailRecipeMethod.image = UIImage(named: "method3")
             case 3:
                 cell.detailRecipe.text = food?.method4!
+                cell.detailRecipeMethod.image = UIImage(named: "method4")
             case 4:
                 cell.detailRecipe.text = food?.method5!
+                cell.detailRecipeMethod.image = UIImage(named: "method5")
             case 5:
                 cell.detailRecipe.text = food?.method6!
+                cell.detailRecipeMethod.image = UIImage(named: "method6")
             case 6:
                 cell.detailRecipe.text = food?.method7!
+                cell.detailRecipeMethod.image = UIImage(named: "method7")
             default:
                 print("default")
             }
@@ -137,19 +144,19 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             
             switch indexPath.row {
             case 0:
-                height = (100 + 30 * (food!.method1!.count / 20))
+                height = (90 + 10 * (food!.method1!.count / 20))
             case 1:
-                height = (100 + 30 * (food!.method2!.count / 20))
+                height = (90 + 10 * (food!.method2!.count / 20))
             case 2:
-                height = (100 + 30 * (food!.method3!.count / 20))
+                height = (90 + 10 * (food!.method3!.count / 20))
             case 3:
-                height = (100 + 30 * (food!.method4!.count / 20))
+                height = (90 + 10 * (food!.method4!.count / 20))
             case 4:
-                height = (100 + 30 * (food!.method5!.count / 20))
+                height = (90 + 10 * (food!.method5!.count / 20))
             case 5:
-                height = (100 + 30 * (food!.method6!.count / 20))
+                height = (90 + 10 * (food!.method6!.count / 20))
             case 6:
-                height = (100 + 30 * (food!.method7!.count / 20))
+                height = (90 + 10 * (food!.method7!.count / 20))
             default:
                 print("error in cell size")
             }
@@ -236,5 +243,6 @@ class DetailSeasoningCollectionViewCell: UICollectionViewCell {
 
 class DetailRecipesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var detailRecipe: UILabel!
+    @IBOutlet weak var detailRecipeMethod: UIImageView!
     
 }
