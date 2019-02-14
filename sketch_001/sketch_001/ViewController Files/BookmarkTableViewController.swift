@@ -82,8 +82,8 @@ class BookmarkTableViewController: UITableViewController {
         let food = bookmarkedFoodArr![indexPath.row]
         
         cell.foodName.text = food.name
-//        cell.foodTime.text = food.time
-        cell.foodDescript.text = food.descript
+        cell.foodTime.text = food.time
+//        cell.foodDescript.text = food.descript
         cell.foodImage.image = UIImage(named: food.thumbnail)
         cell.food = food
 
