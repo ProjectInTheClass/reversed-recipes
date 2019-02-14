@@ -244,8 +244,6 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
         
-        var checkTerm: String?
-        
         if indexPath.section == 0 {
             if let ingredient = ingredients?[indexPath.row]{
                 
@@ -260,7 +258,6 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
                 cell.ingredientName.text = seasoning.name
                 cell.ingredientAmount.text = ""
                 cell.ingredientTerm.text = ""
-                cell.ingredientString.text = ""
             }
         }
         return cell

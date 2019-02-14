@@ -66,7 +66,6 @@ class IngredientTableViewController: UITableViewController {
             cell.ingredientName.text = seasoning.name
             cell.ingredientAmount.text = ""
             cell.ingredientTerm.text = ""
-            cell.ingredientString.text = ""
         }
         return cell
     }
