@@ -876,13 +876,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mls-6L-p6V">
-                                            <rect key="frame" x="330" y="187" width="35" height="28"/>
+                                            <rect key="frame" x="330" y="184" width="35" height="28"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="35" id="NrX-CK-ljG"/>
-                                                <constraint firstAttribute="height" constant="28" id="ejx-cr-G9K"/>
+                                                <constraint firstAttribute="height" constant="28" id="qLT-fY-xHS"/>
+                                                <constraint firstAttribute="width" constant="35" id="zXi-Eg-v6M"/>
                                             </constraints>
                                             <state key="normal" image="bookmark_outline@80"/>
-                                            <state key="selected" image="bookmark_filled"/>
+                                            <state key="selected" image="bookmark_filled@80"/>
                                             <connections>
                                                 <action selector="bookmarkButtonTapped:" destination="lWh-PR-oQw" eventType="touchUpInside" id="szD-mg-cO3"/>
                                             </connections>
@@ -890,9 +890,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="zl7-c0-1ng" firstAttribute="bottom" secondItem="ARt-d7-QbN" secondAttribute="bottom" id="Lfs-yR-gBF"/>
-                                        <constraint firstItem="mls-6L-p6V" firstAttribute="right" secondItem="LwC-Jb-fvg" secondAttribute="right" id="QzC-V0-kA3"/>
-                                        <constraint firstAttribute="trailing" secondItem="mls-6L-p6V" secondAttribute="trailing" constant="10" id="UA8-jf-qit"/>
-                                        <constraint firstItem="mls-6L-p6V" firstAttribute="top" secondItem="ARt-d7-QbN" secondAttribute="top" id="aaC-Vh-y5U"/>
+                                        <constraint firstItem="mls-6L-p6V" firstAttribute="bottom" secondItem="ARt-d7-QbN" secondAttribute="bottom" id="PRe-WM-9Gp"/>
+                                        <constraint firstItem="LwC-Jb-fvg" firstAttribute="right" secondItem="mls-6L-p6V" secondAttribute="right" id="TBn-bG-biL"/>
                                         <constraint firstItem="ARt-d7-QbN" firstAttribute="leading" secondItem="BzE-0l-Rft" secondAttribute="leading" constant="20" id="hRg-lF-SBO"/>
                                         <constraint firstItem="LwC-Jb-fvg" firstAttribute="leading" secondItem="BzE-0l-Rft" secondAttribute="leading" constant="10" id="mth-m2-9Pt"/>
                                         <constraint firstItem="LwC-Jb-fvg" firstAttribute="top" secondItem="BzE-0l-Rft" secondAttribute="top" id="oei-Ev-jCV"/>
