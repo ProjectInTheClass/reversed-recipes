@@ -69,16 +69,16 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         ingredients = []
         seasonings = []
         
-        let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        docsDir = dirPath[0].appendingPathComponent("myRefrigerator.dat")
-        
-        do {
-            let data = try Data(contentsOf: docsDir!)
-            let content = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as! [Ingredient]
-            ingredients = content
-        } catch {
-            print("Error!")
-        }
+//        let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        docsDir = dirPath[0].appendingPathComponent("myRefrigerator.dat")
+//
+//        do {
+//            let data = try Data(contentsOf: docsDir!)
+//            let content = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as! [Ingredient]
+//            ingredients = content
+//        } catch {
+//            print("Error! in the myrefri viewDidLoad()")
+//        }
         
         showFoodButton.layer.cornerRadius = 0.05 * showFoodButton.bounds.size.width
     }
@@ -172,21 +172,21 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if indexPath.section == 0 {
-                if var tmpIngredients = ingredients{
-                    tmpIngredients.remove(at: indexPath.row)
-                    tableView.deleteRows(at: [indexPath], with: .fade)
-                }else{
-                    print("nil")
-                }
-//                ingredients.remove(at: indexPath.row)
-//                tableView.deleteRows(at: [indexPath], with: .fade)
+//                if var tmpIngredients = ingredients{
+//                    tmpIngredients.remove(at: indexPath.row)
+//                    tableView.deleteRows(at: [indexPath], with: .fade)
+//                }else{
+//                    print("nil")
+//                }
+                ingredients!.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
             } else {
-                if var tmpSeasonings = seasonings{
-                    tmpSeasonings.remove(at: indexPath.row)
-                    tableView.deleteRows(at: [indexPath], with: .fade)
-                }
-//                seasonings.remove(at: indexPath.row)
-//                tableView.deleteRows(at: [indexPath], with: .fade)
+//                if var tmpSeasonings = seasonings{
+//                    tmpSeasonings.remove(at: indexPath.row)
+//                    tableView.deleteRows(at: [indexPath], with: .fade)
+//                }
+                seasonings!.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
     }
