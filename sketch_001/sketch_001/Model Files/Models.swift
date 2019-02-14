@@ -21,8 +21,9 @@ class Ingredient: Codable {
     var name: String
     var icon: String
     var ´class´: String
-    var expirationDate: Int // 소비기한
-    var amount: String? //양 측정 단위
+    var expirationDate: Int // 소비 기한
+    var startDate: String? // 구매 날짜
+//    var amount: String? //양 측정 단위
     //양 숫자를 나타내는 변수 추가
     
     init(name: String, icon: String, ´class´: String, expirationDate: Int) {
@@ -30,6 +31,11 @@ class Ingredient: Codable {
         self.icon = icon
         self.´class´ = ´class´
         self.expirationDate = expirationDate
+    }
+    
+    convenience init(name: String, icon: String, ´class´: String, expirationDate: Int, startDate: String?) {
+        self.init(name: name, icon: icon, ´class´: ´class´, expirationDate: expirationDate)
+        self.startDate = startDate
     }
     
     func isFrozen(ingredient: Ingredient) -> Bool {

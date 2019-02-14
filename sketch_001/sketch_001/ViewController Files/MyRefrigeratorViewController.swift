@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalActionDelegate {
+class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalActionDelegate, ChangeDate {
 
 
     @IBOutlet weak var showFoodButton: UIButton!
@@ -16,7 +16,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     // 임시 나의 재료
     
     var ingredients = [
-        Ingredient(name: "양파", icon: "onions", ´class´: "vegetable", expirationDate: 5),
+        Ingredient(name: "양파", icon: "onions", ´class´: "vegetable", expirationDate: 5, startDate: "2017-01-01"),
         Ingredient(name: "달걀", icon: "eggs", ´class´: "eggs", expirationDate: 5),
         Ingredient(name: "돼지고기", icon: "pork", ´class´: "meat", expirationDate: 5),
         Ingredient(name: "우유", icon: "milk", ´class´: "dairyGoods", expirationDate: 3),
@@ -36,6 +36,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
     
     var totalData: TotalData?
     var possibleFoodList: [Food]?
+    var selectedIngredient: Ingredient?
     
     @IBAction func showRecipes(_ sender: Any) {
 //        var ingredientsList = [String]()
@@ -80,6 +81,14 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         seasonings.append(contentsOf: seasoning)
     }
     
+    func changeDate(changedIngre: Ingredient) {
+        for ingredient in ingredients {
+            if changedIngre.name == ingredient.name {
+                ingredient.startDate = changedIngre.startDate
+                break
+            }
+        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -116,13 +125,6 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             }
         }
     }
-    
-<<<<<<< HEAD
-
-
-    
-=======
->>>>>>> 785a2114074d6f6592ed5cf4d109ebf9d9dca6c0
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //    
 //        switch indexPath.section {
@@ -135,11 +137,6 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
 //        }
 //        tableView.deleteRows(at: [indexPath], with: .automatic)
 //    }
-    
-<<<<<<< HEAD
-
-=======
->>>>>>> 785a2114074d6f6592ed5cf4d109ebf9d9dca6c0
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
         
@@ -161,23 +158,28 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-<<<<<<< HEAD
-        
-        if segue.identifier == "addRefrigeratorSeague" {
-            let addIngredientView = segue.destination as! AddRefrigeratorViewController
-//            let tmpIngredientArr = addIngredientView.selectedCell
-            addIngredientView.delegate = self
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            selectedIngredient = ingredients[indexPath.row]
+            performSegue(withIdentifier: "detailIngredientSegue", sender: self)
+        } else {
+            print("selected seasonings")
         }
-
-=======
->>>>>>> 785a2114074d6f6592ed5cf4d109ebf9d9dca6c0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "addRefrigeratorSeague" {
 //            let addIngredientView = segue.destination as! AddRefrigeratorViewController
 //            let tmpIngredientArr = addIngredientView.selectedCell
 //            addIngredientView.delegate = self
 //        }
+        
+        if segue.identifier == "detailIngredientSegue" {
+            let detailIngredientViewController = segue.destination as! DetailIngredientViewController
+            
+            detailIngredientViewController.ingredient = selectedIngredient
+            detailIngredientViewController.delegate = self
+        }
 
         
         if segue.identifier == "foodListSegue" {
