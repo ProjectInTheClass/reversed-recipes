@@ -43,10 +43,14 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
 //        }
         
         if ingredients![indexPath.row].name.count == 4 {
-            return CGSize(width: 150, height: 54)
+            return CGSize(width: 110, height: 54)
+        }else if ingredients![indexPath.row].name.count == 3 {
+            return CGSize(width: 100, height: 54)
+        }else if ingredients![indexPath.row].name.count == 2 {
+            return CGSize(width: 90, height: 54)
+        }else{
+        return CGSize(width: 80, height: 54)
         }
-        
-        return CGSize(width: 117, height: 54)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,14 +59,21 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
         let ingredient = ingredients![indexPath.row]
         cell.ingredientImage.image = UIImage(named: ingredient.icon)
         cell.ingredientName.text = ingredient.name
-        cell.ingredientButton.layer.cornerRadius = 0.05 * cell.ingredientButton.bounds.size.width
+        cell.ingredientButton.layer.cornerRadius = 10
+        cell.ingredientButton.clipsToBounds = true
+        cell.ingredientButton.layer.borderWidth = 0.2
+        cell.ingredientButton.layer.borderColor = UIColor.lightGray.cgColor
         cell.ingreStr = ingreStr
         cell.delegate = delegate
 
         if cell.ingredientName.text!.count == 4 {
-            cell.ingredientButton.frame.size = CGSize(width: 130, height: 40)
-        } else {
-            cell.ingredientButton.frame.size = CGSize(width: 95, height: 40)
+            cell.ingredientButton.frame.size = CGSize(width: 100, height: 40)
+        } else if cell.ingredientName.text!.count == 3 {
+            cell.ingredientButton.frame.size = CGSize(width: 90, height: 40)
+        }else if cell.ingredientName.text!.count == 2 {
+            cell.ingredientButton.frame.size = CGSize(width: 80, height: 40)
+        }else{
+            cell.ingredientButton.frame.size = CGSize(width: 70, height: 40)
         }
 
         //        cell.contentView.layer.cornerRadius = 6.0
@@ -120,20 +131,40 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ingredientImage: UIImageView!
     @IBOutlet weak var ingredientName: UILabel!
     @IBOutlet weak var ingredientButton: UIButton!
+
+    
+    override func awakeFromNib() {
+//        ingredientButton.layer.masksToBounds = true
+//        ingredientButton.layer.cornerRadius = 10
+//        ingredientButton.clipsToBounds = true
+//
+//        someView.layer.cornerRadius = 0.05 * showFoodButton.bounds.size.width
+//        someView.alignmentRect()
+        
+    }
     
     @IBAction func selectedIngredient(_ sender: Any) {
         if ingredientButton.isSelected {
 //            print("append : \(ingredientName.text!)")
             ingredientButton.isSelected = !ingredientButton.isSelected
             ingreStr?.ingredientsList?.append(ingredientName.text!)
+            ingredientName.textColor = UIColor.black
+            ingredientImage.tintColor = self.tintColor
+            
+            
         } else {
 //            print("delete : \(ingredientName.text!)")
             ingredientButton.isSelected = !ingredientButton.isSelected
             ingreStr?.ingredientsList = ingreStr?.ingredientsList?.filter { $0 != ingredientName.text! }
+            ingredientImage.tintColor = UIColor.lightGray
+            ingredientName.textColor = UIColor.lightGray
+            
         }
 
         delegate?.reloadRecipes(ingreStrArr: ingreStr!.ingredientsList!)
 //        print(ingreStr?.ingredientsList!)
+        
+        
     }
 }
 
@@ -144,3 +175,4 @@ class IngreStr {
 protocol ReloadRecipes {
     func reloadRecipes(ingreStrArr: [String])
 }
+

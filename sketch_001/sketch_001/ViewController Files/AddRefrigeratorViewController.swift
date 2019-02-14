@@ -120,38 +120,41 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         switch indexPath.section {
         case 0:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "고기류"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "Apple")
+            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 1:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "채소류"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "Apple")
+            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 2:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "난류"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "Apple")
+            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 3:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "밥류"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "Apple")
+            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 4:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "유제품류"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "Apple")
+            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 5:
             cell.contentName.text = totalSeasoning![indexPath.item].name
-            cell.contentImage.image = UIImage(named: "Apple")
+            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         default:
             print("empty")
             }
         
         switch indexPath.section {
         case 0...4:
+            print(cell.contentName.text)
             if selectedIngredientString.contains(cell.contentName.text!){
-                cell.backgroundColor = UIColor.gray
+                cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
             }else{
-                cell.backgroundColor = UIColor.white
+                cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)" + "_gray")
             }
         default:
             if selectedSeasoningString.contains(cell.contentName.text!){
-                cell.backgroundColor = UIColor.gray
+//                cell.backgroundColor = UIColor.gray
+                cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
             }else{
-                cell.backgroundColor = UIColor.white
+//                cell.backgroundColor = UIColor.white
+                cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)" + "_gray")
             }
         }
         self.navigationItem.rightBarButtonItem = addButton

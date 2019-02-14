@@ -16,6 +16,7 @@
 		5281CE0D2213FDBC0022A01B /* ingreJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 5281CE0B2213FDBC0022A01B /* ingreJson.json */; };
 		52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */; };
 		BB0459392202DD45003F75F4 /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0459382202DD45003F75F4 /* TotalData.swift */; };
+		BB2016CA2215E7B9003570D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2016C92215E7B9003570D0 /* Assets.xcassets */; };
 		BB2E21E42211D36800520B0B /* DetailRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E21E32211D36800520B0B /* DetailRecipesViewController.swift */; };
 		BB41278122101B6700CA5709 /* BookmarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB41278022101B6700CA5709 /* BookmarkTableViewController.swift */; };
 		BB4127852210608900CA5709 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4127842210608900CA5709 /* RecipesTableViewCell.swift */; };
@@ -28,7 +29,6 @@
 		BBB60DE22212BC3D005F7A11 /* AddRefrigeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB60DE12212BC3D005F7A11 /* AddRefrigeratorViewController.swift */; };
 		BBB80A8721FF30C700D13866 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A8621FF30C700D13866 /* TableViewController.swift */; };
 		BBB80A8921FF30DC00D13866 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A8821FF30DC00D13866 /* FoodListCell.swift */; };
-		BBB80A8B21FF37C300D13866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB80A8A21FF37C300D13866 /* Assets.xcassets */; };
 		BBB80A8D21FF382900D13866 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A8C21FF382900D13866 /* Models.swift */; };
 		BBB80AFD2201E6A900D13866 /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80AFC2201E6A900D13866 /* IngredientTableViewController.swift */; };
 		BBB80AFF2201E93000D13866 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80AFE2201E93000D13866 /* IngredientTableViewCell.swift */; };
@@ -48,6 +48,7 @@
 		52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		8B699AC0BBA30BFE232B4B3D /* Pods-sketch_001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sketch_001.debug.xcconfig"; path = "Target Support Files/Pods-sketch_001/Pods-sketch_001.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0459382202DD45003F75F4 /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
+		BB2016C92215E7B9003570D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB2E21E32211D36800520B0B /* DetailRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipesViewController.swift; sourceTree = "<group>"; };
 		BB41278022101B6700CA5709 /* BookmarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewController.swift; sourceTree = "<group>"; };
 		BB4127842210608900CA5709 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		BBB60DE12212BC3D005F7A11 /* AddRefrigeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRefrigeratorViewController.swift; sourceTree = "<group>"; };
 		BBB80A8621FF30C700D13866 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BBB80A8821FF30DC00D13866 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
-		BBB80A8A21FF37C300D13866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBB80A8C21FF382900D13866 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		BBB80AFC2201E6A900D13866 /* IngredientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
 		BBB80AFE2201E93000D13866 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				BB7F238521E77D230056BB42 /* Main.storyboard */,
-				BBB80A8A21FF37C300D13866 /* Assets.xcassets */,
+				BB2016C92215E7B9003570D0 /* Assets.xcassets */,
 				5281CE01221307860022A01B /* ViewController Files */,
 				5281CE03221307F10022A01B /* ViewCell Files */,
 				5281CE00221307440022A01B /* Model Files */,
@@ -242,9 +242,9 @@
 			files = (
 				5281CDFF2212F80F0022A01B /* dataJson.json in Resources */,
 				BB7F238C21E77D250056BB42 /* LaunchScreen.storyboard in Resources */,
-				BBB80A8B21FF37C300D13866 /* Assets.xcassets in Resources */,
 				5281CE0C2213FDBC0022A01B /* seasJson.json in Resources */,
 				BB7F238721E77D230056BB42 /* Main.storyboard in Resources */,
+				BB2016CA2215E7B9003570D0 /* Assets.xcassets in Resources */,
 				5281CE0D2213FDBC0022A01B /* ingreJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
