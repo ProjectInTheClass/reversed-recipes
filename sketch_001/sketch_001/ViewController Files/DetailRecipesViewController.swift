@@ -137,19 +137,19 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             
             switch indexPath.row {
             case 0:
-                height = (100 + 70 * (food!.method1!.count / 20))
+                height = (100 + 30 * (food!.method1!.count / 20))
             case 1:
-                height = (100 + 70 * (food!.method2!.count / 20))
+                height = (100 + 30 * (food!.method2!.count / 20))
             case 2:
-                height = (100 + 70 * (food!.method3!.count / 20))
+                height = (100 + 30 * (food!.method3!.count / 20))
             case 3:
-                height = (100 + 70 * (food!.method4!.count / 20))
+                height = (100 + 30 * (food!.method4!.count / 20))
             case 4:
-                height = (100 + 70 * (food!.method5!.count / 20))
+                height = (100 + 30 * (food!.method5!.count / 20))
             case 5:
-                height = (100 + 70 * (food!.method6!.count / 20))
+                height = (100 + 30 * (food!.method6!.count / 20))
             case 6:
-                height = (100 + 70 * (food!.method7!.count / 20))
+                height = (100 + 30 * (food!.method7!.count / 20))
             default:
                 print("error in cell size")
             }
