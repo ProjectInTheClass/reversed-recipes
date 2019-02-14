@@ -39,15 +39,15 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         
         switch section {
         case 0:
-            return totalIngredients!.filter({$0.´class´ == "고기류"}).count
+            return totalIngredients!.filter({$0.´class´ == "육류"}).count
         case 1:
-            return totalIngredients!.filter({$0.´class´ == "채소류"}).count
+            return totalIngredients!.filter({$0.´class´ == "채소 / 과일"}).count
         case 2:
-            return totalIngredients!.filter({$0.´class´ == "난류"}).count
+            return totalIngredients!.filter({$0.´class´ == "수산물"}).count
         case 3:
-            return totalIngredients!.filter({$0.´class´ == "밥류"}).count
+            return totalIngredients!.filter({$0.´class´ == "곡물 / 견과류"}).count
         case 4:
-            return totalIngredients!.filter({$0.´class´ == "유제품류"}).count
+            return totalIngredients!.filter({$0.´class´ == "가공 / 유제품"}).count
         case 5:
             return totalSeasoning!.count
         default:
@@ -57,11 +57,29 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? SectionHeader{
-            if indexPath.section < 5 {
-                sectionHeader.sectionHeader.text = totalIngredients?.map({$0.´class´})[indexPath.section]
-            }else{
+            switch indexPath.section {
+            case 0:
+                sectionHeader.sectionHeader.text = "육류"
+            case 1:
+                sectionHeader.sectionHeader.text = "채소 / 과일"
+            case 2:
+                sectionHeader.sectionHeader.text = "수산물"
+            case 3:
+                sectionHeader.sectionHeader.text = "곡물 / 견과류"
+            case 4:
+                sectionHeader.sectionHeader.text = "가공 / 유제품"
+            case 5:
                 sectionHeader.sectionHeader.text = "조미료"
+            default:
+                print("error in add refrigerator")
             }
+            
+//            if indexPath.section < 5 {
+//                sectionHeader.sectionHeader.text = totalIngredients?.map({$0.´class´})[indexPath.section]
+//            }else{
+//                sectionHeader.sectionHeader.text = "조미료"
+//            }
+            
             return sectionHeader
         }
         return UICollectionReusableView()
@@ -119,19 +137,19 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         
         switch indexPath.section {
         case 0:
-            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "고기류"}).map({$0.name})[indexPath.item]
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "육류"}).map({$0.name})[indexPath.item]
             cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 1:
-            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "채소류"}).map({$0.name})[indexPath.item]
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "채소 / 과일"}).map({$0.name})[indexPath.item]
             cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 2:
-            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "난류"}).map({$0.name})[indexPath.item]
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "수산물"}).map({$0.name})[indexPath.item]
             cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 3:
-            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "밥류"}).map({$0.name})[indexPath.item]
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "곡물 / 견과류"}).map({$0.name})[indexPath.item]
             cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 4:
-            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "유제품류"}).map({$0.name})[indexPath.item]
+            cell.contentName.text = totalIngredients?.filter({$0.´class´ == "가공 / 유제품"}).map({$0.name})[indexPath.item]
             cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
         case 5:
             cell.contentName.text = totalSeasoning![indexPath.item].name

@@ -3,25 +3,24 @@
     "id": 0,
     "name": "김치 볶음밥",
     "time": "10분",
-    "ingredients": "밥, 양파, 김치, 햄",
-    "ingreAmount": "1공기, 1/3개, 1/2컵, 1/4개",
+    "ingredients": "밥, 양파, 김치",
+    "ingreAmount": "1공기, 1/3개,  100g",
     "seasoning": "설탕, 고추장, 소금, 참기름",
     "method1": "밥을 넓은 접시에 펼쳐 열을 식힌다.",
     "method2": "양념 재료를 섞어 양념장을 만든다.",
-    "method3": "중간 불로 달군 팬에 식용유를 두른 뒤 다진 양파와 다진 김치, 다진 햄을 넣고 볶는다.",
+    "method3": "중간 불로 달군 팬에 식용유를 두른 뒤 다진 양파와 다진 김치를 넣고 볶는다.",
     "method4": "양념장을 넣고 살짝 더 볶은 뒤 밥을 넣고 고루 간이 배도록 볶아 볶음밥을 만든다.",
     "method5": "달걀 프라이를 곁들여 완성한다.",
     "method6": "",
     "method7": "",
-    "thumbnail": "김치 볶음밥",
-    "descript": ""
+    "thumbnail": "김치 볶음밥"
   },
   {
     "id": 1,
     "name": "참치마요",
     "time": "10분",
     "ingredients": "밥, 달걀, 참치",
-    "ingreAmount": "1공기, 1알, 1개",
+    "ingreAmount": "1공기, 1알, 100g",
     "seasoning": "마요네즈, 간장, 설탕",
     "method1": "먼저 달걀 프라이를 만들어 준비한다.",
     "method2": "간장 2T, 물 2T, 설탕 1T를 팬에 넣어 불을 올리고 가장자리가 보글보글 하면 불을 끕니다.",
@@ -30,8 +29,7 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "참치마요",
-    "descript": ""
+    "thumbnail": "nothing"
   },
   {
     "id": 2,
@@ -47,59 +45,55 @@
     "method5": "팬 남은 공간에 준비한 달걀을 부어 스크램블에그를 만든다.",
     "method6": "스크램블에그가 완성되면 전체적으로 밥과 볶은 뒤 완성한다.",
     "method7": "",
-    "thumbnail": "계란 볶음밥",
-    "descript": ""
+    "thumbnail": "계란 볶음밥"
   },
   {
     "id": 3,
     "name": "돼지고기 김치찌개",
     "time": "25분",
-    "ingredients": "김치, 돼지고기, 대파, 고추, 마늘",
-    "ingreAmount": "150g, 50g, 1/2개, 1개, 2알",
-    "seasoning": "국간장, 고춧가루, 된장",
-    "method1": "마늘을 다지고 대파, 고추는 송송 썰어 준비한다.",
-    "method2": "냄비에 돼지고기와 쌀뜨물을 넣고 된장을 풀어 끓인다.",
-    "method3": "김치를 넣는다.",
-    "method4": "대파, 고추를 넣는다.",
+    "ingredients": "김치, 돼지고기, 대파, 마늘",
+    "ingreAmount": "150g, 50g, 1/2개, 2알",
+    "seasoning": "국간장, 고춧가루",
+    "method1": "마늘을 다지고 대파는 송송 썰어 준비한다.",
+    "method2": "냄비에 돼지고기와 물을 넣고 끓인다.",
+    "method3": "돼지고기가 익기 시작할 때 김치를 넣는다.",
+    "method4": "대파를 넣는다.",
     "method5": "다진 마늘, 국간장, 고춧가루를 넣어 간을 맞춰 완성한다.",
     "method6": "",
     "method7": "",
-    "thumbnail": "돼지고기 김치찌개",
-    "descript": ""
+    "thumbnail": "돼지고기 김치찌개"
   },
   {
     "id": 4,
     "name": "된장찌개",
     "time": "25분",
-    "ingredients": "감자, 양파, 버섯, 두부, 마늘, 고추",
-    "ingreAmount": "1개, 1/2개, 1/2개, 1/2개, 2알, 1/2개",
+    "ingredients": "감자, 양파, 두부, 마늘",
+    "ingreAmount": "1개, 1/2개, 1/2개, 2알",
     "seasoning": "된장",
     "method1": "냄비에 된장을 풀어 끓인다.",
-    "method2": "냄비에 감자, 버섯, 두부, 양파를 넣는다.",
-    "method3": "푹 끓인 후 마늘을 다져 고추와 함께 냄비에 넣는다.",
+    "method2": "냄비에 감자, 두부, 양파를 넣는다.",
+    "method3": "푹 끓인 후 마늘을 다져 냄비에 넣는다.",
     "method4": "3분 정도 더 끓여 완성한다.",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "된장찌개",
-    "descript": ""
+    "thumbnail": "된장찌개"
   },
   {
     "id": 5,
     "name": "해물 새우 라면",
     "time": "15분",
-    "ingredients": "새우, 대파, 고추, 라면, 양파",
-    "ingreAmount": "2개, 1/2개, 1/2개, 1개, 1/2개",
+    "ingredients": "새우, 대파, 라면, 양파",
+    "ingreAmount": "2개, 1/2개, 1개, 1/2개",
     "seasoning": "",
     "method1": "흐르는 물에 새우를 헹군다.",
     "method2": "라면 끓이는 양 1.5배의 물과 새우를 냄비에 넣어 10분 동안 끓인다.",
     "method3": "면은 따로 삶는다.",
     "method4": "냄비에 올라오는 거품은 제거한다.",
-    "method5": "냄비에 라면 스프, 대파, 고추, 양파를 넣어 5분 더 끓인다.",
+    "method5": "냄비에 라면 스프, 대파, 양파를 넣어 5분 더 끓인다.",
     "method6": "익은 새우를 잠시 건져 내고 삶아둔 면을 1분 정도 끓여 완성한다.",
     "method7": "",
-    "thumbnail": "해물 새우 라면",
-    "descript": ""
+    "thumbnail": "해물 새우 라면"
   },
   {
     "id": 6,
@@ -110,54 +104,51 @@
     "seasoning": "고추장, 고춧가루, 설탕, 간장",
     "method1": "냄비에 물과 떡을 넣어 끓인다.",
     "method2": "고추장 1T, 고춧가루 0.75T, 설탕 1T, 간장 1T를 섞어 소스를 만든다.",
-    "method3": "냄비에 물이 끓으면 준비한 소스를 넣어 쫄인다.",
+    "method3": "냄비에 물이 끓으면 준비한 소스를 넣어 졸인다.",
     "method4": "마무리로 준비한 대파를 넣어 완성한다.",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "떡볶이",
-    "descript": ""
+    "thumbnail": "떡볶이"
   },
   {
     "id": 7,
     "name": "비빔국수",
     "time": "10분",
-    "ingredients": "면",
+    "ingredients": "소면",
     "ingreAmount": "100g",
     "seasoning": "고추장, 식초, 설탕, 참기름",
     "method1": "끓는 물에 면을 넣어 4분 삶는다.",
     "method2": "삶은 면을 찬물에 헹군다.",
     "method3": "고추장 1.5T, 식초 0.75T, 설탕 0.5T를 섞어 소스를 만든다.",
-    "method4": "준비한 면과 소스 그리고 참기름을 넣어 비벼 완성한다.",
+    "method4": "준비한 면과 소스, 참기름을 넣고 비벼 완성한다.",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "비빔국수",
-    "descript": ""
+    "thumbnail": "비빔국수"
   },
   {
     "id": 8,
-    "name": "쇠고기무국",
+    "name": "소고기무국",
     "time": "25분",
     "ingredients": "소고기, 대파, 무, 마늘, 소주, 다시마",
     "ingreAmount": "40g, 1/4개, 1/4개, 1알, 0.5T, 100g",
     "seasoning": "국간장, 소금",
-    "method1": "하루 전 찬물에 다시마를 담구어 다시를 만든다.",
+    "method1": "하루 전 찬물에 다시마를 담구어 맛국물을 만든다.",
     "method2": "마늘을 다지고 무와 대파는 먹기 좋은 크기로 썬다.",
     "method3": "소고기에 다진 마늘 0.25T, 국간장 0.25T, 소주 0.2T를 넣어 간을 한다.",
-    "method4": "냄비에 준비한 소고리를 센불에서 볶는다.",
+    "method4": "냄비에 준비한 소고기를 센불에서 볶는다.",
     "method5": "고기가 익으면 무를 넣어 함께 4분 볶는다.",
-    "method6": "그 다음 다시를 700ml 부어 끓인다.",
+    "method6": "그 다음 맛국물을 700ml 부어 끓인다.",
     "method7": "마지막으로 대파를 넣고 소금으로 간을 하여 완성한다.",
-    "thumbnail": "쇠고기무국",
-    "descript": ""
+    "thumbnail": "소고기무국"
   },
   {
     "id": 9,
     "name": "베이컨 볶음밥",
     "time": "10분",
     "ingredients": "밥, 달걀, 베이컨, 대파",
-    "ingreAmount": "1공기, 1알, 1/2줌, 1/4개",
+    "ingreAmount": "1공기, 1알, 50g, 1/4개",
     "seasoning": "간장",
     "method1": "팬에 식용유를 두르고 스크램블에그를 만들어 놓는다.",
     "method2": "대파와 베이컨을 먹기 좋은 크기로 썰어 팬에 볶는다.",
@@ -166,15 +157,14 @@
     "method5": "준비한 스크램블에그를 넣어 함께 볶아 완성한다.",
     "method6": "",
     "method7": "",
-    "thumbnail": "베이컨 볶음밥",
-    "descript": ""
+    "thumbnail": "베이컨 볶음밥"
   },
   {
     "id": 10,
     "name": "스팸마요",
     "time": "10분",
     "ingredients": "밥, 달걀, 양파, 햄",
-    "ingreAmount": "1공기, 1알, 1/2개, 1/4개",
+    "ingreAmount": "1공기, 1알, 1/2개, 50g",
     "seasoning": "간장, 설탕, 마요네즈",
     "method1": "양파와 햄을 먹기 좋은 크기로 썰어 놓는다.",
     "method2": "팬에 햄을 볶아 놓는다.",
@@ -183,12 +173,11 @@
     "method5": "준비한 양파, 스크램블에그, 햄과 밥 그리고 마요네즈를 비벼 완성한다.",
     "method6": "",
     "method7": "",
-    "thumbnail": "스팸마요",
-    "descript": ""
+    "thumbnail": "nothing"
   },
   {
     "id": 11,
-    "name": "고구마밥",
+    "name": "고구마 밥",
     "time": "30분",
     "ingredients": "밥, 고구마",
     "ingreAmount": "1공기, 1개",
@@ -200,59 +189,55 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "고구마밥",
-    "descript": ""
+    "thumbnail": "nothing"
   },
   {
     "id": 12,
     "name": "샐러드",
     "time": "10분",
-    "ingredients": "봄동, 토마토, 양파",
-    "ingreAmount": "1줌, 1/2개, 1/3개",
+    "ingredients": "상추, 토마토",
+    "ingreAmount": "1줌, 1/2개",
     "seasoning": "발사믹 드레싱",
-    "method1": "양파를 찬물에 담궈 매운 맛을 뺀다.",
-    "method2": "봄동과 토마토를 먹기 좋은 크기로 잘라 준비한다.",
-    "method3": "준비한 봄동과 토마토, 양파에 발사믹 드레싱을 둘러 완성한다.",
+    "method1": "상추와 토마토를 먹기 좋은 크기로 잘라 준비한다.",
+    "method2": "준비한 상추와 토마토에 발사믹 드레싱을 둘러 완성한다.",
+    "method3": "",
     "method4": "",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "샐러드",
-    "descript": ""
+    "thumbnail": "샐러드"
   },
   {
     "id": 13,
     "name": "닭가슴살 샐러드",
     "time": "10분",
-    "ingredients": "닭가슴살, 봄동, 토마토, 양파",
-    "ingreAmount": "1개, 1줌, 1/2개, 1/3개",
+    "ingredients": "닭가슴살, 상추, 토마토",
+    "ingreAmount": "1개, 1줌, 1/2개",
     "seasoning": "발사믹 드레싱",
-    "method1": "양파를 찬물에 담궈 매운 맛을 뺀다.",
-    "method2": "봄동과 토마토를 먹기 좋은 크기로 잘라 준비한다.",
-    "method3": "닭가슴살을 먹기 좋은 크기로 결대로 찢어 준비한다.",
-    "method4": "준비한 재료에 발사믹 드레싱을 둘러 완성한다.",
+    "method1": "상추와 토마토를 먹기 좋은 크기로 잘라 준비한다.",
+    "method2": "닭가슴살을 먹기 좋은 크기로 결대로 찢어 준비한다.",
+    "method3": "준비한 재료에 발사믹 드레싱을 둘러 완성한다.",
+    "method4": "",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "닭가슴살 샐러드",
-    "descript": ""
+    "thumbnail": "닭가슴살 샐러드"
   },
   {
     "id": 14,
     "name": "감바스",
     "time": "20분",
     "ingredients": "새우, 마늘",
-    "ingreAmount": "1.5줌, 1줌",
+    "ingreAmount": "7마리, 7알",
     "seasoning": "소금, 후추, 올리브유",
-    "method1": "팬에 올리브유를 새우 양과 같도록 넣어 달군다.",
+    "method1": "팬에 올리브유를 새우 양과 같도록 부어주고 가열한다.",
     "method2": "마늘은 먹기 좋은 크기로 썰어 준비한다.",
     "method3": "키친타올에 새우를 놓아 물기를 뺀다.",
     "method4": "물기가 제거된 새우에 소금과 후추로 간을 한다.",
     "method5": "달궈진 올리브유에 마늘을 넣어 튀긴다.",
-    "method6": "마늘이 튀겨지기 시작하면 새우를 넣어 익혀 완성한다.",
+    "method6": "마늘이 튀겨지기 시작하면 새우를 넣고 익혀 완성한다.",
     "method7": "",
-    "thumbnail": "감바스",
-    "descript": ""
+    "thumbnail": "감바스"
   },
   {
     "id": 15,
@@ -263,51 +248,48 @@
     "seasoning": "소금",
     "method1": "달걀을 풀고 소금을 넣어 간을 맞춘다.",
     "method2": "대파를 먹기 좋은 크기로 썰어 풀은 달걀에 넣는다.",
-    "method3": "예열된 팬에 식용유를 두르고 풀은 달걀을 얇게 부은다.",
+    "method3": "예열된 팬에 식용유를 두르고 풀어 놓은 달걀을 팬에 깔아준다.",
     "method4": "약한 불로 익히면서 말아 완성한다.",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "계란말이",
-    "descript": ""
+    "thumbnail": "계란말이"
   },
   {
     "id": 16,
     "name": "김치국수",
     "time": "25분",
-    "ingredients": "다시마, 면, 김치",
-    "ingreAmount": "100g, 100g, 1/2컵",
+    "ingredients": "다시마, 소면, 김치",
+    "ingreAmount": "100g, 100g, 50g",
     "seasoning": "참기름",
-    "method1": "냄비에 다시마를 넣어 끓여 다시를 만든다.",
+    "method1": "냄비에 다시마를 넣어 끓여 맛국물을 만든다.",
     "method2": "끓는 물에 면을 넣어 삶은 후 찬물로 헹궈 놓는다.",
     "method3": "김치와 참기름을 팬에 볶아 놓는다.",
-    "method4": "다시에 면을 담고 위에 볶은 김치를 놓아 완성한다.",
+    "method4": "맛국물에 면을 담고 위에 볶은 김치를 놓아 완성한다.",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "김치국수",
-    "descript": ""
+    "thumbnail": "김치국수"
   },
   {
     "id": 17,
     "name": "간장 볶음밥",
     "time": "10분",
     "ingredients": "밥, 대파, 햄",
-    "ingreAmount": "1공기, 1/3개, 1/4개",
+    "ingreAmount": "1공기, 1/3개, 50g",
     "seasoning": "간장, 후추, 버터",
     "method1": "팬에 버터 0.5T를 넣고 녹인다.",
     "method2": "대파와 햄을 먹기 좋은 크기로 썰어 놓는다.",
-    "method3": "버터가 녹기 시작할 때 준비한 대파를 넣어 3분 볶는다.",
+    "method3": "버터가 녹기 시작할 때 준비한 대파를 넣어 3분 동안 볶는다.",
     "method4": "팬에 햄을 넣어 대파와 함께 볶는다.",
     "method5": "팬에 밥을 넣기 전 버터 0.5T를 넣어 녹인다.",
     "method6": "버터가 모두 녹으면 밥과 간장을 넣어 5분 볶아 완성한다.",
     "method7": "",
-    "thumbnail": "간장 볶음밥",
-    "descript": ""
+    "thumbnail": "간장 볶음밥"
   },
   {
     "id": 18,
-    "name": "간장찜닭",
+    "name": "간장 찜닭",
     "time": "30분",
     "ingredients": "닭, 대파, 양파, 당근, 감자, 마늘",
     "ingreAmount": "1/3마리, 1/3개, 1/3개, 1/4개, 1/2개, 2알",
@@ -319,8 +301,7 @@
     "method5": "마늘을 다져 다진 마늘 0.4T, 간장 1국자, 설탕 1.5T, 물엿 0.7T를 섞어 양념을 만든다.",
     "method6": "준비한 양념과 대파, 양파를 닭에 넣고 끓여 완성한다.",
     "method7": "",
-    "thumbnail": "간장찜닭",
-    "descript": ""
+    "thumbnail": "간장 찜닭"
   },
   {
     "id": 19,
@@ -336,15 +317,14 @@
     "method5": "다진 마늘, 국간장, 고춧가루를 넣어 간을 맞춰 완성한다.",
     "method6": "",
     "method7": "",
-    "thumbnail": "김치찌개",
-    "descript": ""
+    "thumbnail": "김치찌개"
   },
   {
     "id": 20,
     "name": "해물 꽃게 라면",
     "time": "15분",
     "ingredients": "꽃게, 대파, 고추, 라면, 양파",
-    "ingreAmount": "2개, 1/2개, 1/2개, 1개, 1/2개",
+    "ingreAmount": "2마리, 1/2개, 1/2개, 1개, 1/2개",
     "seasoning": "",
     "method1": "칫솔로 꽃게를 손질한다.",
     "method2": "라면 끓이는 양 1.5배의 물과 꽃게를 냄비에 넣어 10분 동안 끓인다.",
@@ -353,8 +333,7 @@
     "method5": "냄비에 라면 스프, 대파, 고추, 양파를 넣어 5분 더 끓인다.",
     "method6": "익은 꽃게는 잠시 건져 내고 삶아둔 면을 1분 정도 끓여 완성한다.",
     "method7": "",
-    "thumbnail": "해물 꽃게 라면",
-    "descript": ""
+    "thumbnail": "해물 꽃게 라면"
   },
   {
     "id": 21,
@@ -370,8 +349,7 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "완숙 달걀",
-    "descript": ""
+    "thumbnail": "완숙 달걀"
   },
   {
     "id": 22,
@@ -387,8 +365,7 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "반숙 달걀",
-    "descript": ""
+    "thumbnail": "반숙 달걀"
   },
   {
     "id": 23,
@@ -404,8 +381,7 @@
     "method5": "감자를 넣고 국간장으로 입맛에 맛게 간을 맞춘다.",
     "method6": "숙성된 반죽을 찢어 넣는다.",
     "method7": "준비한 나머지 재료를 넣고 4분 끓여 완성한다.",
-    "thumbnail": "김치 수제비",
-    "descript": ""
+    "thumbnail": "nothing"
   },
   {
     "id": 24,
@@ -413,7 +389,7 @@
     "time": "45분",
     "ingredients": "밀가루, 김치, 애호박, 감자, 양파, 고추, 멸치, 다시마",
     "ingreAmount": "250g, 1.25컵, 1/4개, 1/2개, 1/4개, 1/2개, 4개, 100g",
-    "seasoning": "",
+    "seasoning": "국간장",
     "method1": "밀가루에 물을 조금씩 넣어 반죽을 한다.",
     "method2": "반죽이 손에 달라붙지 않으면 봉투로 감싸 냉장고에 30분 동안 숙성을 시킨다.",
     "method3": "물 400g에 멸치, 다시마를 넣고 5분 동안 끓인 후 멸치, 다시마를 제거한다.",
@@ -421,25 +397,23 @@
     "method5": "감자를 넣고 국간장으로 입맛에 맛게 간을 맞춘다.",
     "method6": "숙성된 반죽을 찢어 넣는다.",
     "method7": "준비한 나머지 재료를 넣고 4분 끓여 완성한다.",
-    "thumbnail": "수제비",
-    "descript": ""
+    "thumbnail": "수제비"
   },
   {
     "id": 25,
     "name": "햄치즈 토스트",
     "time": "15분",
     "ingredients": "식빵, 치즈, 햄, 달걀",
-    "ingreAmount": "2개, 1개, 2개, 1알",
+    "ingreAmount": "2개, 1개, 100g, 1알",
     "seasoning": "버터, 케첩",
     "method1": "팬에 버터 0.5T를 넣고 녹인다.",
-    "method2": "기호에 맞게 식빵을 올려 굽는다.",
-    "method3": "준비한 햄과 계란을 굽는다.",
+    "method2": "기호에 맞게 식빵을 굽는다.",
+    "method3": "준비한 햄과 달걀을 굽는다.",
     "method4": "식빵에 케첩을 바르고 그 위에 햄과 치즈를 올려 완성한다.",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "햄치즈 토스트",
-    "descript": ""
+    "thumbnail": "햄치즈 토스트"
   },
   {
     "id": 26,
@@ -455,8 +429,7 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "반숙 토스트",
-    "descript": ""
+    "thumbnail": "반숙 토스트"
   },
   {
     "id": 27,
@@ -472,15 +445,14 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "김치 부침개",
-    "descript": ""
+    "thumbnail": "김치 부침개"
   },
   {
     "id": 28,
     "name": "시래기국",
     "time": "20분",
     "ingredients": "시래기, 대파, 멸치",
-    "ingreAmount": "1줌, 1/4개, 4개",
+    "ingreAmount": "1줌, 1/4개, 4마리",
     "seasoning": "된장, 소금",
     "method1": "시래기를 찬물에서 담가 두었다가 씻어 준다.",
     "method2": "냄비에 약 500ml의 물을 넣고 멸치와 시래기를 넣고 끓인다.",
@@ -489,33 +461,31 @@
     "method5": "5분간 더 끓인 후 완성한다.",
     "method6": "",
     "method7": "",
-    "thumbnail": "시래기국",
-    "descript": ""
+    "thumbnail": "시래기국"
   },
   {
     "id": 29,
     "name": "콩나물국",
     "time": "15분",
     "ingredients": "콩나물, 대파, 멸치",
-    "ingreAmount": "1줌, 1/2개, 4개",
+    "ingreAmount": "1줌, 1/2개, 4마리",
     "seasoning": "간장, 소금, 고춧가루",
     "method1": "냄비에 물을 적당히 넣고 멸치와 함께 끓인다.",
-    "method2": "육수가 우러나오면 멸치를 빼고 콩나물을 넣고 계속 끓인다.",
+    "method2": "맛국물이 우러나오면 멸치를 빼고 콩나물을 넣고 계속 끓인다.",
     "method3": "콩나물 숨이 죽으면 대파를 썰어 넣는다.",
     "method4": "간장 1T와 고춧가루 0.5T를 넣고 소금으로 간을 맞추어 완성한다.",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "콩나물국",
-    "descript": ""
+    "thumbnail": "콩나물국"
   },
   {
     "id": 30,
     "name": "삼겹살 김치 볶음",
     "time": "20분",
-    "ingredients": "삼겹살, 김치",
-    "ingreAmount": "100g, 150g",
-    "seasoning": "참기름, 마늘",
+    "ingredients": "삼겹살, 김치, 마늘",
+    "ingreAmount": "100g, 150g, 3알",
+    "seasoning": "참기름",
     "method1": "팬을 중간 불로 달군 다음 삼겹살을 올린다.",
     "method2": "기름이 빠져 나올 때 먹기 좋은 크기로 썰어 준 김치를 올려 함께 볶는다.",
     "method3": "참기름을 넣어 볶고 기호에 따라 다진 마늘을 함께 넣어 준다.",
@@ -523,8 +493,7 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "삼겹살 김치 볶음",
-    "descript": ""
+    "thumbnail": "삼겹살 김치 볶음"
   },
   {
     "id": 31,
@@ -540,15 +509,14 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "참치 계란말이",
-    "descript": ""
+    "thumbnail": "참치 계란말이"
   },
   {
     "id": 32,
     "name": "베이컨 계란말이",
     "time": "10분",
     "ingredients": "베이컨, 달걀",
-    "ingreAmount": "2개, 2알",
+    "ingreAmount": "100g, 2알",
     "seasoning": "소금",
     "method1": "그릇에 달걀을 깨어 흰자와 노른자를 골고루 섞어 준다.",
     "method2": "팬에 기름을 두르고 섞어 준 달걀을 고르게 부어 준다.",
@@ -557,25 +525,23 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "베이컨 계란말이",
-    "descript": ""
+    "thumbnail": "베이컨 계란말이"
   },
   {
     "id": 33,
     "name": "어묵탕",
     "time": "30분",
     "ingredients": "어묵, 마늘, 다시마, 무, 대파, 멸치",
-    "ingreAmount": "1/2팩, 2알, 2장, 1/4개, 1개, 1줌",
+    "ingreAmount": "150g, 2알, 50g, 1/4개, 1/2개, 3마리",
     "seasoning": "소금, 국간장, 후추",
     "method1": "무의 껍질을 벗겨 찬물에 넣고 끓인다.",
-    "method2": "다시마와 멸치를 넣어 육수를 우려낸다.",
-    "method3": "육수가 우러나면 재료들을 건져내고 어묵을 넣어 끓인다.",
+    "method2": "다시마와 멸치를 넣어 맛국물을 우려낸다.",
+    "method3": "맛국물이 우러나면 재료들을 건져내고 어묵을 넣어 끓인다.",
     "method4": "대파를 먹기 좋은 크기로 썰어 넣어 완성한다.",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "어묵탕",
-    "descript": ""
+    "thumbnail": "어묵탕"
   },
   {
     "id": 34,
@@ -583,74 +549,54 @@
     "time": "30분",
     "ingredients": "고구마",
     "ingreAmount": "3개",
-    "seasoning": "설탕, 올리고당",
+    "seasoning": "설탕, 물엿",
     "method1": "고구마의 껍질을 벗기고 깍둑썰기를 한다.",
     "method2": "썰어 놓은 고구마를 찬물에 담궈 놓는다.",
     "method3": "냄비에 기름을 붓고 고구마를 튀긴다.",
     "method4": "고구마의 겉면이 노란색이 되면 건져낸다.",
-    "method5": "",
+    "method5": "튀겨진 고구마에 물엿을 부어주어 완성한다.",
     "method6": "",
     "method7": "",
-    "thumbnail": "고구마맛탕",
-    "descript": ""
+    "thumbnail": "고구마맛탕"
   },
   {
     "id": 35,
     "name": "김밥",
     "time": "30분",
     "ingredients": "김, 밥, 당근, 단무지, 시금치, 햄",
-    "ingreAmount": "2장, 2공기,  1/2개, 2개, 4개, 4개",
+    "ingreAmount": "2장, 1공기,  1/2개, 30g, 0.5줌, 50g",
     "seasoning": "참기름, 깨, 소금",
-    "method1": "준비한 채소들을 채썬다.",
+    "method1": "준비한 채소들을 채썰기로 썰어준다.",
     "method2": "시금치는 끓는 물에 살짝 데쳐서 숨을 죽인다.",
     "method3": "김을 깔고 그 위에 밥을 올린 후 각종 재료들을 조금씩 올려 말아 준다.",
     "method4": "먹기 좋은 크기로 김밥을 썰어 완성한다.",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "김밥",
-    "descript": ""
+    "thumbnail": "김밥"
   },
   {
     "id": 36,
     "name": "누룽지",
-    "time": "15분",
+    "time": "25분",
     "ingredients": "밥",
     "ingreAmount": "1공기",
     "seasoning": "",
     "method1": "기름을 두르지 않은 팬에 밥을 얇게 펴 준다.",
-    "method2": "약한 불로 약 10분 정도 굽는다.",
+    "method2": "약한 불로 양면을 각각 약 10분 정도 굽는다.",
     "method3": "밥이 구워져 팬에서 떨어지면 뒤집어 반대편도 구워 완성한다.",
     "method4": "",
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "누룽지",
-    "descript": ""
+    "thumbnail": "누룽지"
   },
   {
     "id": 37,
-    "name": "비빔국수",
-    "time": "10분",
-    "ingredients": "소면, 김치",
-    "ingreAmount": "100g, 1줌",
-    "seasoning": "고추장, 설탕, 식초, 참기름, 소금",
-    "method1": "냄비에 면이 담길 정도의 물을 넣고 끓인다.",
-    "method2": "끓는 물에 소금을 0.5T 넣고 면을 넣어 삶는다.",
-    "method3": "면을 삶는 동안 고추장 1T, 설탕 1T, 식초 1T, 참기름 1T를 섞어 양념장을 만든다.",
-    "method4": "김치를 잘게 썰어 국물을 털고 양념장에 버무린다.",
-    "method5": "삶은 면과 준비한 양념장을 비벼 완성한다.",
-    "method6": "",
-    "method7": "",
-    "thumbnail": "비빔국수",
-    "descript": ""
-  },
-  {
-    "id": 38,
     "name": "프렌치토스트",
     "time": "5분",
     "ingredients": "식빵, 달걀, 우유",
-    "ingreAmount": "2개, 1알, 1/3컵",
+    "ingreAmount": "2개, 1알, 100ml",
     "seasoning": "설탕",
     "method1": "달걀을 풀고 우유를 넣은 다음 섞는다.",
     "method2": "식빵에 풀은 달걀을 골고루 적신다.",
@@ -659,11 +605,10 @@
     "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "프렌치토스트",
-    "descript": ""
+    "thumbnail": "프렌치토스트"
   },
   {
-    "id": 39,
+    "id": 38,
     "name": "콩나물무침",
     "time": "5분",
     "ingredients": "콩나물",
@@ -673,10 +618,9 @@
     "method2": "고춧가루 1T, 간장 1T, 참기름 1T를 섞어 양념장을 만든다.",
     "method3": "준비한 양념장을 콩나물에 버무려 완성한다.",
     "method4": "",
-    "method5": "대파 향이 올라오면 라면 스프의 반만 넣어 잘 볶아준다.",
+    "method5": "",
     "method6": "",
     "method7": "",
-    "thumbnail": "콩나물무침",
-    "descript": ""
+    "thumbnail": "콩나물무침"
   }
 ]

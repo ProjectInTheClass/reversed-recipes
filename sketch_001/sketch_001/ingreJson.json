@@ -1,65 +1,331 @@
 [
   {
-    "name": "양파",
-    "icon": "양파",
-    "´class´": "채소류",
-    "expirationDate": 7,
-    "amount": ""
-  },
-  {
-    "name": "달걀",
-    "icon": "고추1",
-    "´class´": "난류",
-    "expirationDate": 30,
-    "amount": ""
-  },
-  {
-    "name": "돼지고기",
-    "icon": "마늘",
-    "´class´": "고기류",
+    "name": "소고기",
+    "icon": "소고기",
+    "´class´": "육류",
     "expirationDate": 3,
     "amount": ""
   },
   {
-    "name": "우유",
-    "icon": "milk",
-    "´class´": "유제품류",
-    "expirationDate": 7,
+    "name": "돼지고기",
+    "icon": "돼지고기",
+    "´class´": "육류",
+    "expirationDate": 3,
     "amount": ""
   },
   {
-    "name": "대파",
-    "icon": "leek",
-    "´class´": "채소류",
-    "expirationDate": 30,
-    "amount": ""
-  },
-  {
-    "name": "밥",
-    "icon": "rice",
-    "´class´": "밥류",
+    "name": "닭고기",
+    "icon": "닭고기",
+    "´class´": "육류",
     "expirationDate": 2,
     "amount": ""
   },
   {
-    "name": "김치",
-    "icon": "basic",
-    "´class´": "채소류",
-    "expirationDate": 60,
+    "name": "양파",
+    "icon": "양파",
+    "´class´": "채소 / 과일",
+    "expirationDate": 7,
     "amount": ""
   },
   {
-    "name": "마늘",
-    "icon": "basic",
-    "´class´": "채소류",
+    "name": "김치",
+    "icon": "김치",
+    "´class´": "채소 / 과일",
+    "expirationDate": -1,
+    "amount": ""
+  },
+  {
+    "name": "대파",
+    "icon": "대파",
+    "´class´": "채소 / 과일",
     "expirationDate": 30,
     "amount": ""
   },
   {
-      "name": "마늘2",
-      "icon": "basic",
-      "´class´": "채소류",
-      "expirationDate": 30,
-      "amount": ""
+    "name": "고추",
+    "icon": "고추",
+    "´class´": "채소 / 과일",
+    "expirationDate": 5,
+    "amount": ""
+  },
+  {
+    "name": "마늘",
+    "icon": "마늘",
+    "´class´": "채소 / 과일",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "무",
+    "icon": "무",
+    "´class´": "채소 / 과일",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "봄동",
+    "icon": "봄동",
+    "´class´": "채소 / 과일",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "토마토",
+    "icon": "토마토",
+    "´class´": "채소 / 과일",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "당근",
+    "icon": "당근",
+    "´class´": "채소 / 과일",
+    "expirationDate": 5,
+    "amount": ""
+  },
+  {
+    "name": "애호박",
+    "icon": "애호박",
+    "´class´": "채소 / 과일",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "시래기",
+    "icon": "시래기",
+    "´class´": "채소 / 과일",
+    "expirationDate": 90,
+    "amount": ""
+  },
+  {
+    "name": "콩나물",
+    "icon": "콩나물",
+    "´class´": "채소 / 과일",
+    "expirationDate": 3,
+    "amount": ""
+  },
+  {
+    "name": "가지",
+    "icon": "가지",
+    "´class´": "채소 / 과일",
+    "expirationDate": 5,
+    "amount": ""
+  },
+  {
+    "name": "딸기",
+    "icon": "딸기",
+    "´class´": "채소 / 과일",
+    "expirationDate": 4,
+    "amount": ""
+  },
+  {
+    "name": "레몬",
+    "icon": "레몬",
+    "´class´": "채소 / 과일",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "브로콜리",
+    "icon": "브로콜리",
+    "´class´": "채소 / 과일",
+    "expirationDate": 3,
+    "amount": ""
+  },
+  {
+    "name": "사과",
+    "icon": "사과",
+    "´class´": "채소 / 과일",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "상추",
+    "icon": "상추",
+    "´class´": "채소 / 과일",
+    "expirationDate": 1,
+    "amount": ""
+  },
+  {
+    "name": "양배추",
+    "icon": "양배추",
+    "´class´": "채소 / 과일",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "콩",
+    "icon": "콩",
+    "´class´": "채소 / 과일",
+    "expirationDate": -1,
+    "amount": ""
+  },
+  {
+    "name": "파프리카",
+    "icon": "파프리카",
+    "´class´": "채소 / 과일",
+    "expirationDate": 5,
+    "amount": ""
+  },
+  {
+    "name": "호박",
+    "icon": "호박",
+    "´class´": "채소 / 과일",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "새우",
+    "icon": "새우",
+    "´class´": "수산물",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "꽃게",
+    "icon": "꽃게",
+    "´class´": "수산물",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "멸치",
+    "icon": "멸치",
+    "´class´": "수산물",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "다시마",
+    "icon": "다시마",
+    "´class´": "수산물",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "밥",
+    "icon": "밥",
+    "´class´": "곡물 / 견과류",
+    "expirationDate": 2,
+    "amount": ""
+  },
+  {
+    "name": "감자",
+    "icon": "감자",
+    "´class´": "곡물 / 견과류",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "고구마",
+    "icon": "고구마",
+    "´class´": "곡물 / 견과류",
+    "expirationDate": 5,
+    "amount": ""
+  },
+  {
+    "name": "두부",
+    "icon": "두부",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 2,
+    "amount": ""
+  },
+  {
+    "name": "라면",
+    "icon": "라면",
+    "´class´": "가공 / 유제품",
+    "expirationDate": -1,
+    "amount": ""
+  },
+  {
+    "name": "떡",
+    "icon": "떡",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "소면",
+    "icon": "소면",
+    "´class´": "가공 / 유제품",
+    "expirationDate": -1,
+    "amount": ""
+  },
+  {
+    "name": "소주",
+    "icon": "소주",
+    "´class´": "가공 / 유제품",
+    "expirationDate": -1,
+    "amount": ""
+  },
+  {
+    "name": "베이컨",
+    "icon": "베이컨",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "햄",
+    "icon": "햄",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "닭가슴살",
+    "icon": "닭가슴살",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 2,
+    "amount": ""
+  },
+  {
+    "name": "식빵",
+    "icon": "식빵",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 10,
+    "amount": ""
+  },
+  {
+    "name": "치즈",
+    "icon": "치즈",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 3,
+    "amount": ""
+  },
+  {
+    "name": "부침가루",
+    "icon": "부침가루",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "단무지",
+    "icon": "단무지",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 15,
+    "amount": ""
+  },
+  {
+    "name": "달걀",
+    "icon": "달걀",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 30,
+    "amount": ""
+  },
+  {
+    "name": "어묵",
+    "icon": "어묵",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 4,
+    "amount": ""
+  },
+  {
+    "name": "참치",
+    "icon": "참치",
+    "´class´": "가공 / 유제품",
+    "expirationDate": -1,
+    "amount": ""
   }
 ]
