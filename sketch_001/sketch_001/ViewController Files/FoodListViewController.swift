@@ -162,6 +162,7 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
         }
 
         delegate?.reloadRecipes(ingreStrArr: ingreStr!.ingredientsList!)
+        
 //        print(ingreStr?.ingredientsList!)
         
         
@@ -175,4 +176,3 @@ class IngreStr {
 protocol ReloadRecipes {
     func reloadRecipes(ingreStrArr: [String])
 }
-

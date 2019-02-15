@@ -209,7 +209,7 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
             for seasoning in selectedSeasoningString {
                 selectedSeasoningCell.append(totalSeasoning!.first(where: {$0.name == seasoning})!)
             }
-        
+            
             delegate.completeModalAction(selectedIngredientCell, selectedSeasoningCell)
         }
         self.dismiss(animated: true, completion: nil)
