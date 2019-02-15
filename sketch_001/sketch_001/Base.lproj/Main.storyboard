@@ -402,7 +402,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="6jY-ir-rKH" kind="show" identifier="detailRecipesSegue" id="qxo-4F-rfp"/>
+                        <segue destination="6jY-ir-rKH" kind="show" identifier="detailRecipesSegue" id="HVn-am-ShB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZE-M0-tnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1180,7 +1180,7 @@
         <image name="refri_outlined" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qxo-4F-rfp"/>
+        <segue reference="HVn-am-ShB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.67379269689999999" blue="0.003209765944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

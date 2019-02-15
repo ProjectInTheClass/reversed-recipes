@@ -175,4 +175,3 @@ class IngreStr {
 protocol ReloadRecipes {
     func reloadRecipes(ingreStrArr: [String])
 }
-

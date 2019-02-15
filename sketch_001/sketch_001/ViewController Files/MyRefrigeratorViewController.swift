@@ -263,7 +263,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
                         let startDate = dateFormatter.date(from: ingredient.startDate!)
                         let endDate = calendar.date(byAdding: DateComponents(day: ingredient.expirationDate), to: startDate!)
                         let todayDate = Date()
-                        let remainingDate = todayDate.timeIntervalSince(endDate!)
+                        let remainingDate = endDate!.timeIntervalSince(todayDate)
                         let remainingDays = Int(remainingDate / 86400)
                         
                         if remainingDays > 7 {
