@@ -161,6 +161,7 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
         }
 
         delegate?.reloadRecipes(ingreStrArr: ingreStr!.ingredientsList!)
+        
 //        print(ingreStr?.ingredientsList!)
         
         

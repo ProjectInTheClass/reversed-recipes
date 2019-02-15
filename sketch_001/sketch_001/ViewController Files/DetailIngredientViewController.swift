@@ -59,7 +59,13 @@ class DetailIngredientViewController: UIViewController {
         let endDate = calendar.date(byAdding: DateComponents(day: ingredient!.expirationDate), to: datePicker.date)
         let endDateStr = dateFormatter.string(from: endDate!)
         startDateLabel.text = startDateStr
-        endDateLabel.text = endDateStr
+        
+        if ingredient!.expirationDate != -1 {
+            endDateLabel.text = endDateStr
+        } else {
+            endDateLabel.text = "-"
+        }
+        
         ingredient?.startDate = startDateStr
         isChangedDate = true
 //        let todayDate = Date()
@@ -79,6 +85,10 @@ class DetailIngredientViewController: UIViewController {
         iconImage.image = UIImage(named: ingredient!.icon)
         nameLabel.text = ingredient!.name
         classLabel.text = ingredient!.´class´
+        
+        if ingredient!.expirationDate == -1 {
+            endDateLabel.text = "-"
+        }
         
         if ingredient?.isFrozen == true {
             endDateLabel.textColor = UIColor.gray

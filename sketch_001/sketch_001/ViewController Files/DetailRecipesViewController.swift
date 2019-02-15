@@ -137,7 +137,14 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         }else if indexPath.section == 1 {
             return CGSize(width: (width / 4) - 30, height: 75)
         }else if indexPath.section == 2 {
-            return CGSize(width: (width / 4) - 30, height: 75)
+            let seasonings = food!.seasoning!
+            let eachSeas = Set(seasonings.components(separatedBy: ", "))
+            let seasArr = Array(eachSeas)
+            if seasArr[0] == "" {
+                return CGSize(width: (width / 4) - 30, height: 0)
+            } else {
+                return CGSize(width: (width / 4) - 30, height: 75)
+            }
         }else {
             let collectionViewHeight = CGFloat(100)
             var height: Int?

@@ -109,6 +109,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         }else{
             emptyHomeImage.isHidden = true
         }
+        self.ingredientTableView.reloadData()
 //        print(ingredients.count)
 //        ingredientTableView.delegate = self
 //        ingredientTableView.dataSource = self
@@ -246,22 +247,50 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
         
         if indexPath.section == 0 {
             if let ingredient = ingredients?[indexPath.row]{
-                
                 cell.ingredientIcon.image = UIImage(named: ingredient.icon)
                 cell.ingredientName.text = ingredient.name
-                cell.ingredientTerm.text = "\(ingredient.expirationDate)일"
-                cell.ingredientAmount.text = ""
+                if ingredient.isFrozen == true {
+                    cell.ingredientTerm.text = "냉동"
+                    cell.ingredientTerm.isEnabled = false
+                } else {
+                    if ingredient.expirationDate != -1 {
+                        cell.ingredientTerm.isEnabled = true
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateStyle = .medium
+                        dateFormatter.dateFormat = "yyyy-MM-dd"
+                        
+                        let calendar = Calendar(identifier: .gregorian)
+                        let startDate = dateFormatter.date(from: ingredient.startDate!)
+                        let endDate = calendar.date(byAdding: DateComponents(day: ingredient.expirationDate), to: startDate!)
+                        let todayDate = Date()
+                        let remainingDate = todayDate.timeIntervalSince(endDate!)
+                        let remainingDays = Int(remainingDate / 86400)
+                        
+                        if remainingDays > 7 {
+                            cell.ingredientTerm.text = ""
+//                            cell.ingredientTerm.textColor = UIColor(displayP3Red: CGFloat(0)/255, green: CGFloat(230)/255, blue: CGFloat(28)/255, alpha: 1)
+                        } else if remainingDays > 2 {
+                            cell.ingredientTerm.text = ""
+//                            cell.ingredientTerm.textColor = UIColor.yellow
+                        } else {
+                            cell.ingredientTerm.text = "경고"
+                            cell.ingredientTerm.textColor = UIColor.red
+                        }
+                    } else {
+                        cell.ingredientTerm.text = ""
+//                        cell.ingredientTerm.textColor = UIColor.green
+                    }
+                }
             }
         }else{
             if let seasoning = seasonings?[indexPath.row]{
                 cell.ingredientIcon.image = UIImage(named: seasoning.icon)
                 cell.ingredientName.text = seasoning.name
-                cell.ingredientAmount.text = ""
-                cell.ingredientTerm.text = ""
             }
         }
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             selectedIngredient = ingredients![indexPath.row]

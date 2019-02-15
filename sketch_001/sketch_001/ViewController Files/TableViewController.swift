@@ -26,7 +26,7 @@ class TableViewController: UITableViewController, ReloadRecipes {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.tableView.reloadData()
+        self.tableView.reloadData()
         
     }
 
@@ -115,6 +115,6 @@ class TableViewController: UITableViewController, ReloadRecipes {
             }
         }
         
-        super.tableView.reloadData()
+        self.tableView.reloadData()
     }
 }
