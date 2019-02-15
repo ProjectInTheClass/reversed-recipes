@@ -26,7 +26,7 @@ class TableViewController: UITableViewController, ReloadRecipes {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.tableView.reloadData()
+        self.tableView.reloadData()
         
     }
 
@@ -43,7 +43,12 @@ class TableViewController: UITableViewController, ReloadRecipes {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedFood = possibleFoodList![indexPath.row]
+        if repossibleFoodList == nil {
+            selectedFood = possibleFoodList![indexPath.row]
+        } else {
+            selectedFood = repossibleFoodList![indexPath.row]
+        }
+        
         performSegue(withIdentifier: "detailRecipesSegue", sender: self)
     }
     
@@ -115,6 +120,6 @@ class TableViewController: UITableViewController, ReloadRecipes {
             }
         }
         
-        super.tableView.reloadData()
+        self.tableView.reloadData()
     }
 }

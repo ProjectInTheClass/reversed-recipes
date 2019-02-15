@@ -12,9 +12,7 @@ class IngredientTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ingredientIcon: UIImageView!
     @IBOutlet weak var ingredientName: UILabel!
-    @IBOutlet weak var ingredientAmount: UILabel!
     @IBOutlet weak var ingredientTerm: UILabel!
-//    @IBOutlet weak var ingredientString: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

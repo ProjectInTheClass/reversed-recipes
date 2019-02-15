@@ -149,19 +149,19 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
             ingredientButton.isSelected = !ingredientButton.isSelected
             ingreStr?.ingredientsList?.append(ingredientName.text!)
             ingredientName.textColor = UIColor.black
-            ingredientImage.tintColor = self.tintColor
-            
+            ingredientImage.image = UIImage(named: "\(ingredientName.text!)")
             
         } else {
 //            print("delete : \(ingredientName.text!)")
             ingredientButton.isSelected = !ingredientButton.isSelected
             ingreStr?.ingredientsList = ingreStr?.ingredientsList?.filter { $0 != ingredientName.text! }
-            ingredientImage.tintColor = UIColor.lightGray
+            ingredientImage.image = UIImage(named: "\(ingredientName.text!)" + "_gray")
             ingredientName.textColor = UIColor.lightGray
             
         }
 
         delegate?.reloadRecipes(ingreStrArr: ingreStr!.ingredientsList!)
+        
 //        print(ingreStr?.ingredientsList!)
         
         
@@ -175,4 +175,3 @@ class IngreStr {
 protocol ReloadRecipes {
     func reloadRecipes(ingreStrArr: [String])
 }
-

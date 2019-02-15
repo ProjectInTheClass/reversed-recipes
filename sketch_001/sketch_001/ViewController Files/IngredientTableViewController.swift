@@ -58,14 +58,11 @@ class IngredientTableViewController: UITableViewController {
             cell.ingredientIcon.image = UIImage(named: ingredient.icon)
             cell.ingredientName.text = ingredient.name
             cell.ingredientTerm.text = "\(ingredient.expirationDate)일"
-            cell.ingredientAmount.text = ""
             
         }else{
             let seasoning = seasonings![indexPath.row]
             cell.ingredientIcon.image = UIImage(named: seasoning.icon)
             cell.ingredientName.text = seasoning.name
-            cell.ingredientAmount.text = ""
-            cell.ingredientTerm.text = ""
         }
         return cell
     }
