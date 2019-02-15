@@ -118,6 +118,7 @@ input, select, textarea {
 	}
 
 	h1 {
+        font-size: 4.00em;
 		font-weight: 600;
 		text-transform: uppercase;
 		color: #FFAC01;
@@ -130,7 +131,7 @@ input, select, textarea {
 	}
 
 	h2 {
-		font-size: 2.00em;
+		font-size: 4.00em;
 		font-weight: 500;
 		letter-spacing: 1px;
 		margin: 0 0 1.5em 0;
@@ -138,9 +139,10 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 1em;
+		font-size: 3em;
 		letter-spacing: 2px;
 		margin: 0 0 1.25em 0;
+        line-height: 2.05em;
 	}
 
 	a {
