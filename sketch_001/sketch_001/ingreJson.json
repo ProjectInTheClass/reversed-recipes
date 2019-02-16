@@ -309,7 +309,7 @@
   },
   {
     "name": "달걀",
-    "icon": "달걀",
+    "icon": "egg",
     "´class´": "가공 / 유제품",
     "expirationDate": 30,
     "amount": ""
