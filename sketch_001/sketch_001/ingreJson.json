@@ -134,7 +134,7 @@
   },
   {
     "name": "사과",
-    "icon": "사과",
+    "icon": "apple",
     "´class´": "채소 / 과일",
     "expirationDate": 7,
     "amount": ""
