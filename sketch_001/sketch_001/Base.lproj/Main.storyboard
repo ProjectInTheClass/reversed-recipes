@@ -338,18 +338,19 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodListCell" rowHeight="220" id="0Kj-kE-rW0" customClass="FoodListCell" customModule="sketch_001" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="220"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Kj-kE-rW0" id="1VM-M6-TMH">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Kj-kE-rW0" id="1VM-M6-TMH">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="219.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hzb-bE-OsL">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="177"/>
+                                            <rect key="frame" x="10" y="0.0" width="330" height="177.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="177" id="kF3-Yo-bDA"/>
+                                                <constraint firstAttribute="width" secondItem="hzb-bE-OsL" secondAttribute="height" multiplier="373:200" id="q4U-Or-hwr"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요리 이름" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-UG-n2H">
-                                            <rect key="frame" x="20" y="187" width="84.5" height="25"/>
+                                            <rect key="frame" x="20" y="187.5" width="84.5" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="jqz-eX-sbe"/>
                                             </constraints>
@@ -358,7 +359,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tip-ub-CzV">
-                                            <rect key="frame" x="270" y="187" width="35" height="28"/>
+                                            <rect key="frame" x="300" y="187.5" width="35" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="RZz-m9-WTX"/>
                                                 <constraint firstAttribute="width" constant="35" id="xdp-DT-eTX"/>
@@ -370,7 +371,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1q-cD-IVj">
-                                            <rect key="frame" x="109.5" y="194" width="26" height="18"/>
+                                            <rect key="frame" x="109.5" y="194.5" width="26" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="1" green="0.67379269689999999" blue="0.003209765944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -383,6 +384,7 @@
                                         <constraint firstItem="fYA-UG-n2H" firstAttribute="leading" secondItem="1VM-M6-TMH" secondAttribute="leading" constant="20" id="IRq-6N-1JL"/>
                                         <constraint firstItem="hzb-bE-OsL" firstAttribute="leading" secondItem="1VM-M6-TMH" secondAttribute="leading" constant="10" id="LgU-6N-bPD"/>
                                         <constraint firstItem="tip-ub-CzV" firstAttribute="top" secondItem="fYA-UG-n2H" secondAttribute="top" id="Q7B-x5-Wr1"/>
+                                        <constraint firstAttribute="bottom" secondItem="hzb-bE-OsL" secondAttribute="bottom" constant="50" id="ac3-8k-7Sw"/>
                                         <constraint firstAttribute="right" secondItem="hzb-bE-OsL" secondAttribute="right" constant="10" id="gP1-1E-2xi"/>
                                         <constraint firstItem="hzb-bE-OsL" firstAttribute="top" secondItem="1VM-M6-TMH" secondAttribute="top" id="wTe-LY-fv2"/>
                                         <constraint firstItem="g1q-cD-IVj" firstAttribute="leading" secondItem="fYA-UG-n2H" secondAttribute="trailing" constant="5" id="x6Y-Ce-QLQ"/>
