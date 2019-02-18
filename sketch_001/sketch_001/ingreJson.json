@@ -92,7 +92,7 @@
   },
   {
     "name": "시래기",
-    "icon": "driedradishgrenns",
+    "icon": "driedradishgreens",
     "´class´": "채소 / 과일",
     "expirationDate": 90,
     "amount": ""
@@ -253,7 +253,7 @@
   },
   {
     "name": "소면",
-    "icon": "plainnoocles",
+    "icon": "plainnoodles",
     "´class´": "가공 / 유제품",
     "expirationDate": -1,
     "amount": ""

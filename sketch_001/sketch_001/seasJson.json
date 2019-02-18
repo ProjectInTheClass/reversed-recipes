@@ -1,74 +1,74 @@
 [
   {
     "name": "설탕",
-    "icon": "설탕"
+    "icon": "sugar"
   },
   {
     "name": "고추장",
-    "icon": "고추장"
+    "icon": "redchilipaste"
   },
   {
     "name": "소금",
-    "icon": "소금"
+    "icon": "salt"
   },
   {
     "name": "참기름",
-    "icon": "참기름"
+    "icon": "sesameoil"
   },
   {
     "name": "마요네즈",
-    "icon": "마요네즈"
+    "icon": "mayonnaise"
   },
   {
     "name": "간장",
-    "icon": "간장"
+    "icon": "soysauce"
   },
   {
     "name": "후추",
-    "icon": "후추"
+    "icon": "pepper"
   },
   {
     "name": "국간장",
-    "icon": "국간장"
+    "icon": "koreanstylesoysauce"
   },
   {
     "name": "고춧가루",
-    "icon": "고춧가루"
+    "icon": "redchilipowder"
   },
   {
     "name": "된장",
-    "icon": "된장"
+    "icon": "soybeanpaste"
   },
   {
     "name": "식초",
-    "icon": "식초"
+    "icon": "vinegar"
   },
   {
     "name": "드레싱",
-    "icon": "드레싱"
+    "icon": "dressing"
   },
   {
     "name": "올리브유",
-    "icon": "올리브유"
+    "icon": "oliveoil"
   },
   {
     "name": "버터",
-    "icon": "버터"
+    "icon": "butter"
   },
   {
     "name": "물엿",
-    "icon": "물엿"
+    "icon": "starchsyrup"
   },
   {
     "name": "케첩",
-    "icon": "케첩"
+    "icon": "ketchup"
   },
   {
     "name": "잼",
-    "icon": "잼"
+    "icon": "jam"
   },
   {
     "name": "깨",
-    "icon": "깨"
+    "icon": "sesame"
   }
 ]
