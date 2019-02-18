@@ -1,0 +1,194 @@
+[
+  {
+    "k_name": "소고기",
+    "e_name": "beef"
+  },
+  {
+    "k_name": "돼지고기",
+    "e_name": "pork"
+  },
+  {
+    "k_name": "닭고기",
+    "e_name": "chicken"
+  },
+  {
+    "k_name": "양파",
+    "e_name": "onion"
+  },
+  {
+    "k_name": "김치",
+    "e_name": "kimchi"
+  },
+  {
+    "k_name": "대파",
+    "e_name": "greenonion"
+  },
+  {
+    "k_name": "고추",
+    "e_name": "chili"
+  },
+  {
+    "k_name": "마늘",
+    "e_name": "garlic"
+  },
+  {
+    "k_name": "무",
+    "e_name": "whiteradish"
+  },
+  {
+    "k_name": "봄동",
+    "e_name": "seasonedcabbage"
+  },
+  {
+    "k_name": "토마토",
+    "e_name": "tomato"
+  },
+  {
+    "k_name": "당근",
+    "e_name": "carrot"
+  },
+  {
+    "k_name": "애호박",
+    "e_name": "greenpumpkin"
+  },
+  {
+    "k_name": "시래기",
+    "e_name": "driedradishgrenns"
+  },
+  {
+    "k_name": "콩나물",
+    "e_name": "beansprouts"
+  },
+  {
+    "k_name": "가지",
+    "e_name": "eggplant"
+  },
+  {
+    "k_name": "딸기",
+    "e_name": "strawberry"
+  },
+  {
+    "k_name": "레몬",
+    "e_name": "lemon"
+  },
+  {
+    "k_name": "브로콜리",
+    "e_name": "broccoli"
+  },
+  {
+    "k_name": "사과",
+    "e_name": "apple"
+  },
+  {
+    "k_name": "상추",
+    "e_name": "lettuce"
+  },
+  {
+    "k_name": "양배추",
+    "e_name": "cabbage"
+  },
+  {
+    "k_name": "콩",
+    "e_name": "bean"
+  },
+  {
+    "k_name": "파프리카",
+    "e_name": "paprika"
+  },
+  {
+    "k_name": "호박",
+    "e_name": "pumpkin"
+  },
+  {
+    "k_name": "새우",
+    "e_name": "shirimp"
+  },
+  {
+    "k_name": "꽃게",
+    "e_name": "bluecrab"
+  },
+  {
+    "k_name": "멸치",
+    "e_name": "anchovy"
+  },
+  {
+    "k_name": "다시마",
+    "e_name": "kelp"
+  },
+  {
+    "k_name": "미역",
+    "e_name": "seaweed"
+  },
+  {
+    "k_name": "밥",
+    "e_name": "rice"
+  },
+  {
+    "k_name": "감자",
+    "e_name": "potato"
+  },
+  {
+    "k_name": "고구마",
+    "e_name": "sweetpotato"
+  },
+  {
+    "k_name": "두부",
+    "e_name": "tofu"
+  },
+  {
+    "k_name": "라면",
+    "e_name": "ramen"
+  },
+  {
+    "k_name": "떡",
+    "e_name": "ricecake"
+  },
+  {
+    "k_name": "소면",
+    "e_name": "plainnoocles"
+  },
+  {
+    "k_name": "소주",
+    "e_name": "soju"
+  },
+  {
+    "k_name": "베이컨",
+    "e_name": "bacon"
+  },
+  {
+    "k_name": "햄",
+    "e_name": "ham"
+  },
+  {
+    "k_name": "닭가슴살",
+    "e_name": "chickenbreast"
+  },
+  {
+    "k_name": "식빵",
+    "e_name": "plainbread"
+  },
+  {
+    "k_name": "치즈",
+    "e_name": "cheese"
+  },
+  {
+    "k_name": "부침가루",
+    "e_name": "pancakepowder"
+  },
+  {
+    "k_name": "단무지",
+    "e_name": "pickledradish"
+  },
+  {
+    "k_name": "달걀",
+    "e_name": "egg"
+  },
+  {
+    "k_name": "어묵",
+    "e_name": "fishcake"
+  },
+  {
+    "k_name": "참치",
+    "e_name": "tunacan"
+  }
+]

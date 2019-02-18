@@ -1,0 +1,74 @@
+[
+  {
+    "k_name": "설탕",
+    "e_name": "sugar"
+  },
+  {
+    "k_name": "고추장",
+    "e_name": "redchilipaste"
+  },
+  {
+    "k_name": "소금",
+    "e_name": "salt"
+  },
+  {
+    "k_name": "참기름",
+    "e_name": "sesameoil"
+  },
+  {
+    "k_name": "마요네즈",
+    "e_name": "mayonnaise"
+  },
+  {
+    "k_name": "간장",
+    "e_name": "soysauce"
+  },
+  {
+    "k_name": "후추",
+    "e_name": "pepper"
+  },
+  {
+    "k_name": "국간장",
+    "e_name": "koreanstylesoysauce"
+  },
+  {
+    "k_name": "고춧가루",
+    "e_name": "chilipowder"
+  },
+  {
+    "k_name": "된장",
+    "e_name": "soybeanpaste"
+  },
+  {
+    "k_name": "식초",
+    "e_name": "vinegar"
+  },
+  {
+    "k_name": "드레싱",
+    "e_name": "dressing"
+  },
+  {
+    "k_name": "올리브유",
+    "e_name": "oliveoil"
+  },
+  {
+    "k_name": "버터",
+    "e_name": "butter"
+  },
+  {
+    "k_name": "물엿",
+    "e_name": "starchsyrup"
+  },
+  {
+    "k_name": "케첩",
+    "e_name": "ketchup"
+  },
+  {
+    "k_name": "잼",
+    "e_name": "jam"
+  },
+  {
+    "k_name": "깨",
+    "e_name": "sesame"
+  }
+]

@@ -92,7 +92,64 @@ class PlistCoding {
     }
 }
 
-
-
-
-
+class Translation {
+    var ingreDictionary = [String : String]()
+    var seasDictionary = [String : String]()
+    
+    init() {
+        do {
+            if let file = Bundle.main.url(forResource: "dicIngreJson", withExtension: "json") {
+                let data = try Data(contentsOf: file)
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let object = json as? [String: Any] {
+                    // json is a dictionary
+                    print(object)
+                } else if let object = json as? [Any] {
+                    // json is an array
+                    for anItem in object as! [Dictionary<String, AnyObject>] {
+                        let Name = anItem["e_name"] as! String
+                        let ID = anItem["k_name"] as! String
+                        //                        let industry = Industry(name: industryName, id:industryID)
+                        ingreDictionary[ID] = Name
+                        //                        industries[industryID]?.getString()
+                    }
+                } else {
+                    print("JSON is invalid")
+                }
+            } else {
+                print("no file")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        do {
+            if let file = Bundle.main.url(forResource: "dicSeasJson", withExtension: "json") {
+                let data = try Data(contentsOf: file)
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let object = json as? [String: Any] {
+                    // json is a dictionary
+                    print(object)
+                } else if let object = json as? [Any] {
+                    // json is an array
+                    for anItem in object as! [Dictionary<String, AnyObject>] {
+                        let Name = anItem["e_name"] as! String
+                        let ID = anItem["k_name"] as! String
+                        //                        let industry = Industry(name: industryName, id:industryID)
+                        seasDictionary[ID] = Name
+                        //                        industries[industryID]?.getString()
+                    }
+                } else {
+                    print("JSON is invalid")
+                }
+            } else {
+                print("no file")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+//        print(dictionary["소고기"]!)
+//        print("---------------")
+    }
+}

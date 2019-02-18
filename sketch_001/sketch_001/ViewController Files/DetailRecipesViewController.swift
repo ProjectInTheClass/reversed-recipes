@@ -12,7 +12,7 @@ import AlignedCollectionViewFlowLayout
 class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var food: Food?
-    
+    var translation: Translation?
     
 //    @IBOutlet weak var methodLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -59,7 +59,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailFoodImageCollectionIdentifier, for: indexPath) as! DetailFoodImageCollectionViewCell
             cell.detailFoodImage.image = UIImage(named: food!.thumbnail)
-            cell.detailFoodName.text = food?.thumbnail
+            cell.detailFoodName.text = food?.name
             cell.detailFoodTime.text = food?.time
             return cell
             
@@ -69,7 +69,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             let eachIngre = Set(ingredients!.components(separatedBy: ", "))
             let ingreArr = Array(eachIngre)
             cell.detailIngredientName.text = ingreArr[indexPath.row]
-            cell.detailIngredientImage.image = UIImage(named: ingreArr[indexPath.row])
+            cell.detailIngredientImage.image = UIImage(named: translation!.ingreDictionary[ingreArr[indexPath.row]]!)
             return cell
             
         }else if indexPath.section == 2 {
@@ -78,7 +78,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             let eachSeas = Set(seasonings.components(separatedBy: ", "))
             let seasArr = Array(eachSeas)
             cell.detailSeasoningName.text = seasArr[indexPath.row]
-            cell.detailSeasoningImage.image = UIImage(named: seasArr[indexPath.row])
+            cell.detailSeasoningImage.image = UIImage(named: translation!.seasDictionary[seasArr[indexPath.row]]!)
             return cell
             
         }else {
@@ -224,6 +224,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         collectionView.delegate = self
         collectionView.dataSource = self
         super.viewDidLoad()
+        translation = Translation()
 //        let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
 //            collectionView.collectionViewLayout = alignedFlowLayout
     }

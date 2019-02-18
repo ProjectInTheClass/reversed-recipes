@@ -31,6 +31,8 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
     var totalIngredients: [Ingredient]?
     var totalSeasoning: [Seasoning]?
     
+    var translation: Translation?
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return Set(totalIngredients!.map({$0.´class´})).count + 1 //조미료
     }
@@ -138,22 +140,22 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         switch indexPath.section {
         case 0:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "육류"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
+            cell.contentImage.image = UIImage(named: translation!.ingreDictionary[cell.contentName.text!]!)
         case 1:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "채소 / 과일"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
+            cell.contentImage.image = UIImage(named: translation!.ingreDictionary[cell.contentName.text!]!)
         case 2:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "수산물"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
+            cell.contentImage.image = UIImage(named: translation!.ingreDictionary[cell.contentName.text!]!)
         case 3:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "곡물 / 견과류"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
+            cell.contentImage.image = UIImage(named: translation!.ingreDictionary[cell.contentName.text!]!)
         case 4:
             cell.contentName.text = totalIngredients?.filter({$0.´class´ == "가공 / 유제품"}).map({$0.name})[indexPath.item]
-            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
+            cell.contentImage.image = UIImage(named: translation!.ingreDictionary[cell.contentName.text!]!)
         case 5:
             cell.contentName.text = totalSeasoning![indexPath.item].name
-            cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
+            cell.contentImage.image = UIImage(named: translation!.seasDictionary[cell.contentName.text!]!)
         default:
             print("empty")
             }
@@ -162,17 +164,17 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         case 0...4:
             print(cell.contentName.text)
             if selectedIngredientString.contains(cell.contentName.text!){
-                cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
+                cell.contentImage.image = UIImage(named: translation!.ingreDictionary[cell.contentName.text!]!)
             }else{
-                cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)" + "_gray")
+                cell.contentImage.image = UIImage(named: translation!.ingreDictionary[cell.contentName.text!]! + "_gray")
             }
         default:
             if selectedSeasoningString.contains(cell.contentName.text!){
 //                cell.backgroundColor = UIColor.gray
-                cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)")
+                cell.contentImage.image = UIImage(named: translation!.seasDictionary[cell.contentName.text!]!)
             }else{
 //                cell.backgroundColor = UIColor.white
-                cell.contentImage.image = UIImage(named: "\(cell.contentName.text!)" + "_gray")
+                cell.contentImage.image = UIImage(named: translation!.seasDictionary[cell.contentName.text!]! + "_gray")
             }
         }
         self.navigationItem.rightBarButtonItem = addButton
@@ -196,6 +198,7 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
         totalSeasoningData = TotalSeasoningData()
         totalIngredients = totalIngredientData?.totalIngredients
         totalSeasoning = totalSeasoningData?.totalSeasoning
+        translation = Translation()
 //        let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .justified, verticalAlignment: .center)
 //        collectionView.collectionViewLayout = alignedFlowLayout
     }
