@@ -181,7 +181,9 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             let dataIngre = try NSKeyedArchiver.archivedData(withRootObject: ingredientsNS!, requiringSecureCoding: false)
             let dataSeas = try NSKeyedArchiver.archivedData(withRootObject: seasoningsNS!, requiringSecureCoding: false)
             try dataIngre.write(to: docsDirOfIngre)
+            print("complete saving ingre")
             try dataSeas.write(to: docsDirOfSeas)
+            print("complete saving seas")
         } catch {
             print("error during the save in saveData() of MyRefri")
         }
