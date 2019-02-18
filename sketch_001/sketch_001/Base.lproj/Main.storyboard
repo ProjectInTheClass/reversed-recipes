@@ -280,7 +280,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="돼지고기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmy-Jx-YGL">
-                                                    <rect key="frame" x="51" y="22" width="52" height="18"/>
+                                                    <rect key="frame" x="54" y="21" width="52" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -289,9 +289,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Idv-dd-JmK" firstAttribute="leading" secondItem="8YF-M9-nd5" secondAttribute="leadingMargin" constant="7" id="MSJ-JP-ZF0"/>
-                                            <constraint firstItem="pmy-Jx-YGL" firstAttribute="centerY" secondItem="8YF-M9-nd5" secondAttribute="centerY" constant="4" id="Pby-qn-NTV"/>
+                                            <constraint firstItem="pmy-Jx-YGL" firstAttribute="centerY" secondItem="8YF-M9-nd5" secondAttribute="centerY" constant="3" id="Pby-qn-NTV"/>
                                             <constraint firstItem="Idv-dd-JmK" firstAttribute="centerY" secondItem="8YF-M9-nd5" secondAttribute="centerY" constant="2" id="cWP-1U-WeL"/>
-                                            <constraint firstItem="pmy-Jx-YGL" firstAttribute="leading" secondItem="Idv-dd-JmK" secondAttribute="trailing" constant="6" id="xe5-bZ-MrX"/>
+                                            <constraint firstItem="pmy-Jx-YGL" firstAttribute="leading" secondItem="Idv-dd-JmK" secondAttribute="trailing" constant="9" id="xe5-bZ-MrX"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="54"/>
                                         <connections>
