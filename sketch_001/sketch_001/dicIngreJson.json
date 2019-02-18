@@ -100,6 +100,10 @@
     "e_name": "pumpkin"
   },
   {
+    "k_name": "시금치",
+    "e_name": "spinach"
+  },
+  {
     "k_name": "새우",
     "e_name": "shirimp"
   },
@@ -190,5 +194,17 @@
   {
     "k_name": "참치",
     "e_name": "tunacan"
+  },
+  {
+    "k_name": "밀가루",
+    "e_name": "flour"
+  },
+  {
+    "k_name": "김",
+    "e_name": "laver"
+  },
+  {
+    "k_name": "우유",
+    "e_name": "milk"
   }
 ]

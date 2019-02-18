@@ -78,7 +78,9 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             let eachSeas = Set(seasonings.components(separatedBy: ", "))
             let seasArr = Array(eachSeas)
             cell.detailSeasoningName.text = seasArr[indexPath.row]
-            cell.detailSeasoningImage.image = UIImage(named: translation!.seasDictionary[seasArr[indexPath.row]]!)
+            if let _ = translation!.seasDictionary[seasArr[indexPath.row]] {
+                cell.detailSeasoningImage.image = UIImage(named: translation!.seasDictionary[seasArr[indexPath.row]]!)
+            }
             return cell
             
         }else {

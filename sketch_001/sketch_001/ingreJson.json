@@ -175,6 +175,13 @@
     "amount": ""
   },
   {
+    "name": "시금치",
+    "icon": "spinach",
+    "´class´": "채소 / 과일",
+    "expirationDate": 3,
+    "amount": ""
+  },
+  {
     "name": "새우",
     "icon": "shirimp",
     "´class´": "수산물",
@@ -333,6 +340,27 @@
     "icon": "tunacan",
     "´class´": "가공 / 유제품",
     "expirationDate": -1,
+    "amount": ""
+  },
+  {
+    "name": "밀가루",
+    "icon": "flour",
+    "´class´": "가공 / 유제품",
+    "expirationDate": -1,
+    "amount": ""
+  },
+  {
+    "name": "김",
+    "icon": "laver",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 7,
+    "amount": ""
+  },
+  {
+    "name": "우유",
+    "icon": "milk",
+    "´class´": "가공 / 유제품",
+    "expirationDate": 7,
     "amount": ""
   }
 ]
