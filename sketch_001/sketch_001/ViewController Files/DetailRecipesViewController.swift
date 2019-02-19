@@ -137,7 +137,11 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         if indexPath.section == 0 {
             return CGSize(width: view.bounds.width, height: view.bounds.width*0.66)
         }else if indexPath.section == 1 {
-            return CGSize(width: (width / 4) - 30, height: 75)
+            if width < 350 {
+                return CGSize(width: (width / 4) - 25, height: 75)
+            }else{
+                return CGSize(width: (width / 4) - 30, height: 75)
+            }
         }else if indexPath.section == 2 {
             let seasonings = food!.seasoning!
             let eachSeas = Set(seasonings.components(separatedBy: ", "))
@@ -145,7 +149,11 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             if seasArr[0] == "" {
                 return CGSize(width: (width / 4) - 30, height: 0)
             } else {
-                return CGSize(width: (width / 4) - 30, height: 75)
+                if width < 350 {
+                    return CGSize(width: (width / 4) - 25, height: 75)
+                }else{
+                    return CGSize(width: (width / 4) - 30, height: 75)
+                }
             }
         }else {
             let collectionViewHeight = CGFloat(100)
@@ -171,54 +179,6 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             }
             
             return CGSize(width: view.bounds.width, height: CGFloat(height!))
-            
-            /*
-            var cellHeight = CGFloat(exactly: 0.0)
-            
-            guard let recipeCount = cell.detailRecipe.text?.count else{
-                return CGSize(width: 0, height: 0)
-            }
-            
-            
-            // 케이스마다 메서드의 글자 개수를 받아와서 몇 줄인지 정숫값으로 받아낸다.  받아낸 정숫값으로 CGSize의 높이를 찾아온다.
-            switch indexPath.row {
-            case 0:
-                
-            case 1:
-                
-            case 2:
-                
-            case 3:
-                
-            case 4:
-                
-            case 5:
-                
-            case 6:
-                
-            default:
-                print("default")
-            }
-            */
-            
-            
-//            return CGSize(width: view.bounds.width, height: collectionViewHeight)
-            
-            
-            
-            
-          /*
-            methodCound = food.me
-            if let cellHeightTemp = food!.method1{
-              var cellHeight = 88*(cellHeightTemp.count-(cellHeightTemp.count % 28))/28
-                 return CGSize(width: view.bounds.width, height: CGFloat(exactly: cellHeight)!)// 3번 째 indexpath.row의 높이
-            }
-            else {
-               return CGSize(width: view.bounds.width, height: CGFloat(exactly: 0)!)// 3번 째 indexpath.row의 높이
-            }
-        */
-          //  var cellHeight:Int? = 88*(food!.method1?.count-(food!.method1.count % 28))/28
- //        return CGSize(width: view.bounds.width, height: CGFloat(exactly: 88/*cellHeight*/)!)// 3번 째 indexpath.row의 높이
         }
     }
 
