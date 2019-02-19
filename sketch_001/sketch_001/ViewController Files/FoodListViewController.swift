@@ -43,9 +43,9 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
 //        }
         
         if ingredients![indexPath.row].name.count == 4 {
-            return CGSize(width: 110, height: 54)
+            return CGSize(width: 118, height: 54)
         }else if ingredients![indexPath.row].name.count == 3 {
-            return CGSize(width: 100, height: 54)
+            return CGSize(width: 105, height: 54)
         }else if ingredients![indexPath.row].name.count == 2 {
             return CGSize(width: 90, height: 54)
         }else{
@@ -69,9 +69,9 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
         if cell.ingredientName.text!.count == 4 {
             cell.ingredientButton.frame.size = CGSize(width: 100, height: 40)
         } else if cell.ingredientName.text!.count == 3 {
-            cell.ingredientButton.frame.size = CGSize(width: 90, height: 40)
+            cell.ingredientButton.frame.size = CGSize(width: 95, height: 40)
         }else if cell.ingredientName.text!.count == 2 {
-            cell.ingredientButton.frame.size = CGSize(width: 80, height: 40)
+            cell.ingredientButton.frame.size = CGSize(width: 82, height: 40)
         }else{
             cell.ingredientButton.frame.size = CGSize(width: 70, height: 40)
         }
