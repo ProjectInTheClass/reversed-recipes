@@ -26,6 +26,34 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         return 4
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "DetailSectionHeader", for: indexPath) as? DetailSectionHeader{
+            switch indexPath.section {
+            case 0 :
+                sectionHeader.sectionHeader.text = nil
+            case 1 :
+                sectionHeader.sectionHeader.text = "식재료"
+            case 2 :
+                sectionHeader.sectionHeader.text = "조미료"
+            case 3 :
+                sectionHeader.sectionHeader.text = "레시피"
+            default :
+                print("There is no section")
+            }
+            return sectionHeader
+        }
+        return UICollectionReusableView()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if section == 0 {
+            return CGSize(width: 50, height: 0)
+        }else{
+            return CGSize(width: UIScreen.main.bounds.width, height: 30)
+        }
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -79,7 +107,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             let seasArr = Array(eachSeas)
             cell.detailSeasoningName.text = seasArr[indexPath.row]
             if let _ = translation!.seasDictionary[seasArr[indexPath.row]] {
-                cell.detailSeasoningImage.image = UIImage(named: translation!.seasDictionary[seasArr[indexPath.row]]! + "_gray")
+                cell.detailSeasoningImage.image = UIImage(named: translation!.seasDictionary[seasArr[indexPath.row]]!)
             }
             return cell
             
@@ -196,23 +224,23 @@ class DetailFoodImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var detailFoodImage: UIImageView!
     @IBOutlet weak var detailFoodName: UILabel!
     @IBOutlet weak var detailFoodTime: UILabel!
-    
 }
 
 class DetailIngredientsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var detailIngredientName: UILabel!
     @IBOutlet weak var detailIngredientImage: UIImageView!
-    
 }
 
 class DetailSeasoningCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var detailSeasoningImage: UIImageView!
     @IBOutlet weak var detailSeasoningName: UILabel!
-    
 }
 
 class DetailRecipesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var detailRecipe: UILabel!
     @IBOutlet weak var detailRecipeMethod: UIImageView!
-    
+}
+
+class DetailSectionHeader: UICollectionReusableView {
+    @IBOutlet weak var sectionHeader: UILabel!
 }

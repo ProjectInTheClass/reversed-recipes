@@ -59,21 +59,21 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
         let ingredient = ingredients![indexPath.row]
         cell.ingredientImage.image = UIImage(named: ingredient.icon)
         cell.ingredientName.text = ingredient.name
-        cell.ingredientButton.layer.cornerRadius = 10
         cell.ingredientButton.clipsToBounds = true
+        cell.ingredientButton.layer.cornerRadius = 20.0 / 1.0
         cell.ingredientButton.layer.borderWidth = 0.2
         cell.ingredientButton.layer.borderColor = UIColor.lightGray.cgColor
         cell.ingreStr = ingreStr
         cell.delegate = delegate
 
         if cell.ingredientName.text!.count == 4 {
-            cell.ingredientButton.frame.size = CGSize(width: 100, height: 40)
+            cell.ingredientButton.frame.size = CGSize(width: 97, height: 43)
         } else if cell.ingredientName.text!.count == 3 {
-            cell.ingredientButton.frame.size = CGSize(width: 95, height: 40)
+            cell.ingredientButton.frame.size = CGSize(width: 92, height: 43)
         }else if cell.ingredientName.text!.count == 2 {
-            cell.ingredientButton.frame.size = CGSize(width: 82, height: 40)
+            cell.ingredientButton.frame.size = CGSize(width: 79, height: 43)
         }else{
-            cell.ingredientButton.frame.size = CGSize(width: 70, height: 40)
+            cell.ingredientButton.frame.size = CGSize(width: 67, height: 43)
         }
 
         //        cell.contentView.layer.cornerRadius = 6.0
@@ -108,7 +108,6 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
                 ingreStr?.ingredientsList?.append(ingredient.name)
             }
         }
-        
 //        for ingredient in ingredients! {
 //            ingreStr?.ingredientsList?.append(ingredient.name)
 //        }
@@ -128,12 +127,14 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
     var possibleFoodList: [Food]?
     var ingreStr: IngreStr?
     var delegate: ReloadRecipes?
+    var translate: Translation?
     @IBOutlet weak var ingredientImage: UIImageView!
     @IBOutlet weak var ingredientName: UILabel!
     @IBOutlet weak var ingredientButton: UIButton!
 
     
     override func awakeFromNib() {
+        translate = Translation()
 //        ingredientButton.layer.masksToBounds = true
 //        ingredientButton.layer.cornerRadius = 10
 //        ingredientButton.clipsToBounds = true
@@ -157,7 +158,6 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
             ingreStr?.ingredientsList = ingreStr?.ingredientsList?.filter { $0 != ingredientName.text! }
             ingredientImage.image = UIImage(named: "\(ingredientName.text!)" + "_gray")
             ingredientName.textColor = UIColor.lightGray
-            
         }
 
         delegate?.reloadRecipes(ingreStrArr: ingreStr!.ingredientsList!)
