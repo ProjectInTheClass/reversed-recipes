@@ -79,7 +79,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             let seasArr = Array(eachSeas)
             cell.detailSeasoningName.text = seasArr[indexPath.row]
             if let _ = translation!.seasDictionary[seasArr[indexPath.row]] {
-                cell.detailSeasoningImage.image = UIImage(named: translation!.seasDictionary[seasArr[indexPath.row]]!)
+                cell.detailSeasoningImage.image = UIImage(named: translation!.seasDictionary[seasArr[indexPath.row]]! + "_gray")
             }
             return cell
             
@@ -123,9 +123,9 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         case 1:
             return UIEdgeInsets(top: 15, left: 15, bottom: 5, right: 15)
         case 2:
-            return UIEdgeInsets(top: 5, left: 15, bottom: 20, right: 15)
+            return UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
         default:
-            return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+            return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
         }
         
 //        return UIEdgeInsets(top: 30, left: 0, bottom: 10, right: 0)
@@ -133,14 +133,13 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width
-//        return CGSize(width: (width / 4) - 30, height: 75)
         if indexPath.section == 0 {
             return CGSize(width: view.bounds.width, height: view.bounds.width*0.66)
         }else if indexPath.section == 1 {
             if width < 350 {
-                return CGSize(width: (width / 4) - 25, height: 75)
+                return CGSize(width: (width / 4) - 25, height: 60)
             }else{
-                return CGSize(width: (width / 4) - 30, height: 75)
+                return CGSize(width: (width / 4) - 30, height: 60)
             }
         }else if indexPath.section == 2 {
             let seasonings = food!.seasoning!
@@ -150,9 +149,9 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
                 return CGSize(width: (width / 4) - 30, height: 0)
             } else {
                 if width < 350 {
-                    return CGSize(width: (width / 4) - 25, height: 75)
+                    return CGSize(width: (width / 4) - 25, height: 60)
                 }else{
-                    return CGSize(width: (width / 4) - 30, height: 75)
+                    return CGSize(width: (width / 4) - 30, height: 60)
                 }
             }
         }else {
@@ -161,19 +160,19 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             
             switch indexPath.row {
             case 0:
-                height = (90 + 10 * (food!.method1!.count / 20))
+                height = (55 + 10 * (food!.method1!.count / 20))
             case 1:
-                height = (90 + 10 * (food!.method2!.count / 20))
+                height = (55 + 10 * (food!.method2!.count / 20))
             case 2:
-                height = (90 + 10 * (food!.method3!.count / 20))
+                height = (55 + 10 * (food!.method3!.count / 20))
             case 3:
-                height = (90 + 10 * (food!.method4!.count / 20))
+                height = (55 + 10 * (food!.method4!.count / 20))
             case 4:
-                height = (90 + 10 * (food!.method5!.count / 20))
+                height = (55 + 10 * (food!.method5!.count / 20))
             case 5:
-                height = (90 + 10 * (food!.method6!.count / 20))
+                height = (55 + 10 * (food!.method6!.count / 20))
             case 6:
-                height = (90 + 10 * (food!.method7!.count / 20))
+                height = (55 + 10 * (food!.method7!.count / 20))
             default:
                 print("error in cell size")
             }
@@ -187,6 +186,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         collectionView.dataSource = self
         super.viewDidLoad()
         translation = Translation()
+        
 //        let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
 //            collectionView.collectionViewLayout = alignedFlowLayout
     }
