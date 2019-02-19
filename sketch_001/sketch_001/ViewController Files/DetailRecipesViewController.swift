@@ -89,25 +89,25 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             switch indexPath.row {
             case 0:
                 cell.detailRecipe.text = food?.method1!
-                cell.detailRecipeMethod.image = UIImage(named: "method1")
+                cell.detailRecipeMethod.image = UIImage(named: "method01")
             case 1:
                 cell.detailRecipe.text = food?.method2!
-                cell.detailRecipeMethod.image = UIImage(named: "method2")
+                cell.detailRecipeMethod.image = UIImage(named: "method02")
             case 2:
                 cell.detailRecipe.text = food?.method3!
-                cell.detailRecipeMethod.image = UIImage(named: "method3")
+                cell.detailRecipeMethod.image = UIImage(named: "method03")
             case 3:
                 cell.detailRecipe.text = food?.method4!
-                cell.detailRecipeMethod.image = UIImage(named: "method4")
+                cell.detailRecipeMethod.image = UIImage(named: "method04")
             case 4:
                 cell.detailRecipe.text = food?.method5!
-                cell.detailRecipeMethod.image = UIImage(named: "method5")
+                cell.detailRecipeMethod.image = UIImage(named: "method05")
             case 5:
                 cell.detailRecipe.text = food?.method6!
-                cell.detailRecipeMethod.image = UIImage(named: "method6")
+                cell.detailRecipeMethod.image = UIImage(named: "method06")
             case 6:
                 cell.detailRecipe.text = food?.method7!
-                cell.detailRecipeMethod.image = UIImage(named: "method7")
+                cell.detailRecipeMethod.image = UIImage(named: "method07")
             default:
                 print("default")
             }
@@ -121,7 +121,7 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         case 0:
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         case 1:
-            return UIEdgeInsets(top: 15, left: 15, bottom: 5, right: 15)
+            return UIEdgeInsets(top: 15, left: 15, bottom: 8, right: 15)
         case 2:
             return UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
         default:
@@ -160,19 +160,19 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             
             switch indexPath.row {
             case 0:
-                height = (55 + 10 * (food!.method1!.count / 20))
+                height = (45 + 10 * (food!.method1!.count / 20))
             case 1:
-                height = (55 + 10 * (food!.method2!.count / 20))
+                height = (45 + 10 * (food!.method2!.count / 20))
             case 2:
-                height = (55 + 10 * (food!.method3!.count / 20))
+                height = (45 + 10 * (food!.method3!.count / 20))
             case 3:
-                height = (55 + 10 * (food!.method4!.count / 20))
+                height = (45 + 10 * (food!.method4!.count / 20))
             case 4:
-                height = (55 + 10 * (food!.method5!.count / 20))
+                height = (45 + 10 * (food!.method5!.count / 20))
             case 5:
-                height = (55 + 10 * (food!.method6!.count / 20))
+                height = (45 + 10 * (food!.method6!.count / 20))
             case 6:
-                height = (55 + 10 * (food!.method7!.count / 20))
+                height = (45 + 10 * (food!.method7!.count / 20))
             default:
                 print("error in cell size")
             }

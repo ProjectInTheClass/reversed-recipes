@@ -667,7 +667,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsR-up-djq">
                                                     <rect key="frame" x="0.0" y="46" width="84" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-N9-3Ds">
@@ -729,14 +729,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAt-G1-qym">
-                                                    <rect key="frame" x="48" y="36" width="305" height="18"/>
+                                                    <rect key="frame" x="43" y="35.5" width="310" height="18"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x1D-YQ-ccf">
-                                                    <rect key="frame" x="10" y="30" width="30" height="30"/>
+                                                    <rect key="frame" x="10" y="32.5" width="25" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="UrY-Ws-YML"/>
-                                                        <constraint firstAttribute="width" constant="30" id="p5p-Al-5Yt"/>
+                                                        <constraint firstAttribute="height" constant="25" id="UrY-Ws-YML"/>
+                                                        <constraint firstAttribute="width" constant="25" id="p5p-Al-5Yt"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8YU-U7-UpI">
@@ -749,8 +749,8 @@
                                             <constraint firstAttribute="bottom" secondItem="8YU-U7-UpI" secondAttribute="top" constant="1" id="5IX-S4-Wda"/>
                                             <constraint firstItem="8YU-U7-UpI" firstAttribute="leading" secondItem="HGP-Tm-B9a" secondAttribute="leading" constant="12" id="Jva-bd-4Q7"/>
                                             <constraint firstAttribute="bottom" secondItem="8YU-U7-UpI" secondAttribute="bottom" id="KOB-rJ-dAs"/>
+                                            <constraint firstItem="YAt-G1-qym" firstAttribute="top" secondItem="x1D-YQ-ccf" secondAttribute="top" constant="3" id="eue-Ja-cIg"/>
                                             <constraint firstItem="x1D-YQ-ccf" firstAttribute="leading" secondItem="HGP-Tm-B9a" secondAttribute="leading" constant="10" id="k6j-Lg-Wwq"/>
-                                            <constraint firstItem="YAt-G1-qym" firstAttribute="centerY" secondItem="HGP-Tm-B9a" secondAttribute="centerY" id="kju-UD-rub"/>
                                             <constraint firstItem="YAt-G1-qym" firstAttribute="leading" secondItem="x1D-YQ-ccf" secondAttribute="trailing" constant="8" id="rZJ-dp-HXg"/>
                                             <constraint firstAttribute="trailing" secondItem="8YU-U7-UpI" secondAttribute="trailing" constant="12" id="xTK-Kt-OI2"/>
                                             <constraint firstItem="x1D-YQ-ccf" firstAttribute="centerY" secondItem="HGP-Tm-B9a" secondAttribute="centerY" id="yGc-O9-dKg"/>
