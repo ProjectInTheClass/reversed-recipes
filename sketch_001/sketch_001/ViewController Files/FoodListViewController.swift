@@ -94,12 +94,10 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        
-        let myLayout = UICollectionViewFlowLayout()
-        myLayout.scrollDirection = .horizontal
-        myLayout.itemSize.width = CGFloat(exactly: 100.0)!
-        collectionView.setCollectionViewLayout(myLayout, animated: true)
-        // Do any additional setup after loading the view.
+//        let myLayout = UICollectionViewFlowLayout()
+//        myLayout.scrollDirection = .horizontal
+//        myLayout.itemSize.width = CGFloat(exactly: 100.0)!
+//        collectionView.setCollectionViewLayout(myLayout, animated: true)
         
         ingreStr = IngreStr()
         ingreStr?.ingredientsList = []
@@ -127,14 +125,14 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
     var possibleFoodList: [Food]?
     var ingreStr: IngreStr?
     var delegate: ReloadRecipes?
-    var translate: Translation?
+    var translation: Translation?
     @IBOutlet weak var ingredientImage: UIImageView!
     @IBOutlet weak var ingredientName: UILabel!
     @IBOutlet weak var ingredientButton: UIButton!
 
     
     override func awakeFromNib() {
-        translate = Translation()
+        translation = Translation()
 //        ingredientButton.layer.masksToBounds = true
 //        ingredientButton.layer.cornerRadius = 10
 //        ingredientButton.clipsToBounds = true
@@ -150,14 +148,17 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
             ingredientButton.isSelected = !ingredientButton.isSelected
             ingreStr?.ingredientsList?.append(ingredientName.text!)
             ingredientName.textColor = UIColor.black
-            ingredientImage.image = UIImage(named: "\(ingredientName.text!)")
-            
+            if let ingreImage = translation!.ingreDictionary[ingredientName.text!]{
+                ingredientImage.image = UIImage(named: ingreImage)
+            }
         } else {
 //            print("delete : \(ingredientName.text!)")
             ingredientButton.isSelected = !ingredientButton.isSelected
             ingreStr?.ingredientsList = ingreStr?.ingredientsList?.filter { $0 != ingredientName.text! }
-            ingredientImage.image = UIImage(named: "\(ingredientName.text!)" + "_gray")
             ingredientName.textColor = UIColor.lightGray
+            if let ingreImage = translation!.ingreDictionary[ingredientName.text!]{
+                ingredientImage.image = UIImage(named: ingreImage + "_gray")
+            }
         }
 
         delegate?.reloadRecipes(ingreStrArr: ingreStr!.ingredientsList!)

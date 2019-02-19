@@ -86,7 +86,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             print("error during the load in viewDidLoad() of MyRefri")
         }
         
-        showFoodButton.layer.cornerRadius = 0.05 * showFoodButton.bounds.size.width
+        showFoodButton.layer.cornerRadius = 20.0 / 1.0
         
         if (ingredients!.count + seasonings!.count) == 0 {
             emptyHomeImage.isHidden = false

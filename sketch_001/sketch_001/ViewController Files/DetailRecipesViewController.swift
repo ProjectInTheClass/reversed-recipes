@@ -113,7 +113,9 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailRecipesCollectionIdentifier, for: indexPath) as! DetailRecipesCollectionViewCell
-
+            
+            cell.detailRecipe.sizeToFit()
+            
             switch indexPath.row {
             case 0:
                 cell.detailRecipe.text = food?.method1!
@@ -153,13 +155,15 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         case 2:
             return UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
         default:
-            return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+            return UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
         }
         
 //        return UIEdgeInsets(top: 30, left: 0, bottom: 10, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailRecipesCollectionIdentifier, for: indexPath) as! DetailRecipesCollectionViewCell
+        
         let width = UIScreen.main.bounds.width
         if indexPath.section == 0 {
             return CGSize(width: view.bounds.width, height: view.bounds.width*0.66)
@@ -183,30 +187,59 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
                 }
             }
         }else {
-            let collectionViewHeight = CGFloat(100)
-            var height: Int?
+            var height: Double?
+//            var height: Int?
+            let fontSize = cell.detailRecipe.font.pointSize
+            var lineCount: Double?
+            
+            switch UIScreen.main.bounds.width {
+            case 320 :
+                lineCount = 22
+            case 375 :
+                lineCount = 27
+            default :
+                lineCount = 30
+            }
             
             switch indexPath.row {
+                
             case 0:
-                height = (45 + 10 * (food!.method1!.count / 20))
+                height = 38 + Double(fontSize) * floor(Double(food!.method1!.count) / lineCount!)
+//                height = (35 + 15 * (food!.method1!.count / 20))
             case 1:
-                height = (45 + 10 * (food!.method2!.count / 20))
+                height = 38 + Double(fontSize) * floor(Double(food!.method2!.count) / lineCount!)
+//                height = (35 + 15 * (food!.method2!.count / 20))
             case 2:
-                height = (45 + 10 * (food!.method3!.count / 20))
+                height = 38 + Double(fontSize) * floor(Double(food!.method3!.count) / lineCount!)
+//                height = (35 + 15 * (food!.method3!.count / 20))
             case 3:
-                height = (45 + 10 * (food!.method4!.count / 20))
+                height = 38 + Double(fontSize) * floor(Double(food!.method4!.count) / lineCount!)
+//                height = (35 + 15 * (food!.method4!.count / 20))
             case 4:
-                height = (45 + 10 * (food!.method5!.count / 20))
+                height = 38 + Double(fontSize) * floor(Double(food!.method5!.count) / lineCount!)
+//                height = (35 + 15 * (food!.method5!.count / 20))
             case 5:
-                height = (45 + 10 * (food!.method6!.count / 20))
+                height = 38 + Double(fontSize) * floor(Double(food!.method6!.count) / lineCount!)
+//                height = (35 + 15 * (food!.method6!.count / 20))
             case 6:
-                height = (45 + 10 * (food!.method7!.count / 20))
+                height = 38 + Double(fontSize) * floor(Double(food!.method7!.count) / lineCount!)
+//                height = (35 + 15 * (food!.method7!.count / 20))
             default:
                 print("error in cell size")
             }
-            
             return CGSize(width: view.bounds.width, height: CGFloat(height!))
         }
+    }
+    
+    private func estimateFrameForText(text: String) -> CGRect {
+        //we make the height arbitrarily large so we don't undershoot height in calculation
+        let height: CGFloat = CGFloat(5.0)
+        
+        let size = CGSize(width: UIScreen.main.bounds.width, height: height)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light)]
+        
+        return NSString(string: text).boundingRect(with: size, options: options, attributes: attributes, context: nil)
     }
 
     override func viewDidLoad() {
