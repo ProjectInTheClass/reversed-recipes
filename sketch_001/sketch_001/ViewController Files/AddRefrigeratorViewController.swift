@@ -104,7 +104,12 @@ class AddRefrigeratorViewController: UIViewController, UICollectionViewDataSourc
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width
-        return CGSize(width: (width / 4) - 30, height: 75)
+        if width < 350 {
+            return CGSize(width: (width / 4) - 25, height: 75)
+        }else{
+            return CGSize(width: (width / 4) - 30, height: 75)
+        }
+        
 //        let width = UIScreen.main.bounds.width
 //        if width == 375 {
 //            return CGSize(width: (width / 5) - 5, height: 75)
