@@ -31,12 +31,16 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             switch indexPath.section {
             case 0 :
                 sectionHeader.sectionHeader.text = nil
+                sectionHeader.sectionHeaderLine.isHidden = true
             case 1 :
                 sectionHeader.sectionHeader.text = "식재료"
+                sectionHeader.sectionHeaderLine.isHidden = true
             case 2 :
                 sectionHeader.sectionHeader.text = "조미료"
+                sectionHeader.sectionHeaderLine.isHidden = true
             case 3 :
                 sectionHeader.sectionHeader.text = "레시피"
+                sectionHeader.sectionHeaderLine.isHidden = true
             default :
                 print("There is no section")
             }
@@ -151,11 +155,11 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
         case 0:
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         case 1:
-            return UIEdgeInsets(top: 15, left: 15, bottom: 8, right: 15)
+            return UIEdgeInsets(top: 5, left: 15, bottom: 10, right: 15)
         case 2:
-            return UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+            return UIEdgeInsets(top: 5, left: 15, bottom: 10, right: 15)
         default:
-            return UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
+            return UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
         }
         
 //        return UIEdgeInsets(top: 30, left: 0, bottom: 10, right: 0)
@@ -204,25 +208,25 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             switch indexPath.row {
                 
             case 0:
-                height = 38 + Double(fontSize) * floor(Double(food!.method1!.count) / lineCount!)
+                height = 43 + Double(fontSize) * floor(Double(food!.method1!.count) / lineCount!)
 //                height = (35 + 15 * (food!.method1!.count / 20))
             case 1:
-                height = 38 + Double(fontSize) * floor(Double(food!.method2!.count) / lineCount!)
+                height = 43 + Double(fontSize) * floor(Double(food!.method2!.count) / lineCount!)
 //                height = (35 + 15 * (food!.method2!.count / 20))
             case 2:
-                height = 38 + Double(fontSize) * floor(Double(food!.method3!.count) / lineCount!)
+                height = 43 + Double(fontSize) * floor(Double(food!.method3!.count) / lineCount!)
 //                height = (35 + 15 * (food!.method3!.count / 20))
             case 3:
-                height = 38 + Double(fontSize) * floor(Double(food!.method4!.count) / lineCount!)
+                height = 43 + Double(fontSize) * floor(Double(food!.method4!.count) / lineCount!)
 //                height = (35 + 15 * (food!.method4!.count / 20))
             case 4:
-                height = 38 + Double(fontSize) * floor(Double(food!.method5!.count) / lineCount!)
+                height = 43 + Double(fontSize) * floor(Double(food!.method5!.count) / lineCount!)
 //                height = (35 + 15 * (food!.method5!.count / 20))
             case 5:
-                height = 38 + Double(fontSize) * floor(Double(food!.method6!.count) / lineCount!)
+                height = 43 + Double(fontSize) * floor(Double(food!.method6!.count) / lineCount!)
 //                height = (35 + 15 * (food!.method6!.count / 20))
             case 6:
-                height = 38 + Double(fontSize) * floor(Double(food!.method7!.count) / lineCount!)
+                height = 43 + Double(fontSize) * floor(Double(food!.method7!.count) / lineCount!)
 //                height = (35 + 15 * (food!.method7!.count / 20))
             default:
                 print("error in cell size")
@@ -276,4 +280,5 @@ class DetailRecipesCollectionViewCell: UICollectionViewCell {
 
 class DetailSectionHeader: UICollectionReusableView {
     @IBOutlet weak var sectionHeader: UILabel!
+    @IBOutlet weak var sectionHeaderLine: UIView!
 }

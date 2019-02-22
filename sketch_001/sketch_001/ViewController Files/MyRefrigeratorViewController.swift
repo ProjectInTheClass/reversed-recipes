@@ -276,7 +276,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
 //                            cell.ingredientTerm.textColor = UIColor.yellow
                         } else {
                             cell.ingredientTerm.text = "경고"
-                            cell.ingredientTerm.textColor = UIColor.red
+//                            cell.ingredientTerm.textColor = UIColor.
                         }
                     } else {
                         cell.ingredientTerm.text = ""
