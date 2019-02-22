@@ -288,6 +288,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             if let seasoning = seasonings?[indexPath.row]{
                 cell.ingredientIcon.image = UIImage(named: seasoning.icon)
                 cell.ingredientName.text = seasoning.name
+                cell.ingredientTerm.isHidden = true
             }
         }
         return cell

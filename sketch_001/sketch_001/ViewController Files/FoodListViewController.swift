@@ -65,6 +65,22 @@ class FoodListViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.ingredientButton.layer.borderColor = UIColor.lightGray.cgColor
         cell.ingreStr = ingreStr
         cell.delegate = delegate
+        
+        if let ingreStr = cell.ingreStr {
+            if ingreStr.ingredientsList!.contains(ingredient.name){
+                cell.ingredientButton.isSelected = false
+                cell.ingredientName.textColor = UIColor.black
+                if let ingreImage = cell.translation!.ingreDictionary[ingredient.name]{
+                    cell.ingredientImage.image = UIImage(named: ingreImage)
+                }
+            }else{
+                cell.ingredientButton.isSelected = true
+                cell.ingredientName.textColor = UIColor.lightGray
+                if let ingreImage = cell.translation!.ingreDictionary[ingredient.name]{
+                    cell.ingredientImage.image = UIImage(named: ingreImage + "_gray")
+                }
+            }
+        }
 
         if cell.ingredientName.text!.count == 4 {
             cell.ingredientButton.frame.size = CGSize(width: 97, height: 43)
@@ -144,7 +160,7 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
     
     @IBAction func selectedIngredient(_ sender: Any) {
         if ingredientButton.isSelected {
-//            print("append : \(ingredientName.text!)")
+            print("append : \(ingredientName.text!)")
             ingredientButton.isSelected = !ingredientButton.isSelected
             ingreStr?.ingredientsList?.append(ingredientName.text!)
             ingredientName.textColor = UIColor.black
@@ -152,7 +168,7 @@ class IngredientsListCollectionViewCell: UICollectionViewCell {
                 ingredientImage.image = UIImage(named: ingreImage)
             }
         } else {
-//            print("delete : \(ingredientName.text!)")
+            print("delete : \(ingredientName.text!)")
             ingredientButton.isSelected = !ingredientButton.isSelected
             ingreStr?.ingredientsList = ingreStr?.ingredientsList?.filter { $0 != ingredientName.text! }
             ingredientName.textColor = UIColor.lightGray
