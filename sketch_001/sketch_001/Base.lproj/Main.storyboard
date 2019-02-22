@@ -496,11 +496,8 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHome02" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-YI-Am5">
-<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-=======
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
->>>>>>> c355e74609da50995332a3dbb8c6a59fc961fc18
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>

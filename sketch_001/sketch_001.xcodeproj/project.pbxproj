@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		52193827221A8F6F009106F5 /* dicSeasJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 52193826221A8F6F009106F5 /* dicSeasJson.json */; };
 		5219382F221A9893009106F5 /* seasJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 5219382E221A9893009106F5 /* seasJson.json */; };
-		52193833221AAAC2009106F5 /* recipeJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 52193832221AAAC2009106F5 /* recipeJson.json */; };
 		5219383B221AAD3C009106F5 /* ingreJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 5219383A221AAD3C009106F5 /* ingreJson.json */; };
 		5219383D221AAD40009106F5 /* dicIngreJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 5219383C221AAD40009106F5 /* dicIngreJson.json */; };
 		522DEE01221197EB00EB8ADA /* DetailIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */; };
@@ -17,6 +16,7 @@
 		522DEE0722126EA300EB8ADA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DEE0622126EA300EB8ADA /* TabBarController.swift */; };
 		5281CE052213C82E0022A01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281CE042213C82E0022A01B /* AppDelegate.swift */; };
 		52CA1BA822117CDE00BC7C89 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */; };
+		52E2094D221F781800FCBE37 /* recipeJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 52E2094C221F781800FCBE37 /* recipeJson.json */; };
 		BB0459392202DD45003F75F4 /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0459382202DD45003F75F4 /* TotalData.swift */; };
 		BB2016CA2215E7B9003570D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2016C92215E7B9003570D0 /* Assets.xcassets */; };
 		BB2E21E42211D36800520B0B /* DetailRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E21E32211D36800520B0B /* DetailRecipesViewController.swift */; };
@@ -40,7 +40,6 @@
 		3102549EBEE682BD8C3C4486 /* Pods-sketch_001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sketch_001.release.xcconfig"; path = "Target Support Files/Pods-sketch_001/Pods-sketch_001.release.xcconfig"; sourceTree = "<group>"; };
 		52193826221A8F6F009106F5 /* dicSeasJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dicSeasJson.json; sourceTree = "<group>"; };
 		5219382E221A9893009106F5 /* seasJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seasJson.json; sourceTree = "<group>"; };
-		52193832221AAAC2009106F5 /* recipeJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipeJson.json; sourceTree = "<group>"; };
 		5219383A221AAD3C009106F5 /* ingreJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ingreJson.json; sourceTree = "<group>"; };
 		5219383C221AAD40009106F5 /* dicIngreJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dicIngreJson.json; sourceTree = "<group>"; };
 		522DEE00221197EB00EB8ADA /* DetailIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIngredientViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		522DEE0622126EA300EB8ADA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5281CE042213C82E0022A01B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52CA1BA722117CDE00BC7C89 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		52E2094C221F781800FCBE37 /* recipeJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipeJson.json; path = ../../../recipeJson.json; sourceTree = "<group>"; };
 		8B699AC0BBA30BFE232B4B3D /* Pods-sketch_001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sketch_001.debug.xcconfig"; path = "Target Support Files/Pods-sketch_001/Pods-sketch_001.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0459382202DD45003F75F4 /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
 		BB2016C92215E7B9003570D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 				5281CE00221307440022A01B /* Model Files */,
 				5281CE02221307CA0022A01B /* Supporting Files */,
 				BB7F238D21E77D250056BB42 /* Info.plist */,
-				52193832221AAAC2009106F5 /* recipeJson.json */,
+				52E2094C221F781800FCBE37 /* recipeJson.json */,
 				5219383A221AAD3C009106F5 /* ingreJson.json */,
 				5219383C221AAD40009106F5 /* dicIngreJson.json */,
 				5219382E221A9893009106F5 /* seasJson.json */,
@@ -241,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5219383D221AAD40009106F5 /* dicIngreJson.json in Resources */,
-				52193833221AAAC2009106F5 /* recipeJson.json in Resources */,
+				52E2094D221F781800FCBE37 /* recipeJson.json in Resources */,
 				BB7F238C21E77D250056BB42 /* LaunchScreen.storyboard in Resources */,
 				5219382F221A9893009106F5 /* seasJson.json in Resources */,
 				5219383B221AAD3C009106F5 /* ingreJson.json in Resources */,
