@@ -12,6 +12,7 @@ class MemoViewController: UIViewController, SaveData {
 
     @IBOutlet weak var memoTextView: UITextView!
 
+    @IBOutlet weak var lisenceLabel: UILabel!
     var docsDir: URL?
     
     override func viewDidLoad() {
@@ -30,7 +31,15 @@ class MemoViewController: UIViewController, SaveData {
         } catch {
             print("error during the load in viewDidLoad() of Memo")
         }
+        
+      lisenceLabel.center.x = view.bounds.width*0.5
+        if view.bounds.height < 600 { lisenceLabel.center.y = 467 }
+        if (600 < view.bounds.height) && (view.bounds.height < 700) { lisenceLabel.center.y = 547 }
+        if (700 < view.bounds.height) && (view.bounds.height < 800)
+        {lisenceLabel.center.y = 617}
+        if 800 < view.bounds.height { lisenceLabel.center.y = 736 }
     }
+    
     
     override func viewDidDisappear(_ animated: Bool) {
         saveData()

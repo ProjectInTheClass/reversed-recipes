@@ -58,9 +58,24 @@ class Ingredient: NSObject, NSCoding, Codable {
     }
 }
 
-struct Seasoning: Codable {
+class Seasoning: NSObject, NSCoding, Codable {
     var name: String
     var icon: String
+    
+    init(name: String, icon: String) {
+        self.name = name
+        self.icon = icon
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.name = aDecoder.decodeObject(forKey: "name") as! String
+        self.icon = aDecoder.decodeObject(forKey: "icon") as! String
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.name, forKey: "name")
+        aCoder.encode(self.icon, forKey: "icon")
+    }
 }
 
 class Food: Codable {

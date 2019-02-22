@@ -86,7 +86,7 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             print("error during the load in viewDidLoad() of MyRefri")
         }
         
-        showFoodButton.layer.cornerRadius = 0.05 * showFoodButton.bounds.size.width
+        showFoodButton.layer.cornerRadius = 20.0 / 1.0
         
         if (ingredients!.count + seasonings!.count) == 0 {
             emptyHomeImage.isHidden = false
@@ -181,7 +181,9 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
             let dataIngre = try NSKeyedArchiver.archivedData(withRootObject: ingredientsNS!, requiringSecureCoding: false)
             let dataSeas = try NSKeyedArchiver.archivedData(withRootObject: seasoningsNS!, requiringSecureCoding: false)
             try dataIngre.write(to: docsDirOfIngre)
+            print("complete saving ingre")
             try dataSeas.write(to: docsDirOfSeas)
+            print("complete saving seas")
         } catch {
             print("error during the save in saveData() of MyRefri")
         }

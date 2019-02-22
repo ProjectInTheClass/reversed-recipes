@@ -19,6 +19,8 @@ class TableViewController: UITableViewController, ReloadRecipes {
     override func viewDidLoad() {
         super.viewDidLoad()
         vc?.delegate = self
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 230
     }
     
     override func didReceiveMemoryWarning() {
