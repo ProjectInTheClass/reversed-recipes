@@ -200,9 +200,9 @@ class DetailRecipesViewController: UIViewController, UICollectionViewDelegate, U
             case 320 :
                 lineCount = 22
             case 375 :
-                lineCount = 27
+                lineCount = 28
             default :
-                lineCount = 30
+                lineCount = 31
             }
             
             switch indexPath.row {

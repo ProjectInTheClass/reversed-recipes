@@ -267,19 +267,20 @@ class MyRefrigeratorViewController: UIViewController, UITableViewDelegate, UITab
                         let todayDate = Date()
                         let remainingDate = endDate!.timeIntervalSince(todayDate)
                         let remainingDays = Int(remainingDate / 86400)
+//                        print("\(ingredient.name): \(remainingDays)")
                         
                         if remainingDays > 7 {
-                            cell.ingredientTerm.text = ""
+                            cell.ingredientTerm.text = nil
 //                            cell.ingredientTerm.textColor = UIColor(displayP3Red: CGFloat(0)/255, green: CGFloat(230)/255, blue: CGFloat(28)/255, alpha: 1)
                         } else if remainingDays > 2 {
-                            cell.ingredientTerm.text = ""
+                            cell.ingredientTerm.text = nil
 //                            cell.ingredientTerm.textColor = UIColor.yellow
                         } else {
                             cell.ingredientTerm.text = "경고"
 //                            cell.ingredientTerm.textColor = UIColor.
                         }
                     } else {
-                        cell.ingredientTerm.text = ""
+                        cell.ingredientTerm.text = nil
 //                        cell.ingredientTerm.textColor = UIColor.green
                     }
                 }
