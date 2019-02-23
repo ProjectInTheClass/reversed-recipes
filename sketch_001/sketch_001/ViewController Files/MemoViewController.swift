@@ -38,6 +38,9 @@ class MemoViewController: UIViewController, SaveData {
         if (700 < view.bounds.height) && (view.bounds.height < 800)
         {lisenceLabel.center.y = 617}
         if 800 < view.bounds.height { lisenceLabel.center.y = 736 }
+    
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     
@@ -54,5 +57,16 @@ class MemoViewController: UIViewController, SaveData {
         } catch {
             print("error during the save in saveData() of Memo")
         }
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = true
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
